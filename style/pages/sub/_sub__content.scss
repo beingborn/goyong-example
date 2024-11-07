@@ -1,0 +1,356 @@
+/****************************************************
+	파일명	: sub__content.css
+	최초작성자	: 이민혁
+	최초작성일	: 2024-09-28
+	-------------------------------------------------
+	Dec. 서브 페이지 스타일링 정의
+	-------------------------------------------------
+	최종수정자	: 이민혁
+	최종수정일	: 2024-10-02
+	수정내용	: 최초작성
+	속성순서: 
+*****************************************************/
+
+
+label.mo_only {display: none;}
+button.mo_only {display: none;}
+
+// 서브 페이지들의 컨텐츠는 공통적으로 #sub__wrap id , 서브 페이지 이미지 지정 
+#sub__wrap .visual__bg { width: 100%; height: 25rem; position: relative; background-repeat: no-repeat; background-position: center; background-size: cover;}
+#sub__wrap .accn_desc .visual__bg, #sub__wrap .main_accn_desc .visual__bg { background-image: url(../img/top_visual_desc.jpg);}
+#sub__wrap .accn_open .visual__bg, #sub__wrap .public_register .visual__bg, #sub__wrap .sub1_1 .visual__bg, #sub__wrap .check__accounting .visual__bg {background-image: url(../img/top_visual_public_open.jpg);}
+#sub__wrap .member_info_change .visual__bg, #sub__wrap .password_change .visual__bg, #sub__wrap .file_change .visual__bg {background-image: url(../img/top_visual_security.jpg);}
+#sub__wrap .notice_detail .visual__bg, #sub__wrap .notice .visual__bg {background-image: url(../img/top_visual_notice.jpg);}
+#sub__wrap .sign_up .visual__bg {background-image: url(../img/top_visual_sign_up.jpg);}
+#sub__wrap .union_management .visual__bg {background-image: url(../img/top_visual_union.jpg);}
+#sub__wrap .faq .visual__bg {background-image: url(../img/top_visual_faq.jpg);}
+#sub__wrap .visual__bg.sub1 {background-image: url(../img/top_visual_notice.jpg);}
+// 서브 페이지 이미지 텍스트 위치 
+#sub__wrap .content .visual__bg .visual__text {position: absolute; bottom: 7.2rem; color: #fff;}
+#sub__wrap .content .visual__bg .visual__text h2 { font-size: 4rem; margin-bottom: 1.2rem; white-space: nowrap; } // 2.8rem
+#sub__wrap .content .visual__bg .visual__text p { font-size: 2.2rem; }
+
+// 서브 페이지별 버튼 마진
+.function__group.margin-1 {margin-top: 4rem;} 
+.function__group.margin-2 {margin-top: 6.4rem;} 
+.pagination__margin {margin-top: 6.4rem; margin-bottom: 20rem;}
+.pagination__margin__mo {margin-top: 3.6rem; margin-bottom: 6rem;}
+
+// 모바일 탭 기본 설정 (회계공시 열람 상세 페이지)
+.mobile__con {display: none;}
+.mobile__tab {display: none; }
+.mobile__tab__content { display: none;}
+
+@media all and (max-width: 768px){.sm--pd-24Th th {padding-left: 2.4rem; padding-right: 2.4rem!important}}
+
+// 세로형 테이블 액티브 스타일 적용 
+.table__vertical.lineBg tr.style1 > td {background: #DEEBF7;}
+.table__vertical.inputBg tr.style1 > td input {background: #DEEBF7!important;}
+.table__vertical.inputBg tr td:first-of-type input {background: #DEEBF7;}
+.table__vertical.lineBg tr td:first-of-type {background: #DEEBF7;}
+
+.input--flex { display: flex; justify-content: space-between; align-items: center; height: 100%;}
+.align__cols {width: 20rem;}
+
+// min-width 지정
+.miw__1024 {min-width: 102.4rem} 
+.miw__1400 {min-width: 140rem;}
+.miw__1260 {min-width: 126rem;}
+.miw__1600 {min-width: 160rem;}
+.miw__1800 {min-width: 180rem;}
+.miw__2600 {min-width: 260rem;}
+
+// 서브 페이지 공통
+.data__number {font-size: 2.1rem; font-weight: 700;}
+.data__number > span {color: #1D56BC;}
+.title__lv1__wrap {margin-top: 8rem; margin-bottom: 6.4rem;}
+
+// 검색 폼이 두 줄인. 회계공시 열람 페이지에만 적용
+.search__form__user {background-color: #EDF1F5; border-radius: 1.2rem;}
+.search__form__user select,.search__form__user input {border: 0.1rem solid #717171;}
+.search__form__user .search {padding: 4rem;}
+.search__form__user .preview {background-color: #fff; height: 4.8rem; flex-grow: 1;}
+.search__form__user .upload__wrap .btn__file__select {font-weight: 400; min-height: 4.8rem;}
+.search__form__user .upload__wrap .btn__upload {font-weight: 400; min-height: 4.8rem;}
+.search__form__user .search .first__input__box {padding-bottom: 2.4rem;}
+.search__form__user .search input {font-size: 1.7rem;}
+.search__form__user .search .select__box {min-width: 18rem; height: 4.8rem; display: flex;}
+.search__form__user .search .select__box.select__container {display: flex; gap: 1rem; justify-content: space-between; align-items: center;} // 해당 클래스 삽입 시 width 50%씩
+.search__form__user .flexTwo {gap: 1rem; justify-content: space-between; align-items: center;}
+.search__form__user .flexTwo input[type="text"],.search__form__user .flexTwo .select__box > select {width: calc(50% - 1rem); flex:auto;}
+.search__form__user .search .select__box.select__container input[type="text"],.sub1__1__wrap .search__form__user .search .select__box > select {width: calc(50% - 1rem); flex: auto;}
+.search__form__user .search .input__box {height: 4.8rem; display: flex; flex: 1;}
+.search .input__box.lg--interval__both input {margin: 0 2.4rem;}
+@media all and (max-width: 767px){.search .input__box.lg--interval__both input{margin: 0;}}
+
+.search__form__user .search .input__box > input {height: 100%; flex: 1; background: #fff;}
+.search__form__user .search .select__box > select {width: 100%; height: 100%; flex: 1;}
+.search__form__user label.mo_only {font-weight: 700; font-size: 1.7rem; padding-bottom: 1rem; margin-right: auto;}
+.search__form__user .search__container {display: flex; gap: 1rem; align-items: center;}
+
+.form__container {display: flex; flex-wrap: wrap; gap: 2.4rem;}
+
+// 가맹 노조 크기 작은 버튼 크기
+.btn__control__u {color: #fff; font-size: 1.7rem; border-radius: 0.7rem; padding: 0 1.6rem; height: 4.8rem;}
+.accn__open__wrap .search__form__user .search > div label {font-size: 1.7rem; font-weight: 700; margin-right: 1.2rem;}
+.accn__desc__wrap .num__label.m__cont{ display: none;}
+
+
+.table__vertical .input__data tr td input {width: 100%; border-radius: 0; text-align: right; font-weight: 700;}
+
+.accn__result table {font-size: 1.6rem;}
+
+// 구분 선이 없는 테이블 
+.notBorderRight table thead th:not(:first-child), .notBorderRight table tbody td:not(:first-child){border-right: 0;}
+.noborderRightAll * {border-right: 0!important;}
+.noborderAll * {border: 0!important;}
+
+// 홈 > 시스템안내 > 자주묻는 질문
+.qna__container {display: inline-flex; justify-content: center; align-items: center; width: 2.6rem; height: 2.6rem; border-radius: 50%; color: #fff;}
+.qna__container.question {background-color: #16C273;}
+.qna__container.answer {background-color: #000000;}
+
+// 자주 묻는 질문 테이블
+.foldStyle__table tbody tr {min-height: 5.8rem; border-bottom: 0.1rem solid #ddd; display: flex; align-items: stretch;}
+.foldStyle__table tbody tr td {display: flex; align-items: center;}
+.foldStyle__table .text__container {flex-grow: 1; flex-basis: 75%;}
+.foldStyle__table tbody tr:nth-child(even){background-color: #F9F9FA;}
+.foldStyle__table .qna__title {min-width:12rem; border-right: 0.1rem solid #ddd; min-height: 5.8rem; display: flex; align-items: center; justify-content: center; background-color: transparent;}
+.foldStyle__table .answer__toggle { font-weight: 700; text-align: left;}
+.foldStyle__table .qna__function__group {margin-left: auto; margin-right: 3rem;}
+.foldStyle__table .arrow__box {width: 3.2rem; height: 3.2rem; margin-left: 5.4rem;}
+.foldStyle__table .arrow__box > img {width: 100%; height: 100%;}
+
+@media all and (max-width: 768px){.search__form__user .search .input__box > input {margin: 0;}}
+// 게시판 상세 내용 테이블
+.notice__detail__wrap table {font-size: 1.6rem;}
+.notice__detail__wrap .content__desc {min-height: 45rem; font-size: 1.7rem; color: #555555;}
+.notice__detail__wrap .table__horizontal__ex .td__container {height: 100%; align-items: center;}
+.board__detail {padding: 6.4rem 0;}
+.notice__detail__wrap .file__wrap {min-height: 5.8rem; background-color: #EAF5F0; display: flex; align-items: center;}
+
+// 첨부 파일
+.file__wrap .file__header {min-width: 25rem; padding-left: 3rem; font-weight: 700; line-height: 5.8rem;}
+.file__wrap .list {flex-grow: 1; max-width: 84rem;}
+.file__wrap .list > span {font-weight: 500;}
+.file__wrap .download {margin-left: auto; padding-right: 3.6rem;}
+
+// 이전글, 다음글 영역
+.prev__next {font-size: 1.6rem; border-bottom: 0.1rem solid #ddd;}
+.prev__next > li {overflow: hidden; position: relative; padding: 1.8rem 0 1.8rem 3rem;  max-height: 5.8rem; display: flex; align-items: center; border-top: 0.1rem solid #ddd;}
+.prev__title {font-weight: 700;}
+.prev__next .prev span, .prev__next .next span {min-width: 22rem; display: inline-flex; align-items: center;}
+.prev__next .prev span::before {content: ''; margin-right: 2rem; display: inline-block; width: 2.4rem; height: 2.4rem; background: url(../img/arrow__top-bk.svg) no-repeat center;background-size: 2.4rem auto;}
+.prev__next .next span::before {content: ''; margin-right: 2rem; display: inline-block; width: 2.4rem; height: 2.4rem; background: url(../img/arrow__bottom-bk.svg) no-repeat center; background-size: 2.4rem auto;
+}
+
+
+// 홈 > 회계공시등록 > 가맹노조(산하조직)관리
+.search .input__box.int {margin-right: 2.4rem;}
+.union__management__wrap .btn__file__select {min-width: 9.1rem;}
+.union__management__wrap .upload__wrap {flex-grow: 1;}
+
+.function__group.type2 {position: absolute; top: 0; right: 0; display: flex; gap: 1rem;}
+.function__group.type2 .btn__control__u {padding: 0 1.2rem; font-size: 1.5rem; height: 4rem;}
+// 홈 > 회계공시 시스템이란
+.accn__desc__wrap .desc__inner {padding: 0 9rem;}
+.accn__desc__wrap .num__label {margin-right : 0.8rem;background-color: #000; display: inline-flex; justify-content : center; align-items: center ;width: 1.4rem; height: 1.4rem; color: #fff; border-radius: 50%; font-size: 1.2rem;}
+
+// 설명 1번 섹션
+.accn__desc__wrap .content__section:first-child { display: flex; position: relative; }
+.content__section:first-child .image__container {min-width: 33.7rem;min-height: 52.7rem;margin-right: 5rem; background-image: url('../img/accn__desc__img_01.png');background-size: cover;}
+.content__section .text__container .title {font-size: 3.6rem; font-weight: 700;}
+.content__section .text__container .desc {font-size: 1.8rem; color: #555555; max-width: 65rem;}
+.content__section:first-child .text__container {padding-top: 13rem;}
+.content__section:first-child .text__container .desc:nth-of-type(1) {margin-bottom: 2.4rem;}
+.content__section:first-child .text__container .desc:nth-of-type(2) {margin-bottom: 5rem;}
+.content__section:first-child .text__container .desc__light {color: #9C9C9C;}
+.content__section:first-child .circle__image__container {width: 15.3rem; height: 18.4rem; 
+    background-image: url('../img/accn__desc__img__circle__01.png');
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+// 주요 공시항목 설명 2번 섹션
+.accn__desc__wrap .section {margin-top: 10rem;}
+.accn__desc__wrap .content__section:nth-child(2){display: flex; position: relative;}
+.accn__desc__wrap .content__section:nth-child(2) .image__container{min-width: 58.4rem; min-height: 27.9rem; max-width: 58.4rem; max-height: 27.9rem; margin-left: 5rem; background-image: url('../img/accn__desc__img_02.png'); background-size: cover;}
+.accn__desc__wrap .content__section:nth-child(2) .text__container {padding-top: 4rem; max-width: 47rem;}
+.accn__desc__wrap .content__section:nth-child(2) .text__container .desc {margin-top: 3rem;}
+.accn__desc__wrap .content__section:nth-child(2) .circle__image__container {width: 41.2rem; height: 11rem; background-image: url('../img/accn__desc__img__circle__02.png'); position: absolute; left: 2.7rem; top: 22rem; bottom: -2rem; background-size: cover;} 
+.accn__desc__wrap .content__section:nth-child(3) .image__container {background-position: center center;}
+
+// 주요 공시항목 설명 3번 섹션
+.accn__desc__wrap .expected__section {text-align: center; margin-bottom: 35rem;}
+.accn__desc__wrap .expected__section .image__container {width: 100%; height: 26.2rem; margin: 5rem 0; background-image: url('../img/accn__desc__img__circle__03.png'); background-position: center center;}
+.accn__desc__wrap .expected__section .title {font-size: 4.8rem; font-weight: 700;}
+
+// 홈 > 시스템안내 > 주요 공시항목 설명
+// .main__accn__desc__wrap .desc__banner{margin: 6.4rem 0;}
+.main__accn__desc__wrap .image__container {text-align: center; margin: 6.4rem 0;}
+.main__accn__desc__wrap .image__container img {max-width: 100%;}
+.main__accn__desc__wrap .table__vertical thead th {height: 5.8rem;}
+.main__accn__desc__wrap .table__vertical tbody th {height: 5.8rem; background: transparent;}
+.main__accn__desc__wrap .tab .table__vertical {border-top: 0.2rem solid #00A463;}
+.main__accn__desc__wrap .table__vertical tbody td {padding: 0.8rem 1rem; margin-top: 1rem; margin-bottom: 1rem; font-weight: 700;}
+.main__accn__desc__wrap .tab:nth-of-type(1) .table__vertical {margin-bottom: 25rem;} //첫번째 탭 표에만 적용
+.main__accn__desc__wrap .tab:nth-of-type(2) .content__section:not(:last-child) {margin-bottom: 10rem}
+.main__accn__desc__wrap .tab:nth-of-type(2) .content__section:last-child {margin-bottom: 30rem}
+
+// 공시항목 설명 배너
+.desc__banner {background-color: #82C252; color: #fff; display: flex; align-items: center; padding: 2.6rem 2.4rem; max-height: 6.4rem; border-radius: 0.8rem;}
+.desc__banner .title {font-size: 1.7rem; font-weight: 700; margin-right: 1.6rem;}
+.desc__banner .desc {font-size: 1.5rem; font-weight: 400;}
+
+// 모바일 변환형 테이블
+@media all and (max-width: 767px) {
+    .table__horizontal__ex.mo__columnTable .border-top-large {border: 0;}
+    .table__horizontal__ex.mo__columnTable tr {display: block; border-bottom: 0;}
+    .table__horizontal__ex.mo__columnTable th {padding: 0; background: transparent; margin-bottom: 1.2rem;}
+    .table__horizontal__ex.mo__columnTable th{margin-top: 1.6rem;}
+    .table__horizontal__ex.mo__columnTable tr:nth-child(1) th:first-child {margin-top: -1.6rem;} // 첫번째 행의 첫번째 제목 마진 값 초기화
+    .table__horizontal__ex.mo__columnTable .td__container {gap: 0; padding: 0;}
+    .table__horizontal__ex.mo__columnTable.mo__columnType2 .border-top-large {border: 0;}
+    .table__horizontal__ex.mo__columnTable.mo__columnType2 .td__container {gap: 1rem;}
+}
+
+
+//데이터 차트 CSS
+.chart-block { display: flex; justify-content: space-between; flex-wrap: wrap; align-items: baseline;}
+.chart__wrapper { width: calc(50% - 20px);}
+
+// 모바일 탭 테이블
+.tab .echart {  width: 100%; height: 400px; position: relative; background-color: #F8F8F8;}
+
+// 차트 제목 
+.chart__title {align-items: baseline; display: flex;justify-content: space-between; border-bottom: 2px solid #000; padding-bottom: 12px;}
+.chart__title h2 {font-weight: 700; font-size: 2.5rem;}
+.chart__title span {font-size: 1.7rem;}
+.tab__4__table { margin-bottom: 6.4rem; }
+.tab__4__table .input--flex input, .tab__4__table .input--flex select { width: calc(50% - 1rem); }
+.tab__4__chart__wrapper { width: calc(50% - 2rem); margin-bottom: 6.4rem;}
+
+// 회원가입 페이지
+.td--flex { display: flex; align-items: center; padding-left: 1rem; flex-wrap: nowrap; }
+.td--flex .td--width { width: 100%; display: flex; justify-content: space-between; }
+.must__help__message span, .must__help__message p { font-size: 1.5rem; }
+.btn__s {font-size: 1.6rem; padding: 0.8rem 1.2rem; border: 0.1rem solid #000; max-height: 5.6rem; min-height: 4rem; border-radius: 0.5rem; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center;} // width: 10%; color: #000; border: 0.1rem solid #1d1d1d; border-radius: 0.5rem; max-width: 8rem; 
+.must__help__message { margin-top: 2.4rem;}
+.file-upload-wrapper { display: flex; align-items: center; }
+.custom-file-label { background-color: #004A98; color: white; width: 10rem; height: 4rem; line-height: 4rem; cursor: pointer; text-align: center; margin-right: 10px; }
+
+// 입력 폼 스타일
+.form__table .with__submit input[type="text"] { width: calc(90%); }
+.form__table .with__submit .btn__s { width: calc(10% - 1rem); color: #fff; }
+.form__table .col2__th { flex-direction: column; align-items: flex-start; justify-content: center; min-height: 5.8rem; }
+.form__table .col2__th span { line-height: 150%; text-align: left; }
+.form__table .preview { min-width: auto; }
+.form__table tr {min-height: 5.8rem; width: 100%; border-bottom: 0.1rem solid #ddd; }
+.form__table td { flex-grow: 1; line-height: 100%; display: block;}
+.form__table td input[type="text"], .form__table td input[type="password"] {line-height: 4rem; width: 100%; padding: 0 8px; font-size: 1.6rem;}
+.form__table td input[type="submit"] {line-height: 4rem; }
+.form__table td select { height: 4rem; }
+.form__table .secret__Check .icon__pw-visible { right: 1.8rem; transform: translateY(-50%); }
+.form__table .secret__Check input {height: 4rem;}
+.form__table .error-message { padding-left: 2rem; padding-bottom: 1rem;}
+
+// 필수 입력
+.must__type { position: relative; text-align: left; }
+.must__type::after { content: ' *'; color: #FE5555;  font-weight: 700; position: absolute;}
+
+
+// 달력 공통
+.td__calender {position: relative; width: 33.33%;}
+
+// 프린트 페이지 전용
+.printResult__desc {font-size: 2.1rem; padding-top: 2.4rem; padding-bottom: 6.4rem;}
+.grayTable th {background-color: #f8f8f8;}
+.printPage {width: 21cm; min-height: 29.7cm; position: relative; }
+.printPage .desc__box__txt {font-size: 14px; margin-left: 0;}
+.printPage .main__title__lg {font-size: 3.2rem;}
+.printResult__inner {padding-top: 60px; padding-left: 40px; padding-right: 40px;} 
+.printPage th {font-size: 12px; padding: 0 4px; max-width: 120px; min-width: 110px!important}
+.printPage tr {min-height: auto;}
+.printPage td {font-size: 12px; font-weight: 400;}
+.printPage .min__h__box {border: 0.1rem solid #ddd; margin: 6px; min-height: 3.2rem;}
+
+@page {size: A4; margin: 0;}
+@media print {
+    .printPage {
+        print-color-adjust: exact;
+        margin: 0;
+        border: initial;
+        border-radius: initial;
+        width: initial;
+        min-height: initial;
+        box-shadow: initial;
+        background: initial;
+        page-break-after: always;
+    }
+    .printPage input {min-height: 30px; padding: 0; box-sizing: border;}
+}
+
+/* 모바일 전용 탭 */
+.mobile__tab .swiper-slide { max-width: 13rem; text-align: center;}
+.mobile__tab .swiper-slide button {width: 100%;height: 100%;color: #555555;background: transparent;font-size: 1.9rem;padding: 2rem 1.6rem;white-space: nowrap;border-bottom: 0.2rem solid #ddd;font-weight: 700;}
+.mobile__tab .swiper-button-next {border-radius: 50%;background: url(../img/mo__tab__next.png) no-repeat center;background-size: 100% auto;box-shadow: 0 0 0.4rem 0 rgba(0, 0, 0, 0.25);}
+.mobile__tab .swiper-button-prev {border-radius: 50%;background: url(../img/mo__tab__prev.png) no-repeat center;background-size: 100% auto;box-shadow: 0 0 0.4rem 0 rgba(0, 0, 0, 0.25);}
+.mobile__tab .swiper-button-next,
+.mobile__tab .swiper-button-prev {position: absolute;z-index: 66;width: 2.4rem;height: 2.4rem;margin-top: 0;margin-top: calc(0px - 1.2rem);}
+.mobile__tab .swiper-button-next::after,
+.mobile__tab .swiper-button-prev::after {font-size: 0;width: 100%;height: 100%;z-index: 21;position: absolute;left: 0;top: 0;}
+.mobile__tab .swiper-button-next::after {background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255));padding: 0.8rem 1.6rem 0.8rem 3.2rem;}
+.mobile__tab .swiper-button-prev::after {background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(255, 255, 255));padding: 0.8rem 3.2rem 0.8rem 1.6rem;}
+.mobile__tab .swiper-slide button.active {color: #21A366;position: relative;}
+.mobile__tab .swiper-slide button.active::after {content: "";position: absolute;bottom: 0;left: 0;width: 100%;height: 0.4rem;background-color: #21a366;}
+.mobile__tab .swiper-slide button.active {color: #21A366; position: relative;}
+.mobile__tab .swiper-slide button.active::after {content: ''; position: absolute;bottom: 0;left: 0;width: 100%;height: 0.4rem;background-color: #21a366;}
+@media all and (min-width: 551px) and (max-width: 766px) {.content .mobile__tab .swiper .swiper-slide {max-width: 25%;}}
+@media all and (max-width: 550px) {.content .mobile__tab .swiper .swiper-slide { max-width: 13rem;}}
+
+
+// 모듈 : 아코디언 서브 데이터 토글
+// 모바일 데이터 오픈 내부 내용
+.mobile__con {margin: 3.6rem 0;}
+.data--open {position: relative;padding: 2rem 0.8rem;font-size: 1.7rem;}
+.data--open .arrow__wrap {position: absolute;top: 50%;transform: translateY(-50%);right: 1rem;}
+.data--open .arrow__wrap .arrow__top {display: none;width: 1.6rem;height: 1.6rem;background: url(../img/arrow__top-green.svg) no-repeat center;}
+.data--open .arrow__wrap .arrow__bottom {display: block;width: 1.6rem;height: 1.6rem;background: url(../img/acordian__arrow__down.png) no-repeat center;}
+.data--open.first {border-top: 0.1rem solid #ddd;}
+.data--open {cursor: pointer;width: 100%;position: relative; border-bottom: 0.1rem solid #ddd;}
+.data__toggle {font-size: 1.7rem;font-weight: 700;}
+.data--open.on {border-bottom: 0.3rem solid #21A366;}
+.data--open.on .data__toggle {color: #21A366;}
+.data--open.on .arrow__top { display: block;}
+.data--open.on .arrow__bottom { display: none;}
+
+// 데이터 오픈 바디 (회계공시 열람, 등록 페이지에서만 사용)
+.mo__slide {padding: 0 1rem;}
+.mo__slide > table {font-size: 1.7rem;}
+.mo__slide > table tr.is-open td {display: flex;} 
+.mo__slide > table th {background: transparent;}
+.mo__slide > table .sub__element {font-weight: 700;font-size: 1.8rem;}
+.mo__slide > table tbody tr td:last-child {margin-bottom: 3rem;}
+// 모바일 슬라이드 액티브 스타일
+.mo__slide > table tbody tr td:first-of-type {margin-top: 2rem; background: #DEEBF7;} // 총계 액티브 스타일
+.mo__slide > table tr.style1 > td {background: #DEEBF7;}
+.mo__slide > table tr.style1 .sub__element {background: transparent;} 
+.mo__slide > table td td:first-of-type {background: #DEEBF7;}
+// 모바일 슬라이드 서브 스타일
+.mo__slide > table .sub__element td {display: flex; align-items: center;}
+.mo__slide > table .sub__element span {display: flex; align-items: center;}
+.mo__slide > table .sub__element::after {content: ''; height: 1px; background-color: #ddd; flex: 1; margin-left: 1rem;}
+.mo__slide > table .t__title {padding-top: 2rem; padding-bottom: 1rem; border-bottom: 0.1rem solid #ddd; display: flex; justify-content: space-between; cursor: pointer;}
+
+.mo__slide > table tr.is-open .t__title.arrow::after {transform: rotate(180deg);}
+.t__title.arrow::after { content: ''; width: 1.6rem; height: 1.6rem; background: url(../img/acordian__arrow__down.png) no-repeat center; align-self: center;}
+.t__title.arrow > span {margin-left: auto; margin-right: .8rem;}
+
+
+.mo__slide > table tr td {margin-top: 2rem; display: flex; align-items: center; justify-content: space-between; display: none;}
+.mo__slide input {text-align: right;}
+.mo__slide.min__h__58 td {min-height: 5.8rem;}
+.td--separated {padding-top: 2rem; padding-bottom: 3rem; border-top: 0.1rem solid #ddd; border-bottom: 0.1rem solid #ddd; margin-bottom: 0!important;}
+// 하위 항목 표시
+.child__arrow {display: inline-block; width: 1.6rem; height: 2.2rem; background: url(../img/arrow__right-bk.svg) no-repeat center; background-size: cover;}
+

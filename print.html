@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=, initial-scale=1.0">
+        <title>보고서 조회</title>
+        <link rel="stylesheet" href="style/reset.css">
+        <link rel="stylesheet" href="style/default.css">
+        <link rel="shortcut icon" href="img/korea__favicon.ico">
+        <link rel="stylesheet" href="style/swiper-bundle.min.css">
+        <script src="js/jquery-3.7.1.js"></script>
+    </head>
+    <body id="print__body">
+            <!-- 프린트 출력물 html -->
+            <div class="printResult inner printPage">
+                <div class="printResult__inner">
+                    <!-- 프린트 출력물 설명 -->
+                    <div class="txt--c">
+                        <h2 class="main__title__lg">노동조합 회계공시 확인</h2>
+                        <p class="printResult__desc"><strong>[강원도지역버스노동조합]</strong> 귀 조합은 <strong>2023년도</strong> 회계공시 대상입니다.</p>
+                    </div>
+                    <!-- 프린트 내용 -->
+                    <div class="desc__box mb--40">
+                            <div class="desc__box__txt">
+                                <p>조합비 세액공제 적용을 위해 공시해야 하는 대상인 <strong>총연합단체, 연합단체, ’22.12.31. 기준 조합원 수 1,000인 이상 단위노동조합(산하조직)</strong>의 공시여부를 조회할 수 있습니다.</p>
+                                <p>조회 결과 <strong>모두 '공시완료'</strong>인 경우 ’23.10월 이후에 납부한 조합비에 세액공제 혜택을 부여합니다.</p>
+                                <p>* 노동조합(산하조직)에 '23.1월 ~ 9월에 납부한 조합비는 종전과 같이 회계공시와 관계없이 세액공제 혜택을 부여합니다.</p>
+                            </div>
+                    </div>
+                    <!-- ./ 프린트 내용 -->
+                    <!-- ./ 프린트 출력물 설명 -->
+                    <h2 class="mb--16">노동조합 회계공시여부 내역</h2>
+                        <div class="table__horizontal__ex grayTable infoTable">
+                            <table class="border-top-large">
+                                <tbody>
+                                    <!-- 
+                                    프린트 출력물 내부 html 그냥 td여도 되나요?
+                                    value값이 아닌 경우에는 값이 늘어나도 다음과 같이 되는데 
+                                    아닐 경우에는 아래와 같이 됩니다.
+                                    -->
+                                    <tr>
+                                        <th><label for="">노동조합<br>(산하조직)명</label></th>
+                                        <td><div class="min__h__box" >전국화학섬유식품산업노동조합LG화학LG에너지솔루션청주지회</div></td>
+                                        <th><label for="">대표자</label></th>
+                                        <td><div class="min__h__box">김*만</div></td>
+                                    </tr>
+                                    <tr>
+                                        <th><label for="">총연합단체</label></th>
+                                        <td><div class="min__h__box" >전국화학섬유식품산업</div></td>
+                                        <th><label for="">총연합단체 공시여부</label></th>
+                                        <td><div class="min__h__box" >공시완료</div></td>
+                                    </tr>
+                                    <tr>
+                                        <th><label for="">연합단체</label></th>
+                                        <td><div class="min__h__box" >전국자동차노동조합연맹</div></td>
+                                        <th><label for="">연합단체 공시여부</label></th>
+                                        <td><div class="min__h__box" >공시완료</div></td>
+                                    </tr>
+                                    <tr>
+                                        <th><label for="">단위노동조합</label></th>
+                                        <td><div class="min__h__box" >강원도지역버스노동조합</div></td>
+                                        <th><label for="">단위노동조합 공시여부</label></th>
+                                        <td><div class="min__h__box" >공시완료</div></td>
+                                    </tr>
+                                    <tr>
+                                        <th><label for="">지부</label></th>
+                                        <td><div class="min__h__box" >-</div></td>
+                                        <th><label for="">지부 공시여부</label></th>
+                                        <td><div class="min__h__box" >-</div></td>
+                                    </tr>
+                                    <tr>
+                                        <th><label for="">지회</label></th>
+                                        <td><div class="min__h__box" >-</div></td>
+                                        <th><label for="">지회 공시여부</label></th>
+                                        <td><div class="min__h__box" >-</div></td>
+                                    </tr>
+                                    <tr>
+                                        <th><label for="">분회</label></th>
+                                        <td><div class="min__h__box" >-</div></td>
+                                        <th><label for="">분회 공시여부</label></th>
+                                        <td><div class="min__h__box" >-</div></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="txt--c mt--64">
+                            <!-- 프린트 날짜 -->
+                            <p class="print__date" style="font-size: 2.1rem;">2024년 09월 25일</p>
+                            <!-- ./ 프린트 날짜 -->
+                        </div>
+                </div>
+            </div>
+            <!-- ./ 프린트 출력물 html -->
+    </body>
+</html>

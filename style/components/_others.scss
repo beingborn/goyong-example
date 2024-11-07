@@ -1,0 +1,314 @@
+/****************************************************
+	파일명	: others.css
+	최초작성자	: 이민혁
+	최초작성일	: 2024-09-28
+	-------------------------------------------------
+	Dec. 컴포넌트별 스타일링 정의
+	-------------------------------------------------
+	최종수정자	: 이민혁
+	최종수정일	: 2024-10-02
+	수정내용	: 최초작성
+	속성순서: 
+*****************************************************/
+
+
+// 파일 아이콘
+.file__icon {display: inline-block;width: 2rem;height: 2.4rem;background: url(../img/file__icon.svg) no-repeat center;background-size: cover;}
+
+// 브레드 크럼브
+.breadcrumb {display: flex; font-weight: 700; font-size: 1.5rem; align-items: center; padding-left: 2.4rem; padding-top: 2.4rem;}
+.breadcrumb .path .home > a {position: relative;}
+.breadcrumb .path .home > a::before { display : inline-block;position: absolute; top: 50%; right: 1.2rem; width: 2.4rem; height: 2.4rem; background: url(../img/Base-Breadcrumb.svg) no-repeat center;content: ""; transform: translateY(-50%);}
+.breadcrumb .path > li {display: inline; position: relative;}
+.breadcrumb .path > li > a { position: relative; font-weight: 700;padding-bottom: 0.1rem;}
+.breadcrumb .path > li > a::after { position: absolute; right: 0; bottom: 0; left: 0; height: 0.1rem;content: ''; background-color: #000;}
+.breadcrumb .path > li + li::before { display: inline-block;width: 2rem;height: 2rem; margin: 0 0.4rem;background: url(../img/arrow__right-bk.svg) no-repeat center;content: "";vertical-align: middle;}
+
+// 페이지 네이션 코드
+.pagination {display: flex; align-items: center; justify-content: center;} 
+.pagination .page-navi { font-size: 1.6rem;line-height: 4rem;} 
+.pagination .page-navi.prev {display: inline-flex; align-items: center; margin-right: 2rem;} 
+.pagination .page-navi.prev::before { display: inline-block; width: 2rem; height: 2rem; background: url(../img/more__arrow__left__black\ 1.png) no-repeat center;content: "";} 
+.pagination .page-navi.next {display: inline-flex; align-items: center; margin-left: 2rem;} 
+.pagination .page-navi.next::after { display: inline-block; width: 2rem; height: 2rem; background: url(../img/more__arrow__right__black.png) no-repeat center;content: "";} 
+.pagination .page-link {display: inline-block; width: 4rem; font-size: 1.6rem; line-height: 4rem; text-align: center; border-radius: 0.7rem;} 
+.pagination .page-link.active { color: #fff; font-weight: 700;background-color: #0c3975;}
+// 모바일 페이지네이션 스타일 변경
+.pagination.m__cont {flex-direction: column;}
+.pagination.m__cont .page-navis {display: flex; align-items: center; margin-bottom: 2.4rem;}
+
+// 도움말
+.info__tip__box {position:relative;} // 전체 래퍼
+.info__tip { display: block; width: 2.4rem; height: 2.4rem; background: url(../img/info__tip.svg) no-repeat center;} // 도움말 버튼
+.info__tip.active {position: relative;} 
+.info__tip.active::after { display: inline-block;
+position: absolute; top: 3.4rem; left: 50%; width: 2.2rem; height: 2.2rem;content: ''; z-index: 1001; 
+background-color: #fff;
+box-shadow: -0.1rem 0.1rem #C6C6C6;
+transform:  translateX(-50%) rotate(135deg);
+z-index: 801;
+}
+.info__tip__box .tooltip__layer {display: none; position: absolute; top: 5rem; left: 7rem; padding: 2.4rem; border: 0.1rem solid #C6C6C6; background: #fff; z-index: 800; border-radius: 1.2rem;}
+.info__tip__box .tooltip__layer.active {display: block;}
+.mobile__con .info__tip__box .tooltip__layer {top: 6.4rem;}
+.info__tip__box .tooltip__title {font-weight: 700; padding-bottom: 2rem;}
+.info__tip__box .tooltip__content strong {padding-right: 0.4rem;}
+.info__tip__box .tooltip__content p:not(:last-child) { padding-bottom: 1.6rem;}
+.info__tip__box .tooltip__content p {display: flex;}
+.info__tip__box .tooltip__layer .info__close__btn {width: 1.6rem ;height: 1.6rem; background: url(../img/info__tip__close.svg)no-repeat center;}
+/* 모바일 화면 일 시 width 100%*/
+@media (max-width: 767px) { .info__tip__box .tooltip__layer { left: 0; width: 100%;}}
+
+// Modal Style 
+#popup {display: none;position:fixed;top:50%;left:50%;background:#fff; -webkit-box-shadow:0px 0px 15px rgba(0,0,0,0.3);-moz-box-shadow:0px 0px 15px rgba(0,0,0,0.3);box-shadow:0px 0px 15px rgba(0,0,0,0.3);-webkit-transform:translate(-50%, -50%);-moz-transform:translate(-50%, -50%);-ms-transform:translate(-50%, -50%);-o-transform:translate(-50%, -50%);transform:translate(-50%, -50%);z-index:1002;}
+// 2024/11/01 이민혁 추가
+#popup .popup__body {padding: 2rem;}
+.bgPopup {position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);content:"";z-index:1001;}
+
+// 설명 박스
+.desc__box {padding: 1.6rem; border: 0.1rem solid #E4E4E4; background: #F8F8F8; border-radius: 0.8rem;}
+.desc__boxTit {display: flex; align-items: center;}
+.desc__boxTit::before { display: inline-block; width: 2rem; height: 2rem; background: url(../img/icon__helper__info__tr.svg);content: ''; margin-right: 0.4rem; background-size: contain;}
+.desc__box__txt {margin-left: 2.4rem;}
+.desc__list {border-top: 0.1rem dashed #C6C6C6; margin-top: 1.6rem; padding-top: 1.6rem;}
+
+/* 폼 CSS */
+form {width: 100%;}
+.search__box { height: 5.8rem; background-color: #F9F9FA; border-top: 0.1rem solid #ddd; border-bottom: 0.1rem solid #ddd;}
+.search__box input, .search__box select { width: 100%; height: 4rem;border: 0.1rem solid #ddd; font-size: 1.6rem; line-height: 4rem;}
+.search--flex {display: flex;align-items: center;}
+.padding--10 {padding-left: 1rem;}
+.search__select__wrap {width: 15.38%; margin-right: 1rem;}
+.auth__select__wrap {width: 33.33%;font-size: 1.6rem;margin-left: 2rem;}
+.select {width: 80%;}
+.select select {min-width: 10rem; margin-left: 1rem; }
+.search__form .form-content select {
+    position: relative;
+    background-color: #fff;
+    background-image: url(/img/select__renew.png);
+    background-position: center right 1rem; 
+    background-repeat: no-repeat; 
+}
+input[type="file"]::file-selector-button {
+    width: 10rem;
+    height: 4rem;
+    border: 0;
+    color: white;
+    line-height: 4rem;
+    text-align: center;
+    background-color: #004A98;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.upload__file__name { color: #8E8E8E; font-weight: 400;font-size: 1.6rem; padding-left: 1rem; text-overflow: ellipsis; overflow: hidden;}
+.search__form {border-bottom: 0.1rem solid #ddd; background-color: #F9F9FA;}
+.form-input, .form-radio {display: flex; width: 100%; height: 5.8rem; align-items: center;}
+// 노동조합 규약명
+.form__head {background-color: #EAF5F0;}
+.form-title { display: inline-flex; height: 100%;text-align: center; justify-content: center; align-items: center;}  // width: 15.38%; /* 전체 너비의 15.38% */ // min-width: 15.38%; /* 최소 너비를 15.38%로 */  
+.form__head {height: 5.8rem; font-weight: 700;}
+.form__head .form-title:nth-of-type(1) {width: 23.44%; max-width: 30rem;}
+.form__row {border-bottom: 0.1rem solid #ddd;}
+.form__row > .form-wrap {height: 5.8rem;}
+.form__row .td__container:nth-of-type(1){width: 23.44%; max-width: 30rem;}
+.form__head > .form-title-file {display: flex; align-items: center; justify-content: center;}
+.form__body .form__row input { width: 100%;height: 4rem; border-radius: 0.5rem;}
+
+.form-content { display: flex; padding: 10px;flex-grow: 1; align-items: center; gap: 10px;}
+.form-content > select {width: 100%; min-height: 4rem; background-color: #fff;}
+.form-content > input[type="text"] {width: 100%; min-height: 4rem; background-color: #fff;}
+
+// 파일 업로드 커스텀
+.preview {height: 4rem; border: 0.1rem solid #CBCCCD; border-radius: 0.5rem;}
+// manage__accounting 회계공시 대상년도 폼
+.year__form { font-size: 1.5rem; margin-right: 2rem;}
+.year__form input { height: 4rem; padding: 0 0.8rem; border: 0.1rem solid #ddd; font-size: 1.6rem; line-height: 4rem; margin-left: 1rem;}
+
+// 모달용 검색 폼 
+.search__form-2 .form-title { height: 5.8rem;background-color : #F9F9FA; min-width: 16rem;}
+.search__form-2 .form-desc { padding: 0 1rem;flex-grow: 1;}
+.btn__file__select--mo {display: none;position: absolute; top: 50%; right: 1.6rem; width: 2.4rem; height: 2.4rem; background: url(../img/file__select--mo.svg) no-repeat center; transform: translateY(-50%); background-size: cover;}
+
+/* 버튼 CSS */
+button { background: inherit;cursor: pointer;}
+
+// 버튼 색상 클래스
+.bg--blue-00 {background-color: #246beb;}
+.bg--blue-01 {background-color: #1d56bc;}
+.bg--blue-02 {background-color: #218bee;}
+.bg--navy-00 {background-color: #003675;}
+.bg--black-00 {background-color: #000000;}
+.bg--gray-00 {background-color: #d8d8d8;}
+.bg--gray-01 {background-color: #C6C6C6;}
+.bg--gray-02 {background-color: #555555;}
+.bg--red-00 {background-color: #b9131e;}
+.bg--green-00 {background-color: #008a1e;}
+.bg--green-01 {background-color: #00ba63;}
+.bg--green-02 {background-color: #21a366;}
+.bg--mint-00 {background-color: #14bdb3;}
+.bg--transparent-00 {background-color: none;}
+.btn__control { height: 5.6rem; padding: 0 2rem; border: 0; color: #fff; font-weight: 400; font-size: 2rem; border-radius: 0.7rem; cursor: pointer;}
+.btn__control.responsive {height: 4rem; font-size: 1.6rem;} // 반응형 버튼 (알림톡 사용)
+
+// 텍스트 색상 변경
+.txt--black-00 {color: #000!important}
+.txt--white-00 {color: #fff!important}
+
+@media all and (max-width: 767px){
+.btn__control.responsive { width: auto;height: 4.8rem; padding: 0 1.2rem; font-size: 1.6rem;}}
+.function__group {text-align: right;} // 버튼 wrapper
+.function__group .btn__control:not(:last-child) {margin-right: 1rem;}
+
+// tab버튼 활성화 스타일
+.sub1__1__wrap .tab__wrap .tab__btn button.active::after,  .main__accn__desc__wrap .tab__btn button.active::after{bottom: 0;}
+
+// 모듈 : 서브 페이지 상단 탭 버튼 스타일
+.tab__wrap {display: flex;width: 100%;margin: 0px auto;max-width: 128rem;align-items: center; margin-top: 8rem;}
+.tab__btn { height: 4.5rem; text-align: center;flex: 1;}
+.tab__btn > button {width: 100%; background: transparent;color: #767676;  font-weight: 700; font-size: 2rem;  line-height: 4.5rem;white-space: nowrap; cursor: pointer;}
+.tab__wrap .tab__btn button.active { position: relative; color: #21a366;}
+.tab__wrap .tab__btn button.active::after { position: absolute;bottom: -0.2rem;left: 0;width: 100%;height: 0.4rem;content: ''; background-color: #21a366;}
+.tab__border {border-bottom: 0.2rem solid #ddd;}
+.tab__btn__auto .tab__btn > button {width: auto;padding: 0 2rem; border-bottom: 0;}
+    
+// 모달 닫기 버튼 스타일
+.close__btn__wrap {text-align: center; padding-top: 1.2rem;}
+.close__btn { height: 5.6rem; padding: 0.4rem 2rem; border: 0; color: #fff; font-weight: 500; font-size: 2rem; line-height: 4.8rem;cursor: pointer; background-color: #218bee; border-radius: 0.7rem;}
+// 버튼
+.btn__select {height: 9rem;border: 0.1rem solid #000;color: #000;font-size: 1.6rem;background-color: transparent;border-radius: 1rem;}
+.btn__find {height: 4rem;border: 0.1rem solid #000;background: transparent;border-radius: 0.5rem;}
+.btn__file__select {display: inline-flex;padding: 0.8rem 1.2rem;border: 0.1rem solid #000;font-weight: 400;font-size: 1.6rem;max-height: 4rem;min-height: 4rem;border-radius: 0.5rem;box-sizing: border-box;align-items: center;justify-content: center;background-color: #fff;}
+.btn__upload {height: 4rem;padding: 0.8rem 2rem;color: #fff;font-size: 1.6rem;max-height: 4rem;border-radius: 0.5rem;}
+.btn__down {display: inline-flex;padding: 0.8rem 1.2rem;border: 0.1rem solid #000;font-size: 1.6rem;max-height: 4rem;min-height: 4rem;border-radius: 0.5rem;box-sizing: border-box;align-items: center;justify-content: center;background-color: #fff;}
+.btn__input {padding: 0.8rem 1.2rem;border: 0.1rem solid #000;background: transparent;font-size: 1.6rem;max-height: 3.8rem;border-radius: 0.5rem;box-sizing: border-box;}
+.btn__add,.btn__remove {width: 5rem;height: 4rem;height: 4rem;color: white;font-size: 3rem;line-height: 4rem;text-align: center;cursor: pointer;border-radius: 0.5rem;}
+.input__find {padding: 0.8rem 2.6rem;}
+.btn__file {width: 2rem; height: 2rem; background: url(../../img/file__select--mo.svg) no-repeat center; background-size: contain;}
+
+/* 팝업 */
+#popup {width: calc(100% - 3.2rem);}
+// .popup__search__inner label {font-size: 1.5rem;}
+
+
+/*  테이블 CSS */
+// 테이블 공통 스타일
+table th {font-weight: 700; background-color: #EAF5F0;}
+table td {font-weight: 700;}
+table caption {position: absolute; top: 0; left: 0; width: 0.1rem; height: 0.1rem; margin: -0.1rem; overflow: hidden; clip: rect(0, 0, 0, 0);}
+
+// 프린트 페이지 출력 페이지에서만 사용
+.border-middleGray {border-top: 0.1rem solid #ddd; border-left: 0.1rem solid #ddd; border-right: 0.1rem solid #ddd;}
+
+// 세로 테이블 공통 스타일 thead 제목이 있는 테이블의 스타일입니다.
+.table__vertical table thead tr th { text-align: center; white-space: normal;border-right: 0.1rem solid #ddd; vertical-align: middle; word-wrap: break-word; word-break:keep-all} 
+.table__vertical tr {border-bottom: 0.1rem solid #ddd;} 
+.table__vertical thead .min__h__box {padding: 0}
+.table__vertical tr th:nth-child(1) { white-space: nowrap;word-break: keep-all;}  // 제목에 있는 th들은 단어들을 기준으로 줄바꿈.
+.table__vertical thead tr th:nth-last-child(1) {border-right: 0;} 
+.table__vertical tbody td, .table__vertical tbody th {  min-height: 6rem; border-right: 0.1rem solid #ddd;}
+.table__vertical tbody th {vertical-align: middle;} 
+.table__vertical tbody td { width: auto;vertical-align: middle;}  
+.table__vertical tbody td:nth-last-child(1) {border-right:0;} 
+.table__vertical.tight__pd tbody td .min__h__box {padding: 0 0.6rem;} // 공시 및 열람 데이터 간격 조정용
+
+// 가로 테이블 공통 스타일
+.table__horizontal__ex tr { display: flex; width: 100%;min-height: 5.8rem; border-bottom: 0.1rem solid #ddd; align-items: stretch;} 
+.table__horizontal__ex tr.m__cont {display: none;}
+.table__horizontal__ex th { display: inline-flex;width: 25rem; text-align: left; padding-left: 3rem; padding-right: 1rem; z-index: -1; align-items: center;} 
+.table__horizontal__ex td { display: block;width: auto; flex-grow: 1; flex-basis: 0;} 
+.table__horizontal__ex .half__row td {width: 50%;}
+.table__horizontal__ex input[type="text"] {  width: 100%;height: 4rem; font-size: 1.6rem;}
+.table__horizontal__ex .td__container select {width: 100%;}
+.table__horizontal__ex .td__container .content {width: 100%;}
+.table__horizontal__ex .td__vertical--c {display: flex; align-items: center;}
+.table__horizontal__ex .find--width td {width: calc(100% - 15.38%);} 
+.table__horizontal__ex .input-3--flex {display: flex; width: 100%; gap: 1rem;} 
+.table__horizontal__ex .input-3--flex input {flex: 1;}
+
+.table__horizontal__ex.shortTit th {width: 20rem;} // 제목 th가 20rem인 가로 테이블
+.table__horizontal__ex.shortTit2 th {width: 15rem; padding: 0 1.5rem;} // 제목 th가 20rem인 가로 테이블
+
+// 테이블 클릭 이벤트
+table.click tr.on {background: #DDEAF6;}
+table.click tr {cursor: pointer;}
+
+// 모바일용 테이블
+.m__table {display: none;}
+.table__horizontal__mo table {font-size: 1.9rem;}
+.table__horizontal__mo table th {background: transparent;}
+.table__horizontal__mo tr {border-bottom: 0.1rem solid #ddd;}
+.table__horizontal__mo td {display: block;}
+.table__horizontal__mo tr td:not(:first-child):not(:last-child){padding-bottom: 1rem;}
+.table__horizontal__mo tr td:first-child {padding-top: 2rem; padding-bottom: 2rem;}
+.table__horizontal__mo tr td:last-child {padding-bottom: 3rem;}
+.attachment__mo {display: inline-block;  width: 1.6rem; height: 1.6rem; background: url(../img/file__select--mo.svg) no-repeat center; background-size: cover; }
+.table__horizontal__mo:not(.widthAutoTable) .sub__title { display: inline-block;width: 19.44%; min-width: 7rem;}
+.table__horizontal__mo .sub__title {font-weight: 700;}
+.accn__open__wrap .table__horizontal__mo .title { font-weight: 700;font-size: 1.9rem;}
+.mo__strongTitle { font-weight: 700;font-size: 1.9rem;}
+.table__horizontal__mo.miw120 .sub__title {min-width: 12rem;}
+.table__horizontal__mo.halfTable .sub__title {display: inline-block; width: 50%;}
+
+// 사용자 공통 테이블 타이틀
+.table__title__wrap {margin-bottom: 6.4rem; margin-top: 6.4rem;}
+.table__title__wrap .data__number {margin-top: 6.4rem;}
+.table__title { font-weight: 700;font-size: 2.5rem;}
+
+// max-height overflow
+.max-h-overflow {max-height: var(--max-height); overflow-y: auto;}
+
+// 테이블 헬퍼 클래스
+// td의 min-height 적용 이슈로 다음과 같이 적용
+.table--fixed {table-layout: fixed;}
+.min__h__box { display: flex; padding: 0 1rem; align-items: center; min-height: 6rem;}
+.text--r {justify-content: flex-end;}
+.text--l {justify-content: flex-start;}
+.text--c {justify-content: center;}
+.td__date {display: flex; align-items: center; gap: 1rem;}
+.td__radio {display: flex; align-items: center; gap: 1rem;}
+.td__date select {flex: 1;}
+
+// 공통 td 내부 여백 확보 클래스
+.td__container {display: flex; padding: 1rem; flex-wrap: wrap; gap: 1rem;}
+.td__container select {flex: 1 1 calc(33.33% - 1rem); } // flex-grow , flex-shirink, flex-basis 1. 남는 공간 균등 차지, 2. 공간 부족 시 다른 flex아이템과 함께 크기 줄임. 3. 기본 크기는 33.33%
+.td__container input[type="text"] {flex: 1 1 calc(33.33% - 1rem)} 
+
+// 달력 input의 아이콘 정렬
+.calender__body {position: relative;}
+.calender__body .calender__icon {position: absolute; top: 50%; right: 1rem; width: 2.4rem; height: 2.4rem; background: url(../img/calendar-days-regular--mo.svg) no-repeat center; transform: translateY(-50%); }
+
+.table--margin {margin: 0.9rem 1rem}
+.border-right {border-right: 0.1rem solid #ddd!important;}
+// 읽기 전용 input(테두리 없애기) 
+.read__info__table input[type="text"] {border: 0; font-weight: 700;}
+.table__vertical:not(.infoTable) tbody tr:hover {background-color: #DDEAF6!important;} // 표 호버 배경색상 지정 
+
+// popup style
+.popupBox { width: 100%; border: .1rem solid #ddd; font-size: 2rem;max-width: 60rem;}
+// 2024/11/01 이민혁 추가 
+.popupBox {
+    position:fixed;top:50%;left:50%;background:#fff; -webkit-box-shadow:0px 0px 15px rgba(0,0,0,0.3);-moz-box-shadow:0px 0px 15px rgba(0,0,0,0.3);
+    box-shadow:0px 0px 15px rgba(0,0,0,0.3);-webkit-transform:translate(-50%, -50%);-moz-transform:translate(-50%, -50%);-ms-transform:translate(-50%, -50%);
+    -o-transform:translate(-50%, -50%);transform:translate(-50%, -50%);z-index:1002;
+}
+.popupBox > *:not(.popup__title) {font-weight: 500;}
+.popupBox .popup__title { display: flex;min-height: 9rem; align-items: center;}
+.popup__title {padding: 0 2rem;}
+.popup__body {padding: 5rem 3rem 0 5rem; font-weight: 500; font-size: 2rem; min-height: 45.6rem;}
+.popup__foot {padding: 1.2rem 2rem;}
+.popup__foot button {font-size: 2rem;}
+.popup__img > img { height: 100%;max-width: 100%; object-fit: cover;}
+// main용 팝업
+.popupBox.main .popup__title { color: #fff;background-color: #21A366; justify-content: center;}
+// 쪽지용 팝업
+.popupBox.message .popup__title {background-color: #EAF5F0;}
+// 검색용 팝업
+.popupBox.search {max-width: 70rem;}
+.popupBox.search .popup__body {padding: 3rem 3rem 0 3rem;}
+.popupBox.search .btn__control__u {height: 4rem; font-weight: 400; font-size: 1.5rem;}
+.popupBox.search .popup__title {background-color: #C8EDDD;}
+.popup__search__inner {padding: 2rem 3rem; background: #EDF1F5; border-radius: 1.2rem;}
+.popup__search__inner label {font-weight: 700;}
+// imgOnly 용 팝업
+.popup__body.imgOnly {padding: 0;}
+

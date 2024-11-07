@@ -1,0 +1,133 @@
+ /* 사용자 폼 관련 페이지 스타일 */
+
+// 로그인 페이지 class login__page 
+.login__page {
+body {position: relative; }
+.wrap {display: flex; flex-direction: column; }
+#login__body {overflow: auto; font-size: 1.5rem; padding-top: 12.8rem; padding-bottom: 8rem;} // flex: 1 0 auto; 
+#login__body input[type="text"], #login__body input[type="password"] {height: 5.8rem; border: 0.1rem solid #717171;}
+#login__body input::placeholder {font-size: 1.9rem;}
+#login__body {display: flex; flex-direction: column; justify-content: center; align-items: center; background-color: #fff;} 
+#login__body .login__block {width: 100%; max-width: 480px; margin-bottom: 8rem;}
+#login__body .login__block .title {text-align: center; font-size: 3.2rem;}
+#login__body .login__block .desc {text-align: center; font-size: 1.8rem; color: #555555;}
+#login__body .login__block > div {background-color: #fff; margin-top: 3rem;}
+#login__body .login__block > div > div > button { color: #fff; height: 5.2rem; font-size: 1.8rem; font-weight: 500; width: 100%; margin: 2.4rem 0 2.4rem 0; border-radius: 0.8rem;}
+
+#login__body .login__block .login__input:nth-of-type(1) {padding-bottom: 2.4rem;}
+#login__body .login__block .login__input:nth-of-type(2) {padding-bottom: 1.2rem;}
+#login__body .login__block .login__input label {padding-bottom: 1.2rem;}
+#login__body .save__info {display: flex; align-items: center; padding-top: 2.4rem;}
+#login__body .save__info input[type="checkbox"] {margin-right: 0.8rem;}
+#login__body .login__help a:not(:last-child)::after {content: ""; width: 1px; height: 12px; background: #ddd; margin: 0 7px 0 13px;display: inline-block;}
+
+// 로그인 도움말
+.helper__box { width: 100%; padding: 2.4rem; background-color: #EDF1F5; border: 1px solid #E4E4E4; border-radius: 1.2rem; font-size: 1.7rem; }
+.helper__box .helper__tit {display: flex; position: relative; color:  #003675; font-weight: 700;}
+.helper__box .helper__tit::before {margin-right: 0.4rem; content: ""; width: 2rem; height: 2rem; margin-top: 0.2rem; background-image: url(../img/icon__helper__info.svg);background-size: contain;}
+.helper__box .helper__desc__wrap .info-list {list-style: disc;}
+.helper__box .helper__desc__wrap .info-list > li:not(:last-child) {margin-bottom: 0.4rem;}
+.helper__box .helper__desc__wrap {margin-top: 1.6rem; margin-left: 4.8rem; color: #555555;}
+// 비밀번호 표시 / 숨기기
+#login__body .secret__Check .icon__pw-visible {right: 1.6rem;}
+}
+
+// 공통 input 숨기기 / 보기
+.secret__Check {position: relative;}
+.secret__Check .icon__pw-visible {position: absolute; top: 50%; background: none; border: none; cursor: pointer; padding: 0; max-height: 2.4rem;}
+.show__icon {width: 2.4rem; height: 2.4rem;}
+
+// 파일 업로드 공통
+.form__table .file__select__container .preview {flex-grow: 1;}
+.form__table .file__select__container {padding-right: 0;}
+.form__table .btn__file__select--mo {display: none;}
+
+// 비밀번호 변경 페이지
+.info__change__form {margin-top: 8rem; margin-bottom: 44rem;}
+
+
+
+
+@media all and (min-width: 480px) and (max-width: 1440px) {
+    br.onlyMo {display: block;}
+}
+
+
+@media all and (min-width: 360px) and (max-width: 767px) {
+// 노동조합 규약
+.form__head .form-title:nth-of-type(1) {min-width: 10rem; max-width: 10rem;}
+.upload__manager .form__row .td__container:nth-of-type(1) {max-width: 10rem; min-width: 10rem;}
+.upload__manager .form__row .td__container input {width: 8rem;}
+.upload__manager .file__select__container > .preview , .union__management__wrap .file__select__container > .preview {margin-right: 1rem;}
+.file__select__container > .preview {position: relative;}
+.btn__file__select {display: none;}
+.btn__file__select--mo {display: block; right: 0;}    
+.file__change__wrap .td__container {flex-wrap: nowrap;}
+.file__change__wrap .preview {white-space: nowrap;}
+.file__change__wrap .btn__file__select {white-space: nowrap;}
+}
+
+@media all and (max-width: 767px) {
+
+// form__table 공통
+br.pcOnly {display: none;}
+.btn__s {min-width: 10rem; font-size: 1.9rem;}
+.form__table td input[type=text], .form__table td input[type=password]{font-size: 1.9rem;}
+.form__table tr {flex-direction: column; border-bottom: 0;}
+.form__table th {padding-left: 0;  margin-bottom: 1.2rem; width: 100%; background-color: transparent; white-space: nowrap;} 
+.form__table.border-top-large{border-top: 0;}
+.form__table .td__container {padding: 0;}
+.form__table .consent__chk .td__container {gap: 0;} // 수신동의 gap 제거
+.form__table td input[type="text"], .form__table td input[type="password"] {padding: 0.8rem 0.8rem; min-height: 5.6rem;} 
+.form__table td select {min-height: 5.6rem; max-height: 5.6rem; font-size: 1.7rem; color: #555555;}
+
+// 파일 업로드
+.form__table .file__select__container {position: relative; gap: 0;}
+.form__table .preview {height: 5.8rem;}
+.form__table .btn__file__select {display: none;}
+.form__table .btn__file__select--mo {display: block;}
+
+// 비밀번호 변경 , 파일 변경 페이지
+.info__change__form {margin-top : 6.4rem ;margin-bottom: 9.2rem;}
+.info__change__form .form__table tr {margin-bottom: 2.4rem;}
+.info__change__form .function__group {margin: 0;}
+.info__change__form .btn__control {width: 100%;}
+.info__change__form .error-message {padding-left: 0; padding-top: 1rem; padding-bottom: 0;}
+
+// 공통 상단 테이블 제목
+.table__title.flex__title {flex-direction: column; align-items: baseline;}
+.table__title.flex__title > h2 {font-size: 3.2rem;}
+.table__title .must__help__message {margin: 0;}
+
+// 회원가입 페이지, 회원정보 변경 페이지 간격 조정
+.sign__up__table__wrap .form__table tr {margin-bottom: 1.6rem;}
+.sign__up__table__wrap .form__table tr:nth-child(6) .td__container {flex-direction: column;}
+.sign__up__table__wrap .form__table tr:nth-child(5){padding-bottom: 3.6rem;}
+.sign__up__table__wrap .form__table tr:nth-child(6) {padding-bottom: 3.6rem;}
+.sign__up__table__wrap .form__table tr:nth-child(8) {padding-bottom: 3.6rem;}
+.sign__up__table__wrap .form__table tr:nth-child(9) {padding-bottom: 3.6rem;}
+.sign__up__table__wrap .form__table tr:nth-child(10) {padding-bottom: 3.6rem;}
+.sign__up__table__wrap .form__table tr:nth-child(11) {padding-bottom: 3.6rem;}
+.sign__up__table__wrap .form__table tr:nth-child(16) {padding-bottom: 3.6rem;}
+.sign__up__table__wrap .form__table tr:nth-child(17) {padding-bottom: 3.6rem;}
+.sign__up__table__wrap .form__table tr:nth-child(18) {padding-bottom: 3.6rem;}
+.sign__up__table__wrap .form__table tr:nth-child(8) .td__container {flex-direction: column;}
+.sign__up__table__wrap .form__table tr:nth-child(9) .td__container {flex-direction: column; width: 100%;}
+.sign__up__table__wrap .form__table tr:last-child {margin-bottom: 1.2rem;}
+.must__help__message {margin-top: 0;}
+.organization {flex-direction: column;}
+.organization .btn__select {width: 100%; height: 4.8rem; margin-bottom: 1rem; margin-left: 0;}
+.sign__up__table__wrap .td__calender {width: 100%; position: relative;}
+.sign__up__table__wrap .form__table .col2__th {min-height: auto;}
+.sign__up__table__wrap .td__date {display: flex; width: 100%; gap: 1rem; align-items: center;}
+.sign__up__table__wrap .td__date select {min-width: auto;}
+.sign__up__table__wrap .td__date .select__renew {background: url(../img/select__renew__mo.svg) no-repeat 92% 50%;}
+.btn__half__wrap.function__group {display: flex;}
+.btn__half__wrap.function__group .btn__control {width: 50%;}
+.radio__wrap label {font-size: 1.9rem;}
+}
+
+
+
+
+

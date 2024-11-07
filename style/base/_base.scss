@@ -1,0 +1,268 @@
+/****************************************************
+	파일명	: base.css
+	최초작성자	: 이민혁
+	최초작성일	: 2024-09-28
+	-------------------------------------------------
+	Dec. 공통 스타일링 정의
+	-------------------------------------------------
+	최종수정자	: 이민혁
+	최종수정일	: 2024-10-02
+	수정내용	: 최초작성
+	속성순서: 
+*****************************************************/
+
+
+#wrap {position: relative; overflow: hidden;}
+#skip-nav {display: none;}
+html {font-size: 62.5%;}
+table {width: 100%; font-size: 1.6rem;}
+
+/* input , select, textarea */
+input, input[type="text"], input[type="password"], input[type="email"], input[type="number"], 
+input[type="search"], input[type="tel"], input[type="url"], input[type="color"], input[type="date"], 
+input[type="datetime-local"], input[type="month"], input[type="range"], input[type="time"], 
+input[type="week"], input[type="file"], input[type="submit"], input[type="button"], 
+input[type="reset"], textarea, select, button {
+font-family: "Pretendard GOV Variable", "Pretendard GOV", -apple-system, BlinkMacSystemFont, 
+system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", 
+"Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+font-size: 1.6rem;
+background-color: #fff;
+}
+input[type="text"], select, input[type="password"] {border: 0.1rem solid #CBCCCD; border-radius: 0.5rem; padding: 1.2rem;}
+select {appearance: none; -moz-appearance: none; padding: 0.8rem 1rem; min-height: 4rem;}
+.file__post {display: none;}
+input[type="checkbox"]{width: 2.4rem; height: 2.4rem;}
+input[type="radio"]{width: 2.4rem;height: 2.4rem;border-radius: 50%;margin: 0;vertical-align: middle;}
+input[type="radio"].clicked:not(:checked) {appearance: none;background-color: #D8D8D8;border: 0.1rem solid #C6C6C6;}
+input[type="radio"].clicked:not(:checked) + label {color: #D8D8D8;}
+.textarea {max-height: 20rem; overflow: auto; border-radius: .5rem; padding: 1.2rem; }
+
+
+// el : 제목
+.title__lv1 {font-size: 4rem; font-weight: 700;}
+.title__lv2 {font-size: 2.5rem; font-weight: 700;}
+.title__lv3 {font-size: 2.1rem; font-weight: 700;}
+.title__lv4 {font-size: 1.7rem; font-weight: 400;}
+.flex__title { display: flex; align-items: center; justify-content: space-between;}
+.flex__title span {font-size: 1.6rem;}
+
+br.onlyMo {display: none;}
+textarea {border: 0.1rem solid #ddd; width: 100%;}
+
+/* selector */
+.select__box select {min-width: 10rem;}
+.select__renew {background-image: url(../img/select__renew.png); background-repeat: no-repeat; background-position: right 1rem center;}
+
+// skip navigation, blind  
+.skip__nav { position: relative; z-index: 300;}  
+.skip__nav a {position: absolute; top: -5rem; left: 0; width: 100%; background-color: #000; text-align: center; padding: 0.7rem 0; font-size: 1.6rem; color: #fff;}
+.skip__nav a:focus {top: 0;z-index: 100;outline: 0.2rem dashed #0cc;}
+.blind {overflow: hidden;display: block;position: absolute;top: -99999.9rem;left: -99999.9rem;width: 0.1rem;height: 0.1rem;line-height: 0;font-size: 0;text-indent: -99999.9rem;z-index: 0;}
+
+/* text align */ 
+.txt--c { text-align: center; }
+.txt--l {text-align: left;}
+.txt--r {text-align: right; padding-right: 1rem;}
+.txt--l-p {text-align: left; padding-left: 1rem;}
+.txt--l-r {text-align: left; padding-left: 1rem;}
+.txt--c-i { text-align: center!important; }
+.txt--l-i {text-align: left!important;}
+.txt--r-i {text-align: right!important;}
+
+// text color
+.color-fff {color: #fff;}
+.color-666 {color: #666666;}
+
+/* padding */ 
+.pl--10 {padding-left: 1rem;}
+.pl--20 {padding-left: 2rem;}
+.pr--10 {padding-right: 1rem;}
+.pb--10 {padding-bottom: 1rem!important;}
+.pr--24 {padding-right: 2.4rem;}
+.px--10{padding: 0 1rem;}
+.pd--10 {padding: 1rem;}
+
+/* preBox */
+.preBox {white-space: pre-wrap;}
+
+/* borderBox */
+.borderBox {border: .1rem solid #CBCCCD; border-radius: .5rem;}
+.borderBox.textarea {max-height: 20rem; overflow-y: auto;}
+
+/* margin */
+/* margin left */
+.ml--10 {margin-left: 1rem;}
+.ml--15 {margin-left: 1.5rem;}
+.ml--20 {margin-left: 2rem;}
+/* margin right */
+.mr--10 {margin-right: 1rem;}
+.mr--24 {margin-right: 2rem;}
+.mr--20 {margin-right: 2rem;}
+/* margin top */
+.mt--0 {margin-top: 0!important;}
+.mt--10 {margin-top: 1rem;}
+.mt--24 {margin-top: 2.4rem;}
+.mt--40 {margin-top: 4rem;}
+.mt--64 {margin-top: 6.4rem;}
+.mt--80 {margin-top: 8rem;}
+/* margin bottom */
+.mb--36 {margin-bottom: 3.6rem;}
+.mb--64 {margin-bottom: 6.4rem;}
+.mb--100 {margin-bottom: 10rem;}
+.mb--250 {margin-bottom: 25rem;}
+.mb--10 {margin-bottom: 1rem;}
+.mb--16 {margin-bottom: 1.6rem;}
+.mb--40 {margin-bottom: 4rem;}
+.mb--56 {margin-bottom: 5.6rem;}
+.mb--60 {margin-bottom: 6rem;}
+.mb--56 {margin-bottom: 5.6rem;}
+.my--20 {margin-top: 2rem; margin-bottom: 2rem;}
+.my--64 {margin-top: 6.4rem; margin-bottom: 6.4rem;}
+
+// gap
+.gap-10 {gap: 1rem;}
+.gap-40 {gap: 4rem;}
+
+// border
+.borderR-7 {border-radius: .7rem;}
+
+
+// padding 
+
+@media all and (max-width: 767px){
+  .sm--mt-36 {margin-top: 3.6rem!important}   
+  .sm--mb-36 {margin-bottom: 3.6rem!important;}
+  .my--64.sm--36-All{margin-top: 3.6rem; margin-bottom: 3.6rem;}
+  .sm--mb-64 {margin-bottom: 6.4rem!important}
+}
+
+/* helper 라지 Space */
+.lg--64-mt {margin-top: 6.4rem;}
+// 태블릿 이상에서만 margin-right를 24px 주는 헬퍼 클래스
+@media all and (min-width: 767px){.tablet-mr-24 {margin-right: 2.4rem;}}
+.hp--lgSpace {margin-bottom: 25rem;}
+@media all and (max-width: 767px) {.hp--lgSpace{margin-bottom: 6rem;}}
+.hp--mdSpace {margin-top: 6.4rem;}
+@media all and (max-width: 767px) {.hp--mdSpace{margin-top: 3.6rem;}}
+
+/* border */
+.border-top-large {border-top: 0.2rem solid #000;}
+.border--btm {border-bottom: 0.1rem solid #ddd;}
+.border--r {border-right: 0.1rem solid #ddd;}
+
+/* flex */
+.flex--box {display: flex;}
+.flex--box-c {display: flex; align-items: center;}
+.flex--center-im {display: flex!important; align-items: center;}
+.flex--box-cs {display: flex; align-items: center; justify-content: space-between;} 
+.flex--box-end {display: flex; justify-content: end;}
+.flex--space {justify-content: space-between;}
+.flex--box-s {display: flex; justify-content: space-between;}
+.flex--end {justify-content: end;}
+.flex--center-s {display: flex; align-items: center; justify-content: center;}
+.flex-equal > * {flex: 1;}
+.flex-equal {display: flex;}
+// flex grow 적용 시 flex된 아이템 기준 나머지 넓이 차지.
+.flex--grow-100 {flex-grow: 1;}
+.flex--start {display: flex; align-items: center; justify-content: start;}
+.flex--column {flex-direction: column;}
+.flex--vertical {display: flex; flex-direction: column;}
+.flex--noWrap {flex-wrap: nowrap!important;}
+.flex--item-right {margin-left: auto;}
+.align--bottom-self {align-self: flex-end;}
+.align--baseline-item {align-items: baseline;}
+
+/* min width, max-width */
+.lg--mw200 {max-width: 20rem;}
+.lg--mw500 {max-width: 50rem;}
+.lg--miw500 {min-width: 50rem;}
+
+@media all and (max-width: 767px){
+  .lg--mw200{max-width: auto;}
+  .lg--mw500{max-width: auto;}
+  .lg--miw500{min-width: auto;}
+}
+// PC 1440px 이상 부터에서 48rem
+@media all and (min-width: 1440px){.lg--miw480{min-width: 48rem;}}
+.mw__490 {max-width: 49rem;}
+
+/* width percent */
+.width--10 {width: 10%;}
+.width--15 {width: 15%;}
+.width--20 {width: 20%;}
+.width--60 {width: 60%;}
+.width--80 {width: 80%;}
+.width--100 {width: 100%;}
+.width__100 {width: 100%;}
+
+/* height */
+.min--h-4 {min-height: 4rem;}
+.height--100 {height: 100%;}
+/* overflow */
+.overflow-xAuto {overflow-x: auto;}
+.overflow-rock {overflow: hidden;}
+/* wordBreak, white-space */ 
+.txt__noWrap {white-space: nowrap;}
+.wordBreakNormal th {word-break: normal!important;}
+.wordBreakNowrap th {white-space: nowrap!important;}
+.wordBreakKeepAll th {word-break: keep-all;}
+/* position */
+.relative {position: relative;}
+/* bg */
+.modal__bg {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 1001;}
+.black__bg {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+/* mobile content */
+.m__image {display: none;}
+.m__image img {width: 100%; height: 100%; object-fit: cover; }
+.m__cont {display: none;}
+.pagination.m__cont{display: none;}
+/* error */
+.error-message {color: #E71825;}
+/* layout */
+.ly__cont {margin-top: 6.4rem;}
+.ly__cont2 {padding-top: 3.6rem;}
+/* font-weight */
+.font-thin {font-weight: 400!important;}
+.font-thin td, .font-thin th {font-weight: 400;}
+
+
+/* font */
+@font-face {
+  font-family: 'Pretendard GOV';
+  font-weight: 800;
+  font-display: swap;
+  src: local('Pretendard GOV ExtraBold'), url(../font/woff2/PretendardGOV-ExtraBold.woff2) format('woff2'), url(../font/woff/PretendardGOV-ExtraBold.woff) format('woff');
+}
+@font-face {
+  font-family: 'Pretendard GOV';
+  font-weight: 700;
+  font-display: swap;
+  src: local('Pretendard GOV Bold'), url(../font/woff2/PretendardGOV-Bold.woff2) format('woff2'), url(../font/woff/PretendardGOV-Bold.woff) format('woff');
+}
+@font-face {
+  font-family: 'Pretendard GOV';
+  font-weight: 500;
+  font-display: swap;
+  src: local('Pretendard GOV Medium'), url(../font/woff2/PretendardGOV-Medium.woff2) format('woff2'), url(../font/woff/PretendardGOV-Medium.woff) format('woff');
+}
+@font-face {
+  font-family: 'Pretendard GOV';
+  font-weight: 400;
+  font-display: swap;
+  src: local('Pretendard GOV Regular'), url(../font/woff2/PretendardGOV-Regular.woff2) format('woff2'), url(../font/woff/PretendardGOV-Regular.woff) format('woff');
+}
+body {
+  font-size: 1.6rem;
+    color: #1d1d1d;
+    font-family: "Pretendard GOV Variable", "Pretendard GOV", -apple-system,
+      BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+      "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    overflow-x: hidden;
+}
+
+
+
+
+

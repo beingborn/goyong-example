@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=, initial-scale=1.0">
+        <title>공지사항 상세</title>
+        <link rel="stylesheet" href="style/reset.css">
+        <link rel="stylesheet" href="style/default.css">
+        <link rel="shortcut icon" href="img/korea__favicon.ico">
+        <link rel="stylesheet" href="style/swiper-bundle.min.css">
+        <script src="js/jquery-3.7.1.js"></script>
+    </head>
+        <body>
+            <!-- 스킵 네비게이션 -->
+            <div class="skip__nav">
+                <a href="#main__content">본문 바로가기</a>
+            </div>
+            <!-- ./ 스킵 네비게이션 -->
+            <div class="wrap notice__detail" id="sub__wrap">
+                    <!-- 헤더 -->
+                    <header class="header">
+                        <div class="inner">
+                            <div class="header__btm">
+                                <h1 class="logo">
+                                    <a href="index(변경).html" title="노동조합 회계공시 시스템 메인페이지로 바로가기">
+                                        <span class="blind">노동조합 회계공시시스템</span>
+                                        <img src="img/slogan_H48.svg" alt="메인 홈페이지로고">
+                                    </a>
+                                </h1>
+                                <div class="right__icon__set">
+                                    <!-- <a href="login.html" class="login">
+                                        <img src="img/login__icon.svg" alt="로그인 아이콘">
+                                        <span>로그인</span>
+                                    </a> -->
+                                    <a href="#" class="hamburger">
+                                        <img src="img/hamburger__icon.svg" alt="전체 메뉴 아이콘">
+                                        <span>전체메뉴</span>
+                                    </a>
+                                    <!-- <a href="sign__up.html" class="sign__up">
+                                        <img src="img/sign__up.svg" alt="회원가입 아이콘">
+                                        <span>회원가입</span>
+                                    </a>   -->
+                                    <div class="user__info">
+                                        <!-- 기존 카운트  -->
+                                        <!-- <ul id="cnt" class="clear">
+                                            <li><span>일일 <i></i></span><b>14</b></li><li><span>주간 <i></i></span><b>130</b></li><li><span>월간 <i></i></span><b>731</b></li><li><span>연간 <i></i></span><b>12182</b></li></ul> -->
+                                        <!-- <a class="reset" href="javascript:void(0)" onclick="fn_reset()">관리자 패스워드 변경</a> -->
+                                            <a href="#" class="user__name">
+                                                <img src="img/icon__user.svg" alt="유저 아이콘">
+                                                <span>사용자님</span>
+                                            </a>
+                                                <a href="#" class="logout">
+                                                <img src="img/login__icon.svg" alt="로그아웃 아이콘">
+                                                <span>로그아웃</span>
+                                            </a>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="header__gnb">
+                            <div>
+                                <nav id="gnb1">
+                                    <ul id="head_menu" class="top__menu">
+                                        <li class="plus"> <a href="javascript:void(0);">시스템안내
+                                        </a>
+                                            <div class="sub__menu">
+                                                <ul>
+                                                    <li class="plus"> <a href="javascript:void(0);">회계공시시스템이란</a>
+                                                        <div class="dep3"> <strong class="dep3__title"> <a href="accn__desc.html">회계공시시스템이란</a> </strong>                  
+                                                        </div>
+                                                    </li>
+                                                    <li class="plus"> <a href="javascript:void(0);">주요회계공시항목설명</a>
+                                                        <!-- dep3 오른쪽 영역 -->
+                                                        <div class="dep3"> <strong class="dep3__title"> <a href="main__accn__desc.html">주요회계공시항목설명</a> </strong>
+                                                    
+                                                        </div>
+                                                    </li>
+                                                    <li class="plus"> <a href="javascript:void(0);">공지사항</a>
+                                                        <!-- dep3 오른쪽 영역 -->
+                                                        <div class="dep3"> <strong class="dep3__title"> <a href="notice.html">공지사항</a> </strong>
+                                                        </div>
+                                                    </li>
+                                                    <li class="plus"> <a href="javascript:void(0);">자주묻는질문</a>
+                                                        <!-- dep3 오른쪽 영역 -->
+                                                        <div class="dep3"> <strong class="dep3__title"> <a href="faq.html">자주묻는질문</a></strong>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="plus"> <a class="open--depth-2" href="javascript:void(0);">회계공시열람
+                                        </a>
+                                            <div class="sub__menu">
+                                                <ul>
+                                                    <li class="plus"> <a href="javascript:void(0);">회계공시열람</a>
+                                                        <div class="dep3"> <strong class="dep3__title"> <a href="accn__open.html">회계공시열람</a> </strong>
+                                                            <ul>
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                                                    <li class="plus"> <a href="javascript:void(0);">회계공시여부조회</a>
+                                                        <div class="dep3"> <strong class="dep3__title"> <a href="check__accounting.html">회계공시여부조회</a> </strong>
+                                                            <ul>
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="plus"> <a class="open--depth-2" href="javascript:void(0);">회계공시등록
+                                        </a>
+                                            <div class="sub__menu">
+                                                <ul>
+                                                    <li class="plus"> <a href="javascript:void(0);">회계공시등록</a>
+                                                        <div class="dep3"> <strong class="dep3__title"> <a href="public__register.html">회계공시등록</a> </strong>
+                                                            <ul>
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                                                    <li class="plus"> <a href="javascript:void(0);">가맹노조산하조직관리</a>
+                                                        <div class="dep3"> <strong class="dep3__title"> <a href="union__management.html">가맹노조산하조직관리</a> </strong>
+                                                            <ul>
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <!-- 모바일용 GNB -->
+                        <nav id="gnb2">
+                            <div class="gnb__in" tabindex="0">
+                            <div class="gnb__head">
+                                <div class="gnb__top2">
+                                    <div class="txt--r">
+                                        <button type="button" class="gnb__close"></button>
+                                    </div>
+                                    <div class="login__info">
+                                        <a href="login.html" class="id__info">
+                                            <img src="img/icon20-1.png" alt="로그인 아이콘">
+                                            <span>로그인을 해주세요</span>
+                                        </a>
+                                        <!-- <a href="" class="id__info">
+                                            <img src="img/user__info.svg" alt="유저 아이콘">
+                                            <span>테스트님</span>
+                                        </a> -->
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="gnb__body">
+                                <div class="m-gnb__menu">
+                                    <div class="menu__wrap">
+                                        <ul>
+                                            <li><a href="#gnbAnchor1" data-target="gnbAnchor1">시스템안내</a></li>
+                                            <li><a href="#gnbAnchor2" data-target="gnbAnchor2">회계공시열람</a></li>
+                                            <li><a href="#gnbAnchor3" data-target="gnbAnchor3">회계공시등록</a></li>
+                                        </ul>
+                                        <a href="#" class="logout">
+                                            <img src="img/icon20-1.png" alt="로그아웃 아이콘">
+                                            <span>로그아웃</span>
+                                        </a>
+                                    </div>
+                                    <div class="submenu__wrap">
+                                        <ul class="submenu" id="gnbAnchor1">
+                                            <li class="title"><a href="#">시스템안내</a></li>
+                                            <li><a href="accn__desc.html">회계공시시스템이란</a></li>
+                                            <li><a href="main__accn__desc.html">주요회계공시항목설명</a></li>
+                                            <li><a href="notice.html">공지사항</a></li>
+                                            <li><a href="faq.html">자주묻는질문</a></li>
+                                        </ul>
+                                        <ul class="submenu" id="gnbAnchor2">
+                                            <li class="title"><a href="accn__open.html">회계공시열람</a></li>
+                                            <li><a href="accn__open.html">회계공시열람</a></li>
+                                            <li><a href="check__accounting.html">회계공시여부조회</a></li>
+                                        </ul>
+                                        <ul class="submenu" id="gnbAnchor3">
+                                            <li class="title"><a href="public__register.html">회계공시등록</a></li>
+                                            <li><a href="public__register.html">회계공시등록</a></li>
+                                            <li><a href="union__management.html">가맹노조(산하조직) 관리</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </nav>
+                        </div>
+                    </header>
+                    <main class="content notice_detail">
+                    <!-- visual bg -->
+                    <div class="visual__bg">
+                        <div class="inner">
+                            <div class="visual__text">
+                                <h2>공지사항</h2>
+                                <p>노동조합 회계공시시스템의 공지사항 상세 페이지입니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ./ visual bg -->
+                    <div class="inner">
+                        <!-- breadcrumb -->
+                        <nav class="breadcrumb">
+                            <ol class="path">
+                                <li class="home"><a href="index(변경).html" class="txt">홈</a></li>
+                                <li><a href="#" class="txt">시스템안내</a></li>
+                                <li><a href="notice.html" class="txt">공지사항</a></li>
+                                <li><a href="notice__detail.html" class="txt">공지사항 상세</a></li>
+                            </ol>
+                        </nav>
+                        <!-- ./ breadcrumb -->
+                        <!-- 테이블 제목 -->
+                        <div class="title__lv1__wrap">
+                            <div class="title__lv1 flex__title"><h2>공지사항</h2></div>
+                        </div>
+                        <!-- 공지사항 테이블 -->
+                        <div class="notice__detail__wrap" id="main__content">
+                            <!-- 공지사항 상단 -->
+                            <div class="table__horizontal__ex">
+                                <table class="border-top-large">
+                                    <caption>공지사항 상세 상단 부분</caption>
+                                    <tbody>
+                                        <tr class="wide__first">
+                                            <th scope="row"><label for="name">제목</label></th>
+                                            <td><div class="td__container">공지사항을 알려드립니다.</div></td>
+                                        </tr>
+                                        <tr class="second__line">
+                                            <th scope="row"><label for="name">구분</label></th>
+                                            <td><div class="td__container">공고</div></td>
+                                            <th scope="row"><label for="examples1033">등록일</label></th>
+                                            <td><div class="td__container">2024-08-12</div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- ./ 공지사항 상단 -->
+                            <div class="content__desc">
+                                <!-- 공지사항 내부 내용 -->
+                                <div class="board__detail">
+                                    <p>2024년 노동조합 회계공시 하반기 추가 공시 등록기간을 아래와 같이 운영합니다.</p>
+                                    <p>• 공시 등록기간: 2024.8.1.부터 2024.9.30.(2개월간)</p>
+                                    <br>
+                                    <p>• 추가 공시 대상 노동조합</p>
+                                    <p>   - 합병ㆍ분할 또는 해산 등 부득이한 사유가 있는 경우</p>
+                                    <p>   - 회계연도 종료일이 12월 31일이 아닌 경우</p>
+                                    <br>
+                                    <p>• 증빙자료 제출: 로그인-회계공시등록-노동조합 정보 화면에서 '근거파일' 첨부 목록에 추가 공시 사유(회계년도 종료일이 12월 31일이 아님 경우 등) 확인이 가능한 내용</p>
+                                    <br>
+                                    <p>   (회계년도 확인이 가능한 규약의 해당 내용 등)을 올려주시면 됩니다.</p>
+                                    <br>
+                                    <p>• 구체적인 공시방법은 시스템 안내 - 공지사항에 올려져 있는 관련 동영상*을 참조하시기 바랍니다.</p>
+                                    <br>
+                                    <p>  * 공지사항 7번째 노동조합 회계공시 시스템 이용방법</p>
+                                </div>
+                                <!-- ./ 공지사항 내부 내용 -->
+                            </div>
+                            <!-- 하단 첨부 파일 -->
+                            <div class="file">
+                                <div class="file__wrap border-top-large">
+                                    <span class="file__header">첨부</span>
+                                    <div class="list flex--box-c pl--10">
+                                        <img src="img/hwp__file__thumb.png" alt="파일 아이콘">
+                                        <span class="file__name">240812_노동조합 회계공시 수정기간 안내(최종).hwp</span>
+                                    </div>
+                                    <span class="download">
+                                        <button type="button" class="btn__down" onclick="fn_fileDown(20240000000185)">
+                                            다운로드
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- ./ 하단 첨부 파일 -->
+                            <!-- 이전글 다음글 -->
+                            <ul class="prev__next">
+                                <li class="prev">
+                                    <span class="prev__title">이전글</span>
+                                    <a class="pl--10" href="notice__detail.html" >2024년 노동조합 회계공시 안내</a>
+                                </li> 
+                                <li class="next">
+                                    <span class="prev__title">다음글</span>
+                                    <a class="pl--10" href="notice__detail.html" >2024년 노동조합 회계공시 안내</a>
+                                </li>
+                            </ul>
+                            <!-- ./ 이전글 다음글 -->
+                        </div>
+                        <!-- ./ 공지사항 테이블 -->
+                        <!-- 하단 버튼 그룹 -->
+                        <div class="function__group margin-1 sm--mb-64 mb--100">
+                            <button type="button" class="btn__control bg--blue-00">목록</button>
+                        </div>
+                        <!-- ./ 하단 버튼 그룹 -->
+                    </div>
+                    </main>
+                    <!-- 푸터 -->
+                    <footer>
+                    <div class="footer__bottom" style="background-color: #F0F0F0;">
+                        <div class="inner">
+                            <div class="footer__logo">
+                                <img src="img/slogan_H48.svg" alt="하단 로고">
+                            </div>
+
+                            <div class="footer__flex">
+                                <div class="footer__info">
+                                    <p class="location">
+                                    30117 세종특별자치시 한누리대로 422 정부세종청사 11동 고용노동부(044-202-7828)
+                                    </p>
+                                    <p class="copyright">
+                                    Copyright(c)Ministry of Employment and Labor. All rights reserved.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </footer>
+                    <!-- ./ 푸터 -->
+                    <div class="gnb__bg"></div>
+            </div>
+        <script src="js/default.js"></script>
+        </body>
+</html>

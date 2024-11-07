@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=, initial-scale=1.0">
+        <title>쪽지용 팝업</title>
+
+        <link rel="stylesheet" href="style/default.css">
+        <link rel="stylesheet" href="style/reset.css">
+        <link rel="shortcut icon" href="img/korea__favicon.ico">
+        <link rel="stylesheet" href="style/swiper-bundle.min.css">
+        <script src="js/jquery-3.7.1.js"></script>
+        <script src="js/echarts.min.js"></script>
+    </head>
+    <body>
+        <!-- 메인용 팝업 -->
+        <div class="popupBox message">
+            <div class="popup__title title__lv2">
+                <h2>쪽지</h2>
+            </div>
+            <div class="popup__body">
+                <div class="flex--vertical gap-40">
+                    <p>관리자 님이 쪽지를 보내셨습니다.</p>
+                    <p>지금 바로 확인해보세요!</p>
+                </div>
+            </div>
+            <div class="popup__foot flex--box-cs">
+                <button type="button">쪽지 확인</button>
+                <button type="button" class="pop__close">닫기</button>
+            </div>
+        </div>
+        <!-- ./ 메인용 팝업 -->
+        <script>
+            $('.pop__close').on('click', function(){
+                $('.popupBox').hide();
+            })
+        </script>
+    </body>
+</html>

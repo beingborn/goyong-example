@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=, initial-scale=1.0">
+        <title>테이블 border 스타일 가이드</title>
+        <link rel="stylesheet" href="style/reset.css">
+        <link rel="stylesheet" href="style/default.css">
+        <link rel="shortcut icon" href="img/korea__favicon.ico">
+        <link rel="stylesheet" href="style/swiper-bundle.min.css">
+        <script src="js/jquery-3.7.1.js"></script>
+    </head>
+    <body class="inner" style="margin-top: 40px;">
+
+        <!-- border-right이 모두 없는 스타일 상단에 noborderRightAll 클래스 삽입 -->
+        <div class="table__vertical noborderRightAll table--fixed">
+            <table class="border-top-large">
+                <caption>오른쪽 구분선이 모두 없는 스타일</caption>
+                <colgroup>
+                    <col style="width: 177px;">
+                    <col>
+                    <col>
+                </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col"><div class="min__h__box text--c">번호</div></th>
+                            <th scope="col"><div class="min__h__box text--c">내용</div></th>
+                            <th scope="col"><div class="min__h__box text--c">파일첨부</div></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><div class="min__h__box text--c">1</div></td>
+                            <td><div class="min__h__box text--c">오른쪽 구분선이 모두 없는 스타일</div></td>
+                            <td><div class="min__h__box text--c">test</div></td>
+                        </tr>
+                    </tbody>
+            </table>
+        </div>
+        <!-- .// border-right가 모두 없는 스타일 -->
+
+        <p class="mb--64"></p>
+
+        <!-- notBorderRight 클래스 적용 시 첫번째 제외 border-right 삭제 -->
+        <div class="table__vertical notBorderRight table--fixed">
+            <table class="border-top-large">
+                <caption>구분선이 첫번째에만 있는 테이블</caption>
+                <colgroup>
+                    <col style="width: 177px;">
+                    <col>
+                    <col>
+                </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col"><div class="min__h__box text--c">번호</div></th>
+                            <th scope="col"><div class="min__h__box text--c">내용</div></th>
+                            <th scope="col"><div class="min__h__box text--c">파일첨부</div></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><div class="min__h__box text--c">2</div></td>
+                            <td><div class="min__h__box text--c">1번만 구분선이 있는 스타일</div></td>
+                            <td><div class="min__h__box text--c">test</div></td>
+                        </tr>
+                    </tbody>
+            </table>
+        </div>
+        <!-- .// notBorderRight 클래스 적용 시 첫번째 제외 border-right 삭제 -->
+
+        <p class="mb--64"></p>
+
+        <!-- border가 모두 있는 스타일 -->
+        <div class="table__vertical table--fixed">
+            <table class="border-top-large">
+                <caption>border가 모두 있는 테이블</caption>
+                <colgroup>
+                    <col style="width: 177px;">
+                    <col>
+                    <col>
+                </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col"><div class="min__h__box text--c">번호</div></th>
+                            <th scope="col"><div class="min__h__box text--c">내용</div></th>
+                            <th scope="col"><div class="min__h__box text--c">파일첨부</div></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><div class="min__h__box text--c">3</div></td>
+                            <td><div class="min__h__box text--c">구분선이 모두 있는 스타일</div></td>
+                            <td><div class="min__h__box text--c">test</div></td>
+                        </tr>
+                    </tbody>
+            </table>
+        </div>
+        <!-- .// border가 모두 있는 스타일 -->
+        
+        <p class="mb--64"></p>
+
+        <!-- 상단 굵은 구분선도 없는 스타일 -->
+        <!-- table 태그에 border-top-large 클래스 제거 -->        
+        <div class="table__vertical noborderRightAll table--fixed">
+            <table class="border-top-large">
+                <caption>상단 굵은 구분선도 없는 스타일</caption>
+                <colgroup>
+                    <col style="width: 177px;">
+                    <col>
+                    <col>
+                </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col"><div class="min__h__box text--c">번호</div></th>
+                            <th scope="col"><div class="min__h__box text--c">내용</div></th>
+                            <th scope="col"><div class="min__h__box text--c">파일첨부</div></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><div class="min__h__box text--c">1</div></td>
+                            <td><div class="min__h__box text--c">읽지 않은 게시물 == (기본 값 두께 굵음)</div></td>
+                            <td><div class="min__h__box text--c">test</div></td>
+                        </tr>
+                        <!-- 읽은 게시물일 경우 font-thin 클래스 부착을 통해 읽은 게시물 표시가 가능합니다. -->
+                        <tr class="font-thin">
+                            <td><div class="min__h__box text--c">2</div></td>
+                            <td><div class="min__h__box text--c">읽은 게시물 == (폰트 두께 얇음)</div></td>
+                            <td><div class="min__h__box text--c">test</div></td>
+                        </tr>
+                        <!-- .// 읽은 게시물일 경우 해당 font-thin 클래스 부착을 통해 읽은 게시물 표시가 가능합니다. -->
+                        <tr class="font-thin">
+                            <td><div class="min__h__box text--c">3</div></td>
+                            <td><div class="min__h__box text--c">읽은 게시물 == (폰트 두께 얇음)</div></td>
+                            <td><div class="min__h__box text--c">test</div></td>
+                        </tr>
+                    </tbody>
+            </table>
+        </div>
+        <!-- .// 상단 굵은 구분선도 없는 스타일-->
+
+    </body>
+</html>

@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>자주묻는질문</title>
+
+        <link rel="stylesheet" href="style/reset.css">
+        <link rel="stylesheet" href="style/default.css">
+        <link rel="shortcut icon" href="img/korea__favicon.ico">
+        <link rel="stylesheet" href="style/swiper-bundle.min.css">
+        <script src="js/jquery-3.7.1.js"></script>
+    </head>
+        <body>
+            <!-- 스킵 네비개이션 -->
+            <div class="skip__nav">
+                <a href="#main__content">본문 바로가기</a>
+            </div>
+            <!-- ./ 스킵 네비게이션 -->
+            <div class="wrap faq__wrap" id="sub__wrap" style="position: relative;">
+            <!-- 헤더 -->
+            <header class="header">
+                <div class="inner">
+                    <div class="header__btm">
+                        <h1 class="logo">
+                            <a href="index(변경).html" title="노동조합 회계공시 시스템 메인페이지로 바로가기">
+                                <span class="blind">노동조합 회계공시시스템</span>
+                                <img src="img/slogan_H48.svg" alt="메인 홈페이지로고">
+                            </a>
+                        </h1>
+                        <div class="right__icon__set">
+                            <!-- <a href="login.html" class="login">
+                                <img src="img/login__icon.svg" alt="로그인 아이콘">
+                                <span>로그인</span>
+                            </a> -->
+                            <a href="#" class="hamburger">
+                                <img src="img/hamburger__icon.svg" alt="전체 메뉴 아이콘">
+                                <span>전체메뉴</span>
+                            </a>
+                            <!-- <a href="sign__up.html" class="sign__up">
+                                <img src="img/sign__up.svg" alt="회원가입 아이콘">
+                                <span>회원가입</span>
+                            </a>   -->
+                            <div class="user__info">
+                                <!-- 기존 카운트  -->
+                                <!-- <ul id="cnt" class="clear">
+                                    <li><span>일일 <i></i></span><b>14</b></li><li><span>주간 <i></i></span><b>130</b></li><li><span>월간 <i></i></span><b>731</b></li><li><span>연간 <i></i></span><b>12182</b></li></ul> -->
+                                <!-- <a class="reset" href="javascript:void(0)" onclick="fn_reset()">관리자 패스워드 변경</a> -->
+                                    <a href="#" class="user__name">
+                                        <img src="img/icon__user.svg" alt="유저 아이콘">
+                                        <span>사용자님</span>
+                                    </a>
+                                        <a href="#" class="logout">
+                                        <img src="img/login__icon.svg" alt="로그아웃 아이콘">
+                                        <span>로그아웃</span>
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+                <div class="header__gnb">
+                    <div>
+                        <nav id="gnb1">
+                            <ul id="head_menu" class="top__menu">
+                                <li class="plus"> <a href="javascript:void(0);">시스템안내
+                                </a>
+                                    <div class="sub__menu">
+                                        <ul>
+                                            <li class="plus"> <a href="javascript:void(0);">회계공시시스템이란</a>
+                                                <div class="dep3"> <strong class="dep3__title"> <a href="accn__desc.html">회계공시시스템이란</a> </strong>                  
+                                                </div>
+                                            </li>
+                                            <li class="plus"> <a href="javascript:void(0);">주요회계공시항목설명</a>
+                                                <div class="dep3"> <strong class="dep3__title"> <a href="main__accn__desc.html">주요회계공시항목설명</a> </strong>
+                                                </div>
+                                            </li>
+                                            <li class="plus"> <a href="javascript:void(0);">공지사항</a>
+                                                <div class="dep3"> <strong class="dep3__title"> <a href="notice.html">공지사항</a> </strong>
+                                                </div>
+                                            </li>
+                                            <li class="plus"> <a href="javascript:void(0);">자주묻는질문</a>
+                                                <div class="dep3"> <strong class="dep3__title"> <a href="faq.html">자주묻는질문</a></strong>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="plus"> <a class="open--depth-2" href="javascript:void(0);">회계공시열람
+                                </a>
+                                    <div class="sub__menu">
+                                        <ul>
+                                            <li class="plus"> <a href="javascript:void(0);">회계공시열람</a>
+                                                <div class="dep3"> <strong class="dep3__title"> <a href="accn__open.html">회계공시열람</a> </strong>
+                                                    <ul>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="plus"> <a href="javascript:void(0);">회계공시여부조회</a>
+                                                <div class="dep3"> <strong class="dep3__title"> <a href="check__accounting.html">회계공시여부조회</a> </strong>
+                                                    <ul>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="plus"> <a class="open--depth-2" href="javascript:void(0);">회계공시등록
+                                </a>
+                                    <div class="sub__menu">
+                                        <ul>
+                                            <li class="plus"> <a href="javascript:void(0);">회계공시등록</a>
+                                                <div class="dep3"> <strong class="dep3__title"> <a href="public__register.html">회계공시등록</a> </strong>
+                                                    <ul>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="plus"> <a href="javascript:void(0);">가맹노조산하조직관리</a>
+                                                <div class="dep3"> <strong class="dep3__title"> <a href="union__management.html">가맹노조산하조직관리</a> </strong>
+                                                    <ul>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- 모바일용 GNB -->
+                <nav id="gnb2">
+                    <div class="gnb__in" tabindex="0">
+                    <div class="gnb__head">
+                        <div class="gnb__top2">
+                            <div class="txt--r">
+                                <button type="button" class="gnb__close"></button>
+                            </div>
+                            <div class="login__info">
+                                <a href="login.html" class="id__info">
+                                    <img src="img/icon20-1.png" alt="로그인 아이콘">
+                                    <span>로그인을 해주세요</span>
+                                </a>
+                                <!-- <a href="" class="id__info">
+                                    <img src="img/user__info.svg" alt="유저 아이콘">
+                                    <span>테스트님</span>
+                                </a> -->
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="gnb__body">
+                        <div class="m-gnb__menu">
+                            <div class="menu__wrap">
+                                <ul>
+                                    <li><a href="#gnbAnchor1" data-target="gnbAnchor1">시스템안내</a></li>
+                                    <li><a href="#gnbAnchor2" data-target="gnbAnchor2">회계공시열람</a></li>
+                                    <li><a href="#gnbAnchor3" data-target="gnbAnchor3">회계공시등록</a></li>
+                                </ul>
+                                <a href="#" class="logout">
+                                    <img src="img/icon20-1.png" alt="로그아웃 아이콘">
+                                    <span>로그아웃</span>
+                                </a>
+                            </div>
+                            <div class="submenu__wrap">
+                                <ul class="submenu" id="gnbAnchor1">
+                                    <li class="title"><a href="#">시스템안내</a></li>
+                                    <li><a href="accn__desc.html">회계공시시스템이란</a></li>
+                                    <li><a href="main__accn__desc.html">주요회계공시항목설명</a></li>
+                                    <li><a href="notice.html">공지사항</a></li>
+                                    <li><a href="faq.html">자주묻는질문</a></li>
+                                </ul>
+                                <ul class="submenu" id="gnbAnchor2">
+                                    <li class="title"><a href="accn__open.html">회계공시열람</a></li>
+                                    <li><a href="accn__open.html">회계공시열람</a></li>
+                                    <li><a href="check__accounting.html">회계공시여부조회</a></li>
+                                </ul>
+                                <ul class="submenu" id="gnbAnchor3">
+                                    <li class="title"><a href="public__register.html">회계공시등록</a></li>
+                                    <li><a href="public__register.html">회계공시등록</a></li>
+                                    <li><a href="union__management.html">가맹노조(산하조직) 관리</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </nav>
+                </div>
+            </header>
+            <main class="content faq">
+                <!-- visual bg -->
+                <div class="visual__bg">
+                    <div class="inner">
+                        <div class="visual__text">
+                            <h2>자주묻는질문</h2>
+                            <p>노동조합 회계공시시스템의 자주 묻는 질문 목록입니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ./ visual bg -->
+                <div class="inner">
+                    <!-- breadcrumb -->
+                    <nav class="breadcrumb">
+                        <ol class="path">
+                            <li class="home">
+                                <a href="index(변경).html" class="txt">홈</a>
+                            </li>
+                            <li>
+                                <a href="#" class="txt">시스템안내</a>
+                            </li>
+                            <li>
+                                <a href="faq.html" class="txt">자주묻는질문</a>
+                            </li>
+                        </ol>
+                    </nav>
+                    <!-- ./ breadcrumb -->
+                    <!-- 테이블 제목 -->
+                    <div class="title__lv1__wrap">
+                        <div class="title__lv1 flex__title">
+                            <h2>자주묻는질문</h2>
+                        </div>
+                    </div>
+                    <!-- 사용자 검색폼  -->
+                    <div class="user__form__wrapper">
+                        <form class="search__form__user type1" action="POST">
+                            <div class="search">
+                                <input type="hidden" id="pageNo" name="pageNo" value=""/>
+                                <input type="hidden" id="lbrUniId" name="lbrUniId" value="">
+                                <input type="hidden" id="yearSel" name="yearSel" value="">
+                                <div class="flex--box-c search__list">
+                                    <label for="label" class="mo_only">검색항목</label>
+                                    <div class="select__box">
+                                        <select class="select--no--style select__renew" id="year" name="year">
+                                            <option value="">전체</option>
+                                            <option value="title">제목</option>
+                                            <option value="desc">내용</option>
+                                        </select>
+                                    </div>
+                                    <label for="label" class="mo_only">검색어</label>
+                                    <div class="input__box lg--interval__both">
+                                        <label for="searchText" class="blind">질문조회</label>
+                                        <input type="text" id="searchText" name="searchText" class="ml4" placeholder="검색어를 입력하세요." value="">
+                                        <div class="flex--box-c btn__con">
+                                            <button type="button" id="" class="btn__control__u bg--mint-00 mr--24" onclick="fn_search();">초기화</button>
+                                            <button type="button" id="" class="btn__control__u bg--blue-02 mr--24" onclick="fn_search();">조회</button>
+                                            <button type="button" id="" class="btn__control__u bg--green-02" onclick="fn_search();">자료 다운로드</button>
+                                        </div>   
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- ./ 사용자 검색폼  -->
+                    <!-- 조회 결과 -->
+                    <div class="table__title__wrap">
+                        <p class="data__number">총 게시글 <span>652</span>건</p>
+                    </div>
+                    <!-- ./ 조회 결과 -->
+                    <!-- 자주묻는 질문 테이블 -->
+                    <div class="foldStyle__table" id="main__content">
+                        <table class="border-top-large">
+                            <caption>자주 묻는 질문 목록(번호, 제목)</caption>
+                            <tbody>
+                                <!-- 1번 질문 -->
+                                <tr>
+                                    <th class="qna__title">
+                                        <div class="qna__container question">
+                                            <span>Q</span>
+                                        </div>
+                                    </th>
+                                    <td class="text__container">
+                                        <div class="td__container">
+                                            <button type="button" title="내용 자세히 보기" class="answer__toggle">[질문1]노동조합 회계공시 시스템에 회계를 공시하는 것은 법적 의무사항인지?</button>
+                                        </div>
+                                    </td>
+                                    <td class="qna__function__group flex--box-c">
+                                        <button type="button">
+                                            <img src="img/download__icon.svg" alt="다운로드 아이콘">
+                                        </button>
+                                        <div class="arrow__box">
+                                            <img src="img/qna__bg__down__arrow.svg" alt="">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="answer__tr">
+                                    <th class="qna__title">
+                                        <div class="qna__container answer">
+                                            <span>A</span>
+                                        </div>
+                                    </th>
+
+                                    <td class="text__container">
+                                        <div class="td__container preBox">
+<p>- 노동조합 또는 산하조직은 노동조합법 제11조의9에 따라 노동조합 회계공시 시스템에 결산결과를 공시할지 여부를 자율적으로 정할 수 있습니다. 
+- 다만, 소득세법 제59조의4 및 동법 시행령 제80조에 따라 조합원이 소속된 노동조합(산하조직)과 그 상급단체*가 모두 결산결과를 공시하는 경우에 조합원이 
+노동조합(산하조직)에 납부한 조합비의 15%에 해당하는 세액공제 혜택을 받을 수 있습니다.
+* 해당 노동조합(산하조직)이 소속된 총연합단체, 연합단체, 단위노동조합, 산하조직
+- 이때 12.31. 기준 조합원 수 1,000인 미만인 단위노조(산하조직)는 공시하지 않아도 그 상급단체가 모두 공시하면 세액공제 혜택을 부여합니다.
+* 상급단체인 단위노조(산하조직)가 조합원수 1,000인 미만이면 공시 불필요, (총)연합단체는 규모에 관계없이 공시 필요</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- 2번 질문 -->
+                                <tr>
+                                    <th class="qna__title">
+                                        <div class="qna__container question">
+                                            <span>Q</span></div>
+                                    </th>
+                                    <td class="text__container">
+                                        <div class="td__container">
+                                            <button type="button" title="내용 자세히 보기" class="answer__toggle">[질문2] 회계 공시 대상 노동조합(산하조직)은 어떻게 되는지?</button>
+                                        </div>
+                                    </td>
+                                    <td class="qna__function__group flex--box-c">
+                                        <button type="button">
+                                            <img src="img/download__icon.svg" alt="다운로드 아이콘">
+                                        </button>
+                                        <div class="arrow__box">
+                                            <img src="img/qna__bg__down__arrow.svg" alt="">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="answer__tr">
+                                    <th class="qna__title">
+                                        <div class="qna__container answer">
+                                            <span>A</span>
+                                        </div>
+                                    </th>
+                                    <td class="text__container">
+                                        <div class="td__container preBox">
+<p>- 고용노동부 노동조합 회계 공시시스템을 통해 공시할 수 있는 대상은 회계공시를 원하는 노동조합과 산하조직입니다.
+- 총연합단체, 연합단체, 산업별·업종별·지역별 노동조합, 기업단위 노동조합등 노동조합과 지부‧지회‧분회 등 산하조직이 공시할 수 있습니다.</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- 3번 질문 -->
+                                <tr>
+                                    <th class="qna__title">
+                                        <div class="qna__container question">
+                                            <span>Q</span></div>
+                                    </th>
+
+                                    <td class="text__container">
+                                        <div class="td__container">
+                                            <button type="button" title="내용 자세히 보기" class="answer__toggle">[질문3] 총연합단체, 연합단체, 단위노조는 무슨 의미인지?</button>
+                                        </div>
+                                    </td>
+                                    <td class="qna__function__group flex--box-c">
+                                        <button type="button">
+                                            <img src="img/download__icon.svg" alt="다운로드 아이콘">
+                                        </button>
+                                        <div class="arrow__box">
+                                            <img src="img/qna__bg__down__arrow.svg" alt="">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="answer__tr">
+                                    <th class="qna__title">
+                                        <div class="qna__container answer">
+                                            <span>A</span>
+                                        </div>
+                                    </th>
+                                    <td>
+                                        <div class="td__container preBox">
+<p>- 단위노동조합은 특정 기업이나 사업장 또는 동종 산업, 지역, 업종에 종사하는 근로자들을 대상 조합원으로 하여 조직된 노동조합을 말합니다.(산업‧업종‧지역별‧기업단위 노동조합)
+- 또한, 연합단체인 노동조합은 동종 산업의 단위노동조합을 구성원으로 하는 산업별 연합단체와 산업별 연합단체 또는 전국규모의 산업별 단위노동조합을 구성원으로 하는 총연합단체로 구분됩니다.</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- 4번 질문 -->
+                                <tr>
+                                    <th class="qna__title">
+                                        <div class="qna__container question">
+                                            <span>Q</span></div>
+                                    </th>
+
+                                    <td class="text__container">
+                                        <div class="td__container">
+                                            <button type="button" title="내용 자세히 보기" class="answer__toggle">[질문4] 총연합단체에서 회계를 공시하지 않는 경우 해당 총연합단체에 가맹한 1,000인 미만 노조(산하조직)도 조합비 세액공제 혜택을 부여받을 수 없는지?</button>
+                                        </div>
+                                    </td>
+
+                                    <td class="qna__function__group flex--box-c">
+                                        <button type="button">
+                                            <img src="img/download__icon.svg" alt="다운로드 아이콘">
+                                        </button>
+                                        <div class="arrow__box">
+                                            <img src="img/qna__bg__down__arrow.svg" alt="">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="answer__tr">
+                                    <th class="qna__title">
+                                        <div class="qna__container answer">
+                                            <span>A</span>
+                                        </div>
+                                    </th>
+                                    <td>
+                                        <div class="td__container preBox">
+<p>- 조합원 수 1,000인 미만 노동조합(산하조직)의 경우 스스로는 공시하지 않아도 되지만, 해당 노동조합(산하조직)이 가맹한 총연합단체가 공시하지 않으면 해당 노동조합(산하조직)에 납부한 조합비에 대해 세액공제 혜택을 받을 수 없습니다.</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- 5번 질문 -->
+                                <tr>
+                                    <th class="qna__title">
+                                        <div class="qna__container question">
+                                            <span>Q</span></div>
+                                    </th>
+                                    <td class="text__container">
+                                        <div class="td__container">
+                                            <button type="button" title="내용 자세히 보기" class="answer__toggle">[질문5] 산별 노동조합 甲 내에 조직된 A 기업 지부의 조합원이 조합비를 甲에게 납부하고 있는데, 甲 외에 A 기업 지부도 공시해야 조합비 세액공제 혜택이 부여되는지?</button>
+                                        </div>
+                                    </td>
+
+                                    <td class="qna__function__group flex--box-c">
+                                        <button type="button">
+                                            <img src="img/download__icon.svg" alt="다운로드 아이콘">
+                                        </button>
+                                        <div class="arrow__box">
+                                            <img src="img/qna__bg__down__arrow.svg" alt="">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="answer__tr">
+                                    <th class="qna__title">
+                                        <div class="qna__container answer">
+                                            <span>A</span>
+                                        </div>
+                                    </th>
+
+                                    <td>
+                                        <div class="td__container preBox">
+<p>- 산별 노동조합 甲이 직접 A 기업 지부의 조합비를 수령하고 A 기업 지부가 산별 노동조합 甲으로부터 교부금을 받아 지부를 운영하는 경우에 甲과 A 모두 공시하여야* A에 조합비 세액공제 혜택이 부여됩니다.
+* 다만, 甲(A)이 1,000인 미만인 경우 甲(A)은 공시하지 않아도 연합단체, 총연합단체만 공시하면 A에 조합비 세액공제 혜택 부여</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                        <div class="faq__page__wrap">
+                            <!-- 웹 전용 페이지 네이션 -->
+                            <div class="pagination w__cont pagination__margin">
+                                <a onclick="fnSelectInfs(1);return false;" class="page-navi step prev" href="#" title="이전페이지로 이동">이전</a>
+                                <div class="page-links">
+                                    <a onclick="fnSelectInfs(1);return false;" class="page-link active" href="#">1</a>
+                                    <span class="page-link link-dot">
+                                        ···
+                                    </span>
+                                    <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">6</a>
+                                    <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">7</a>
+                                    <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">8</a>
+                                    <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">9</a>
+                                    <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">10</a>
+                                    <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">11</a>
+                                    <span class="page-link link-dot">
+                                        ···
+                                    </span>
+                                    <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">120</a>
+                                </div>
+                                <a onclick="fnSelectInfs(1);return false;" class="page-navi step next" href="#" title="다음페이지로 이동">다음</a>
+                            </div>
+                            <!-- ./ 웹 전용 페이지 네이션 -->
+                            <!-- 모바일 전용 페이지 네이션 -->
+                            <div class="pagination m__cont pagination__margin__mo">
+                                <div class="page-navis">
+                                    <a onclick="fnSelectInfs(1); return false;" class="page-navi step prev" href="#" title="이전페이지로 이동">이전</a>
+                                    <a onclick="fnSelectInfs(1); return false;" class="page-navi step next" href="#" title="다음페이지로 이동">다음</a>
+                                </div>
+                                <div class="page-links">
+                                    <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">1</a>
+                                    <span class="page-link link-dot">...</span>
+                                    <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">7</a>
+                                    <a onclick="fnSelectInfs(1);return false;" class="page-link active" href="#">8</a>
+                                    <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">9</a>
+                                    <span class="page-link link-dot">...</span>
+                                    <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">120</a>
+                                </div>
+                            </div>
+                            <!-- ./ 모바일 전용 페이지 네이션 -->
+                        </div>
+                        <script>
+                        /** 
+                            함수명	: 없음
+                            용도    : 자주묻는 질문 토글 및 이미지 변경
+                        */
+                        $(document).ready(function () {
+                            $('.foldStyle__table tr:even').click(function () {
+                                let $answerTr = $(this).next('.answer__tr');
+                                $answerTr.toggle();
+                                // 이미지 경로 변경: answer__tr이 보이면 down arrow, 안 보이면 top arrow
+                                if ($answerTr.is(':visible')) {
+                                    $(this).find('.arrow__box > img').attr('src', 'img/qna__bg__top__arrow.svg');
+                                } else {
+                                    $(this).find('.arrow__box > img').attr('src', 'img/qna__bg__down__arrow.svg');
+                                }
+                            });
+                            $('.answer__tr').hide();
+                        });
+                        </script>
+                </div>
+            </main>
+            <!-- 푸터 -->
+            <footer>
+                <div class="footer__bottom" style="background-color: #F0F0F0;">
+                    <div class="inner">
+                        <div class="footer__logo">
+                            <img src="img/slogan_H48.svg" alt="하단 로고">
+                        </div>
+
+                        <div class="footer__flex">
+                            <div class="footer__info">
+                                <p class="location">
+                                    30117 세종특별자치시 한누리대로 422 정부세종청사 11동 고용노동부(044-202-7828)
+                                </p>
+                                <p class="copyright">
+                                    Copyright(c)Ministry of Employment and Labor. All rights reserved.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- ./ 푸터 -->
+            <div class="gnb__bg"></div>
+            </div>
+            <script src="js/default.js"></script>
+        </body>
+</html>

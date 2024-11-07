@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>회원가입</title>
+    <link rel="stylesheet" href="style/reset.css" />
+    <link rel="stylesheet" href="style/default.css" />
+    <link rel="shortcut icon" href="img/korea__favicon.ico" />
+    <link rel="stylesheet" href="style/jquery-ui.min.css" />
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+  </head>
+  <body>
+    <!-- 스킵 네비게이션 -->
+    <div class="skip__nav">
+      <a href="#main__content">본문 바로가기</a>
+    </div>
+    <!-- 스킵 네비게이션 -->
+    <div class="wrap btn__full__wrap sign__up__wrap relative" id="sub__wrap">
+      <!-- 헤더 -->
+      <header class="header">
+        <div class="inner">
+          <div class="header__btm">
+            <h1 class="logo">
+                <a href="index(변경).html" title="노동조합 회계공시 시스템 메인페이지로 바로가기">
+                    <span class="blind">노동조합 회계공시시스템</span>
+                    <img src="img/slogan_H48.svg" alt="메인 홈페이지로고">
+                </a>
+            </h1>
+            <div class="right__icon__set">
+                <!-- <a href="login.html" class="login">
+                    <img src="img/login__icon.svg" alt="로그인 아이콘">
+                    <span>로그인</span>
+                </a> -->
+                <a href="#" class="hamburger">
+                    <img src="img/hamburger__icon.svg" alt="전체 메뉴 아이콘">
+                    <span>전체메뉴</span>
+                </a>
+                <!-- <a href="sign__up.html" class="sign__up">
+                    <img src="img/sign__up.svg" alt="회원가입 아이콘">
+                    <span>회원가입</span>
+                </a>   -->
+                <div class="user__info">
+                    <!-- 기존 카운트  -->
+                    <!-- <ul id="cnt" class="clear">
+                        <li><span>일일 <i></i></span><b>14</b></li><li><span>주간 <i></i></span><b>130</b></li><li><span>월간 <i></i></span><b>731</b></li><li><span>연간 <i></i></span><b>12182</b></li></ul> -->
+                    <!-- <a class="reset" href="javascript:void(0)" onclick="fn_reset()">관리자 패스워드 변경</a> -->
+                        <a href="#" class="user__name">
+                            <img src="img/icon__user.svg" alt="유저 아이콘">
+                            <span>사용자님</span>
+                        </a>
+                            <a href="#" class="logout">
+                            <img src="img/login__icon.svg" alt="로그아웃 아이콘">
+                            <span>로그아웃</span>
+                        </a>
+                </div>
+            </div>
+        </div>
+        <div class="header__gnb">
+            <div>
+                <nav id="gnb1">
+                    <ul id="head_menu" class="top__menu">
+                        <li class="plus"> <a href="javascript:void(0);">시스템안내
+                        </a>
+                            <div class="sub__menu">
+                                <ul>
+                                    <li class="plus"> <a href="javascript:void(0);">회계공시시스템이란</a>
+                                        <div class="dep3"> <strong class="dep3__title"> <a href="accn__desc.html">회계공시시스템이란</a> </strong>                  
+                                        </div>
+                                    </li>
+                                    <li class="plus"> <a href="javascript:void(0);">주요회계공시항목설명</a>
+                                        <!-- dep3 오른쪽 영역 -->
+                                        <div class="dep3"> <strong class="dep3__title"> <a href="main__accn__desc.html">주요회계공시항목설명</a> </strong>
+                                      
+                                        </div>
+                                    </li>
+                                    <li class="plus"> <a href="javascript:void(0);">공지사항</a>
+                                        <!-- dep3 오른쪽 영역 -->
+                                        <div class="dep3"> <strong class="dep3__title"> <a href="notice.html">공지사항</a> </strong>
+                                        </div>
+                                    </li>
+                                    <li class="plus"> <a href="javascript:void(0);">자주묻는질문</a>
+                                        <!-- dep3 오른쪽 영역 -->
+                                        <div class="dep3"> <strong class="dep3__title"> <a href="faq.html">자주묻는질문</a></strong>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="plus"> <a class="open--depth-2" href="javascript:void(0);">회계공시열람
+                        </a>
+                            <div class="sub__menu">
+                                <ul>
+                                    <li class="plus"> <a href="javascript:void(0);">회계공시열람</a>
+                                        <div class="dep3"> <strong class="dep3__title"> <a href="accn__open.html">회계공시열람</a> </strong>
+                                            <ul>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="plus"> <a href="javascript:void(0);">회계공시여부조회</a>
+                                        <div class="dep3"> <strong class="dep3__title"> <a href="check__accounting.html">회계공시여부조회</a> </strong>
+                                            <ul>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="plus"> <a class="open--depth-2" href="javascript:void(0);">회계공시등록
+                        </a>
+                            <div class="sub__menu">
+                                <ul>
+                                    <li class="plus"> <a href="javascript:void(0);">회계공시등록</a>
+                                        <div class="dep3"> <strong class="dep3__title"> <a href="public__register.html">회계공시등록</a> </strong>
+                                            <ul>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="plus"> <a href="javascript:void(0);">가맹노조산하조직관리</a>
+                                        <div class="dep3"> <strong class="dep3__title"> <a href="union__management.html">가맹노조산하조직관리</a> </strong>
+                                            <ul>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- 모바일용 GNB -->
+        <nav id="gnb2">
+            <div class="gnb__in" tabindex="0">
+            <div class="gnb__head">
+                <div class="gnb__top2">
+                    <div class="txt--r">
+                        <button type="button" class="gnb__close"></button>
+                    </div>
+                    <div class="login__info">
+                        <a href="login.html" class="id__info">
+                            <img src="img/icon20-1.png" alt="로그인 아이콘">
+                            <span>로그인을 해주세요</span>
+                        </a>
+                        <!-- <a href="" class="id__info">
+                            <img src="img/user__info.svg" alt="유저 아이콘">
+                            <span>테스트님</span>
+                        </a> -->
+                    </div>
+                </div>
+            </div> 
+            <div class="gnb__body">
+                <div class="m-gnb__menu">
+                    <div class="menu__wrap">
+                        <ul>
+                            <li><a href="#gnbAnchor1" data-target="gnbAnchor1">시스템안내</a></li>
+                            <li><a href="#gnbAnchor2" data-target="gnbAnchor2">회계공시열람</a></li>
+                            <li><a href="#gnbAnchor3" data-target="gnbAnchor3">회계공시등록</a></li>
+                        </ul>
+                        <a href="#" class="logout">
+                            <img src="img/icon20-1.png" alt="로그아웃 아이콘">
+                            <span>로그아웃</span>
+                        </a>
+                    </div>
+                    <div class="submenu__wrap">
+                        <ul class="submenu" id="gnbAnchor1">
+                            <li class="title"><a href="#">시스템안내</a></li>
+                            <li><a href="accn__desc.html">회계공시시스템이란</a></li>
+                            <li><a href="main__accn__desc.html">주요회계공시항목설명</a></li>
+                            <li><a href="notice.html">공지사항</a></li>
+                            <li><a href="faq.html">자주묻는질문</a></li>
+                        </ul>
+                        <ul class="submenu" id="gnbAnchor2">
+                            <li class="title"><a href="accn__open.html">회계공시열람</a></li>
+                            <li><a href="accn__open.html">회계공시열람</a></li>
+                            <li><a href="check__accounting.html">회계공시여부조회</a></li>
+                        </ul>
+                        <ul class="submenu" id="gnbAnchor3">
+                            <li class="title"><a href="public__register.html">회계공시등록</a></li>
+                            <li><a href="public__register.html">회계공시등록</a></li>
+                            <li><a href="union__management.html">가맹노조(산하조직) 관리</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </nav>
+        </div>
+      </header>
+      <!-- 메인 컨텐츠 -->
+      <main class="content main__content report__content sign_up" style="padding-bottom: 40px">
+        <!-- visual bg -->
+        <div class="visual__bg">
+          <div class="inner">
+            <div class="visual__text">
+              <h2>회원가입</h2>
+              <p>노동조합 회계공시시스템 첨부파일 변경 화면입니다.</p>
+            </div>
+          </div>
+        </div>
+        <!-- ./ visual bg -->
+        <div class="inner">
+          <!-- breadcrumb -->
+          <nav class="breadcrumb">
+            <ol class="path">
+              <li class="home">
+                <a href="index(변경).html" class="txt">홈</a>
+              </li>
+              <li><a href="login.html" class="txt">로그인</a></li>
+              <li><a href="sign__up.html" class="txt">회원가입</a></li>
+            </ol>
+          </nav>
+          <!-- ./ breadcrumb -->
+          <div class="flex__title table__title__wrap">
+            <h2 class="table__title">회원 정보 입력</h2>
+            <div class="must__help__message">
+              <span><span style="color: #fe5555">*</span> 필수 입력항목입니다.</span>
+            </div>
+          </div>
+          <!-- 회원 가입 테이블 -->
+          <form action="POST" id="sign__up--form">
+            <div class="sign__up__table__wrap table__horizontal__ex" id="main__content">
+              <div class="form__table border-top-large">
+                <table>
+                  <caption>사용자용 회원가입 폼입니다.</caption>
+                  <tr>
+                    <th><label for="id" class="must__type">아이디</label></th>
+                    <td>
+                      <div class="td__container">
+                        <input type="text" value="" id="example22222" placeholder="아이디를 입력하세요."/>
+                        <button type="button" class="btn__s bg--transparent-00">중복체크</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th><label for="pw" class="must__type">비밀번호</label></th>
+                    <td>
+                      <div class="td__container secret__Check">
+                        <input class="password__input" id="pw" type="password" placeholder="비밀번호를 입력하세요." maxlength="20"/>
+                        <button type="button" class="btn icon__pw-visible">
+                          <img src="img/icon__see.svg" alt="비밀번호 보이기" class="show__icon"/>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th><label for="pwcheck" class="must__type">비밀번호 확인 </label></th>
+                    <td>
+                      <div class="td__container secret__Check" id="pwLength">
+                        <input class="password__input" id="pwcheck" type="password" placeholder="변경할 비밀번호를 입력하세요." maxlength="20"/>
+                        <button type="button" class="btn icon__pw-visible">
+                          <img src="img/icon__see.svg" alt="비밀번호 보이기" class="show__icon"/>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <label for="css" class="txt--l must__type">노동조합 명칭<br class="onlyMo"/>(또는 산하조직)</label>
+                    </th>
+                    <td>
+                      <div class="td__container">
+                        <input type="text" value="" id="css" placeholder="제주특별자치도공무직노동조합"/>
+                          <!-- 2024.11.04 이민혁 반응형 위해 height--res-768 클래스 및 div 태그 추가 -->
+                          <div>
+                            <button type="button" class="btn__s height--res-768 bg--transparent-00 openPopup">노동조합검색</button>
+                            <button type="button" class="btn__s height--res-768 bg--transparent-00">중복체크</button>
+                          </div>
+                          <!-- .// 2024.11.04 -->
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <label for="name1">노동조합약어명</label>
+                    </th>
+                    <td>
+                      <div class="td__container"><input id="name1" type="text"/></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <label for="s1-1">조직형태</label>
+                    </th>
+                    <td>
+                      <div class="td__container">
+                        <select name="s-1-1" id="s1-1" class="select__renew">
+                          <option value="선택">선택</option>
+                        </select>
+                        <select name="s-2-1" id="s2-1" class="select__renew">
+                          <option value="선택">선택</option>
+                        </select>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <label for="d23" class="txt--l must__type">사업자등록번호<br class="pcOnly"/>(고유번호증번호 등)</label>
+                    </th>
+                    <td>
+                      <div class="td__container">
+                        <input id="d23" type="text" />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <label for="category23233" class="must__type">상급단체의 명칭</label>
+                    </th>
+                    <td colspan="5">
+                      <div class="flex--box">
+                        <!-- <button type="button" class="btn__select width--20 mr--10 ml--10">선택입력</button> -->
+                        <div class="td__container flex--grow-100">
+                          <select name="category" id="category23233" class="select__renew">
+                            <option value="">총연합단체 선택</option>
+                            <option value="10">한국노동조합총연맹</option>
+                            <option value="20">전국민주노동조합총연맹</option>
+                            <option value="40">대한민국노동조합총연맹</option>
+                            <option value="98">기타</option>
+                            <option value="99">총연합단체미가입</option>
+                            <option value="00">직접입력</option>
+                          </select>
+                          <select name="category" id="category2323dd" class="select__renew">
+                            <option value="전체">연합단체 선택</option>
+                          </select>
+                          <select name="category" id="category2323ee" class="select__renew">
+                            <option value="전체">단위노동조합 선택</option>
+                          </select>
+                          <!-- <input type="text" id="1" placeholder="1번 인풋"> -->
+                          <!-- <input type="text" id="2" placeholder="2번 인풋"> -->
+                          <!-- <input type="text" id="3" placeholder="3번 인풋"> -->
+                          <!-- 상위 클래스가 input의 넓이를 자동으로 맞춰줍니다. html 태그만 생성 삭제 하시면 됩니다. -->
+                          <select name="category" id="categoraa" class="select__renew">
+                            <option value="전체">지부 선택</option>
+                          </select>
+                          <select name="category" id="categorbb" class="select__renew">
+                            <option value="전체">지회 선택</option>
+                          </select>
+                          <select name="category" id="categorcc" class="select__renew">
+                            <option value="전체">분회 선택</option>
+                          </select>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <label for="category23233" class="must__type">상급단체의 명칭</label>
+                    </th>
+                    <td colspan="5">
+                      <div class="flex--box-c organization">
+                        <button type="button" class="btn__select width--20 ml--10">
+                          선택입력
+                        </button>
+                        <div class="td__container flex--grow-100">
+                          <select name="category" id="category23233" class="select__renew">
+                            <option value="">총연합단체 선택</option>
+                            <option value="10">한국노동조합총연맹</option>
+                            <option value="20">전국민주노동조합총연맹</option>
+                            <option value="40">대한민국노동조합총연맹</option>
+                            <option value="98">기타</option>
+                            <option value="99">총연합단체미가입</option>
+                            <option value="00">직접입력</option>
+                          </select>
+                          <input type="text" id="1" placeholder="1번 인풋" />
+                          <input type="text" id="2" placeholder="2번 인풋" />
+                          <input type="text" id="3" placeholder="3번 인풋" />
+                          <input type="text" id="3" placeholder="4번 인풋" />
+                          <input type="text" id="3" placeholder="5번 인풋" />
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th><label for="name3" class="must__type">대표자</label></th>
+                    <td>
+                      <div class="td__container">
+                        <input id="name3" type="text" />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <label for="name4">설립연월일</label>
+                    </th>
+                    <td class="td__calender__wrap">
+                      <div class="td__container">
+                        <div class="calender__body">
+                          <input type="text" id="datePicker" maxlength="10"/>
+                          <label
+                            for="datePicker"
+                            class="calender__icon ml--10"
+                          ></label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <label for="d-4-1">회계기간</label>
+                    </th>
+                    <td>
+                      <div class="td__container">
+                        <div class="td__date">
+                          <select name="d-4-1" id="d-4-1" class="select__renew">
+                            <option value="월 선택">월</option>
+                            <option value="1">1 월</option>
+                            <option value="2">2 월</option>
+                            <option value="3">3 월</option>
+                            <option value="4">4 월</option>
+                            <option value="5">5 월</option>
+                            <option value="6">6 월</option>
+                            <option value="7">7 월</option>
+                            <option value="8">8 월</option>
+                            <option value="9">9 월</option>
+                            <option value="10">10 월</option>
+                            <option value="11">11 월</option>
+                            <option value="12">12 월</option>
+                          </select>
+                          <select name="d-4-2" id="d-4-2" class="select__renew">
+                            <option value="&nbsp;">일</option>
+                          </select>
+                          <span>~</span>
+                          <select name="d-4-3" id="d-4-3" class="select__renew">
+                            <option value="&nbsp;">월</option>
+                            <option value="1">1 월</option>
+                            <option value="2">2 월</option>
+                            <option value="3">3 월</option>
+                            <option value="4">4 월</option>
+                            <option value="5">5 월</option>
+                            <option value="6">6 월</option>
+                            <option value="7">7 월</option>
+                            <option value="8">8 월</option>
+                            <option value="9">9 월</option>
+                            <option value="10">10 월</option>
+                            <option value="11">11 월</option>
+                            <option value="12">12 월</option>
+                          </select>
+                          <select name="d-4-4" id="d-4-4" class="select__renew">
+                            <option value="&nbsp;">일</option>
+                          </select>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th><label for="name5"> 조합원 수 </label></th>
+                    <td>
+                      <div class="td__container">
+                        <input id="name5" type="text" value="0" />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th><label for="name6" class="must__type"> 담당자명 </label></th>
+                    <td>
+                      <div class="td__container">
+                        <input id="name6" type="text" />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                        <label for="name7" class="must__type">담당자 이메일</label>
+                    </th>
+                    <td>
+                      <div class="td__container">
+                        <input id="name7" type="text" />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                        <label for="name8" class="must__type">유선연락처</label>
+                    </th>
+                    <td>
+                      <div class="td__container">
+                        <input id="name8" type="text" />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <label for="name9"> 핸드폰 </label>
+                    </th>
+                    <td>
+                      <div class="td__container">
+                        <input id="name9" type="text" />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="consent__chk">
+                    <th>
+                      <label for="rdo_22-1"> 수신동의 여부 </label>
+                    </th>
+                    <td class="td__vertical--c chk__area radio__wrap">
+                      <div class="td__container">
+                        <div class="flex--box">
+                          <div class="mr--10">
+                            <input type="radio" name="agreeCheck" id="agree" />
+                            <label for="rdo_22-2">동의</label>
+                          </div>
+                          <div>
+                            <input type="radio" name="agreeCheck" id="reject" />
+                            <label for="rdo_22-3">거부</label>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <label for="name10"> 소재지 </label>
+                    </th>
+                    <td>
+                      <div class="td__container">
+                        <input id="name10" type="text" />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                        <label for="profile_pisca" class="must__type"> 파일첨부 </label>
+                    </th>
+                    <td>
+                      <div class="td__container file__select__container" id="pwLength">
+                        <div class="preview flex--box-c">
+                          <p class="upload__file__name">선택된 파일없음</p>
+                        </div>
+                        <label class="btn__file__select bg--transparent-00" for="profile_pic">파일선택</label>
+                        <label class="btn__file__select--mo bg--transparent-00" for="profile_pic"></label>
+                        <input type="file" class="file__post" id="profile_pic" name="profile_pic"/>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </form>
+          <!-- ./ 회원 가입 테이블 -->
+          <!-- 필수 정보 -->
+          <div class="must__help__message">
+            <p>
+              <span style="color: #fe5555">*</span> 노동조합 또는 산하조직
+              대표자 명의의 회원가입 신청 공문을 스캔하여 파일로 첨부합니다.
+            </p>
+            <p>
+              (공문에"노동조합 회계공시시스템 회원가입을 신청한다"는 의사를
+              명시하고 대표자 직인 날인, 파일은 1개만 첨부가능)
+            </p>
+          </div>
+          <!-- ./ 필수 정보 -->
+          <!-- 노동조합규약 -->
+          <div class="ly__cont title__lv2 flex__title">
+            <h2 class="mb--16">노동조합 규약</h2>
+          </div>
+          <div class="union__code border-top-large">
+            <div class="upload__manager">
+              <form action="POST">
+                <div class="form__head flex--box-c border--btm">
+                  <div class="form-title" style="border-right: 1px solid #ddd">
+                    <span>규약명</span>
+                  </div>
+                  <div class="form-title-file flex--grow-100 txt--c height--100">
+                    <span>첨부파일</span>
+                  </div>
+                </div>
+                <div class="form__body">
+                  <div class="form__row flex--box-c">
+                    <div class="td__container" style="border-right: 1px solid #ddd">
+                      <input type="text" name="rule_name[]" placeholder="" class="input__text width--100" style="padding: 0"/>
+                    </div>
+                    <div class="td__container file__select__container flex--grow-100" id="pwLength">
+                      <div class="preview flex--box-c">
+                        <p class="upload__file__name">선택된 파일없음</p>
+                        <label class="btn__file__select--mo bg--transparent-00" for="profile_pics2"></label>
+                      </div>
+                      <label class="btn__file__select bg--transparent-00" for="profile_pics2">파일선택</label>
+                      <input type="file" class="file__post" id="profile_pics2" name="profile_pics2"/>
+                      <button type="button" class="btn__add bg--green-01" style="margin-left: auto">+</button>
+                    </div>
+                  </div>
+                  <!-- 노동조합 규약 두번째 줄 - -->
+                  <div class="form__row flex--box-c">
+                    <div
+                      class="td__container"
+                      style="border-right: 1px solid #ddd"
+                    >
+                      <input
+                        type="text"
+                        name="rule_name[]"
+                        placeholder=""
+                        class="input__text width--100"
+                        style="padding: 0"
+                      />
+                    </div>
+                    <div
+                      class="td__container file__select__container flex--grow-100"
+                      id="pwLength"
+                    >
+                      <div class="preview flex--box-c">
+                        <p class="upload__file__name">선택된 파일없음</p>
+                        <label
+                          class="btn__file__select--mo bg--transparent-00"
+                          for="profile_pics3"
+                        ></label>
+                      </div>
+                      <label
+                        class="btn__file__select bg--transparent-00"
+                        for="profile_pics3"
+                        >파일선택</label
+                      >
+                      <input
+                        type="file"
+                        class="file__post"
+                        id="profile_pics3"
+                        name="profile_pics3"
+                        style="opacity: 0; width: 0px"
+                      />
+                      <button
+                        type="button"
+                        class="btn__remove bg--green-01"
+                        style="margin-left: auto"
+                      >
+                        -
+                      </button>
+                    </div>
+                  </div>
+                  <!-- ./ 노동조합 규약 두번째 줄 - -->
+                </div>
+              </form>
+              <!-- 기존 HTML 코드 위에 추가 -->
+              <template id="row-template">
+                <div class="form__row flex--box-c">
+                  <div class="td__container" style="border-right: 1px solid #ddd">
+                    <input type="text" name="rule_name[]" placeholder="" class="input__text"/>
+                  </div>
+                  <div class="td__container file__select__container flex--grow-100" >
+                    <div class="preview flex--box-c">
+                      <p class="upload__file__name">선택된 파일없음</p>
+                      <label class="btn__file__select--mo bg--transparent-00" for="profile_pic"></label>
+                    </div>
+                    <label class="btn__file__select bg--transparent-00">파일선택</label>
+                    <input type="file" class="file__post" name="profile_pic"/>
+                    <button type="button" class="btn__remove bg--green-01" style="margin-left: auto">-</button>
+                  </div>
+                </div>
+              </template>
+              <!-- template  -->
+            </div>
+          </div>
+          <!-- 하단 버튼 그룹 -->
+          <div class="function__group margin-1">
+            <button type="button" class="btn__control bg--blue-00">저장</button>
+          </div>
+          <!-- ./ 하단 버튼 그룹 -->
+        </div>
+      </main>
+      <!-- ./ 메인 컨텐츠 -->
+      <!-- 푸터  -->
+      <footer>
+        <div class="footer__bottom" style="background-color: #f0f0f0">
+          <div class="inner">
+            <div class="footer__logo">
+              <img src="img/slogan_H48.svg" alt="하단 로고" />
+            </div>
+
+            <div class="footer__flex">
+              <div class="footer__info">
+                <p class="location">
+                  30117 세종특별자치시 한누리대로 422 정부세종청사 11동
+                  고용노동부(044-202-7828)
+                </p>
+                <p class="copyright">
+                  Copyright(c)Ministry of Employment and Labor. All rights
+                  reserved.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- 노동조합 검색 팝업 -->
+      <div class="popupBox search" id="popup">
+        <div class="popup__title title__lv2">노동조합 검색</div>
+        <div class="popup__body">
+          <!-- 상단 버튼 + 제목 -->
+          <!-- 2024.11.04 이민혁 모바일 반응형 세로 정렬 위해 sm-flex--column 클래스 추가 -->
+          <div class="flex--box-cs sm-flex--column">
+            <h2>가맹노조 산하조직관리</h2>
+            <div>
+              <button type="button" class="btn__control__u bg--mint-00">초기화</button>
+              <button type="button" class="btn__control__u bg--blue-02">조회</button>
+              <button type="button" class="btn__control__u bg--green-02">선택</button>
+            </div>
+          </div>
+          <!-- ./ 상단 버튼 + 제목 -->
+          <!-- 검색 영역 -->
+          <div class="popup__search__inner mt--10">
+            <!-- 2024/11/01 이민혁 모바일 모달 스타일링을 위해 아래 sm-flex--column 클래스 추가 -->
+            <div class="flex--box-c sm-flex--column">
+              <label for="name" class="pr--24">노동조합명</label>
+              <input type="text" id="name" class="flex--grow-100">
+            </div>
+          </div>
+          <!-- ./ 검색 영역 -->
+          <section>
+            <div class="flex--box-cs mt--40">
+              <h2 class="title__lv2">노동조합 목록</h2>
+              <p class="title__lv4 align--bottom-self">총 <strong>910</strong>건</p>
+            </div>
+            <!-- 
+                P : 하단의 style에 변수 수치를 변경하여 최대 높이를 조절할 수 있습니다.
+            -->
+            <div class="table__vertical table--fixed mt--10 max-h-overflow" style="--max-height: 24rem">
+							<table class="border-top-large click">
+									<caption>노동조합 목록 표</caption>
+									<colgroup>
+										<col style="width: 12rem;">
+										<col>
+									</colgroup>
+									<thead>
+										<tr>
+											<th><div class="min__h__box text--c">번호</div></th>
+											<th><div class="min__h__box text--c">노동조합(산하조직)명</div></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><div class="min__h__box text--c">1</div></td>
+											<td><div class="min__h__box text--c">도레이노동조합</div></td>
+										</tr>
+										<tr>
+											<td><div class="min__h__box text--c">2</div></td>
+											<td><div class="min__h__box text--c">전국여성노동조합</div></td>	
+										</tr>
+										<tr>
+											<td><div class="min__h__box text--c">3</div></td>
+											<td><div class="min__h__box text--c">금융감독원노동조합</div></td>
+										</tr>
+										<tr>
+											<td><div class="min__h__box text--c">4</div></td>
+											<td><div class="min__h__box text--c">건설산업노동조합</div></td>
+										</tr>
+										<tr>
+											<td><div class="min__h__box text--c">5</div></td>
+											<td><div class="min__h__box text--c">한국노동조합총연맹</div></td>
+										</tr>
+                    <tr>
+											<td><div class="min__h__box text--c">6</div></td>
+											<td><div class="min__h__box text--c">한국노동총연맹</div></td>
+										</tr>
+									</tbody>
+							</table>
+						</div>
+          </section>
+        </div>
+        <div class="popup__foot">
+          <div class="txt--r">
+            <button type="button" class="close">닫기</button>
+          </div>
+        </div>
+      </div>
+      <!-- ./ 노동조합 검색 팝업 -->
+      <div class="gnb__bg"></div>
+    </div>
+    <!-- js 파일 -->
+    <script src="js/default.js"></script>
+    <script src="js/manage__accounting.js"></script>
+    <script>
+      /** 
+        함수명	: 없음
+        용도    : 달력 표시 및 옵션 설정
+      */
+      $(document).ready(function () {
+        var dateFormat = "yymmdd",
+          from = $(".datePicker").datepicker({
+            dateFormat: "yymmdd",
+            // defaultDate: "+1w",
+            changeMonth: true,
+            changeYear: true,
+            yearRange: "c-80y:c",
+            numberOfMonths: 1,
+          });
+
+        function getDate(element) {
+          var date;
+          try {
+            date = $.datepicker.parseDate(dateFormat, element.value);
+          } catch (error) {
+            date = null;
+          }
+          return date;
+        }
+
+        $.datepicker.setDefaults({
+          closeText: "닫기",
+          currentText: "오늘",
+          prevText: "이전 달",
+          nextText: "다음 달",
+          monthNames: ["1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월","12월",],
+          monthNamesShort: ["1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월","12월",],
+          dayNames: ["일", "월", "화", "수", "목", "금", "토"],
+          dayNamesShort: ["일", "월", "화", "수", "목", "금", "토"],
+          dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
+          weekHeader: "주",
+          yearSuffix: "년",
+        });
+      });
+    </script>
+  </body>
+</html>

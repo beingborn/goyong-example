@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=, initial-scale=1.0" />
+        <title>회계공시등록</title>
+        <link rel="stylesheet" href="style/reset.css" />
+        <link rel="shortcut icon" href="img/korea__favicon.ico" />
+        <script src="js/jquery-3.7.1.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="style/jquery-ui.min.css" />
+        <link rel="stylesheet" href="style/default.css" />
+    </head>
+    <body>
+        <!-- 스킵 네비개이션 -->
+        <div class="skip__nav">
+            <a href="#main__content">본문 바로가기</a>
+        </div>
+        <!-- ./ 스킵 네비개이션 -->
+        <div id="sub__wrap" class="relative">
+            <!-- 헤더 -->
+            <header class="header">
+                <div class="inner">
+                    <div class="header__btm">
+                        <h1 class="logo">
+                            <a href="index(변경).html" title="노동조합 회계공시 시스템 메인페이지로 바로가기">
+                                <span class="blind">노동조합 회계공시시스템</span>
+                                <img src="img/slogan_H48.svg" alt="메인 홈페이지로고">
+                            </a>
+                        </h1>
+                        <div class="right__icon__set">
+                            <!-- <a href="login.html" class="login">
+                                <img src="img/login__icon.svg" alt="로그인 아이콘">
+                                <span>로그인</span>
+                            </a> -->
+                            <a href="#" class="hamburger">
+                                <img src="img/hamburger__icon.svg" alt="전체 메뉴 아이콘">
+                                <span>전체메뉴</span>
+                            </a>
+                            <!-- <a href="sign__up.html" class="sign__up">
+                                <img src="img/sign__up.svg" alt="회원가입 아이콘">
+                                <span>회원가입</span>
+                            </a>   -->
+                            <div class="user__info">
+                                <!-- 기존 카운트  -->
+                                <!-- <ul id="cnt" class="clear">
+                                    <li><span>일일 <i></i></span><b>14</b></li><li><span>주간 <i></i></span><b>130</b></li><li><span>월간 <i></i></span><b>731</b></li><li><span>연간 <i></i></span><b>12182</b></li></ul> -->
+                                <!-- <a class="reset" href="javascript:void(0)" onclick="fn_reset()">관리자 패스워드 변경</a> -->
+                                    <a href="#" class="user__name">
+                                        <img src="img/icon__user.svg" alt="유저 아이콘">
+                                        <span>사용자님</span>
+                                    </a>
+                                        <a href="#" class="logout">
+                                        <img src="img/login__icon.svg" alt="로그아웃 아이콘">
+                                        <span>로그아웃</span>
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+                <div class="header__gnb">
+                    <div>
+                        <nav id="gnb1">
+                            <ul id="head_menu" class="top__menu">
+                                <li class="plus"> <a href="javascript:void(0);">시스템안내
+                                </a>
+                                    <div class="sub__menu">
+                                        <ul>
+                                            <li class="plus"> <a href="javascript:void(0);">회계공시시스템이란</a>
+                                                <div class="dep3"> <strong class="dep3__title"> <a href="accn__desc.html">회계공시시스템이란</a> </strong>                  
+                                                </div>
+                                            </li>
+                                            <li class="plus"> <a href="javascript:void(0);">주요회계공시항목설명</a>
+                                                <!-- dep3 오른쪽 영역 -->
+                                                <div class="dep3"> <strong class="dep3__title"> <a href="main__accn__desc.html">주요회계공시항목설명</a> </strong>
+                                                </div>
+                                            </li>
+                                            <li class="plus"> <a href="javascript:void(0);">공지사항</a>
+                                                <!-- dep3 오른쪽 영역 -->
+                                                <div class="dep3"> <strong class="dep3__title"> <a href="notice.html">공지사항</a> </strong>
+                                                </div>
+                                            </li>
+                                            <li class="plus"> <a href="javascript:void(0);">자주묻는질문</a>
+                                                <!-- dep3 오른쪽 영역 -->
+                                                <div class="dep3"> <strong class="dep3__title"> <a href="faq.html">자주묻는질문</a></strong>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="plus"> <a class="open--depth-2" href="javascript:void(0);">회계공시열람
+                                </a>
+                                    <div class="sub__menu">
+                                        <ul>
+                                            <li class="plus"> <a href="javascript:void(0);">회계공시열람</a>
+                                                <div class="dep3"> <strong class="dep3__title"> <a href="accn__open.html">회계공시열람</a> </strong>
+                                                    <ul>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="plus"> <a href="javascript:void(0);">회계공시여부조회</a>
+                                                <div class="dep3"> <strong class="dep3__title"> <a href="check__accounting.html">회계공시여부조회</a> </strong>
+                                                    <ul>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="plus"> <a class="open--depth-2" href="javascript:void(0);">회계공시등록
+                                </a>
+                                    <div class="sub__menu">
+                                        <ul>
+                                            <li class="plus"> <a href="javascript:void(0);">회계공시등록</a>
+                                                <div class="dep3"> <strong class="dep3__title"> <a href="public__register.html">회계공시등록</a> </strong>
+                                                    <ul>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="plus"> <a href="javascript:void(0);">가맹노조산하조직관리</a>
+                                                <div class="dep3"> <strong class="dep3__title"> <a href="union__management.html">가맹노조산하조직관리</a> </strong>
+                                                    <ul>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- 모바일용 GNB -->
+                <nav id="gnb2">
+                    <div class="gnb__in" tabindex="0">
+                    <div class="gnb__head">
+                        <div class="gnb__top2">
+                            <div class="txt--r">
+                                <button type="button" class="gnb__close"></button>
+                            </div>
+                            <div class="login__info">
+                                <a href="login.html" class="id__info">
+                                    <img src="img/icon20-1.png" alt="로그인 아이콘">
+                                    <span>로그인을 해주세요</span>
+                                </a>
+                                <!-- <a href="" class="id__info">
+                                    <img src="img/user__info.svg" alt="유저 아이콘">
+                                    <span>테스트님</span>
+                                </a> -->
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="gnb__body">
+                        <div class="m-gnb__menu">
+                            <div class="menu__wrap">
+                                <ul>
+                                    <li><a href="#gnbAnchor1" data-target="gnbAnchor1">시스템안내</a></li>
+                                    <li><a href="#gnbAnchor2" data-target="gnbAnchor2">회계공시열람</a></li>
+                                    <li><a href="#gnbAnchor3" data-target="gnbAnchor3">회계공시등록</a></li>
+                                </ul>
+                                <a href="#" class="logout">
+                                    <img src="img/icon20-1.png" alt="로그아웃 아이콘">
+                                    <span>로그아웃</span>
+                                </a>
+                            </div>
+                            <div class="submenu__wrap">
+                                <ul class="submenu" id="gnbAnchor1">
+                                    <li class="title"><a href="#">시스템안내</a></li>
+                                    <li><a href="accn__desc.html">회계공시시스템이란</a></li>
+                                    <li><a href="main__accn__desc.html">주요회계공시항목설명</a></li>
+                                    <li><a href="notice.html">공지사항</a></li>
+                                    <li><a href="faq.html">자주묻는질문</a></li>
+                                </ul>
+                                <ul class="submenu" id="gnbAnchor2">
+                                    <li class="title"><a href="accn__open.html">회계공시열람</a></li>
+                                    <li><a href="accn__open.html">회계공시열람</a></li>
+                                    <li><a href="check__accounting.html">회계공시여부조회</a></li>
+                                </ul>
+                                <ul class="submenu" id="gnbAnchor3">
+                                    <li class="title"><a href="public__register.html">회계공시등록</a></li>
+                                    <li><a href="public__register.html">회계공시등록</a></li>
+                                    <li><a href="union__management.html">가맹노조(산하조직) 관리</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </nav>
+                </div>
+            </header>
+            <!-- ./ 헤더 -->
+            <main class="content">
+                <!-- visual bg -->
+                <div class="visual__bg sub1">
+                    <div class="inner">
+                        <div class="visual__text">
+                            <h2>쪽지 관리</h2>
+                            <p>쪽지 관리 화면입니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ./ visual bg -->
+                <div class="inner">
+                    <!-- breadcrumb -->
+                    <nav class="breadcrumb">
+                        <ol class="path">
+                            <li class="home"><a href="index(변경).html" class="txt">홈</a></li>
+                            <li><a href="#" class="txt">사용자 관리</a></li>
+                            <li><a href="#" class="txt">쪽지 관리</a></li>
+                        </ol>
+                    </nav>
+                    <!-- ./ breadcrumb -->
+                    <div class="relative flex--box-c mt--80 mb--64 sm--mb-36 sm-flex--column">
+                        <!-- 테이블 제목 -->
+                        <div class="title__lv1 w__cont">
+                            <h2>쪽지 관리</h2>
+                        </div>
+                        <!-- ./ 테이블 제목 -->
+                        <!-- 상단 버튼 그룹 -->
+                        <div class="function__group flex-equal" style="margin-left: auto;">
+                            <button type="button" class="btn__control bg--blue-02 txt__noWrap" onclick="fn_search();">초기화</button>
+                            <button type="button" class="btn__control bg--blue-02" onclick="fn_search();">조회</button>
+                            <button type="button" class="btn__control bg--blue-00" onclick="fn_search();">신규</button>
+                            <button type="button" class="btn__control bg--blue-02" onclick="fn_search();">저장</button>
+                        </div>
+                        <!-- ./ 상단 버튼 그룹 -->
+                    </div>
+                    <!-- 상단 검색폼 -->
+                    <div class="user__form__wrapper ">
+                        <form class="search__form__user" action="POST">
+                            <div class="search">
+                                <div class="flex--box-c search__list">
+                                    <label for="searchDate" class="mr--10 w__cont">검색기간</label>
+                                    <label class="mo_only must__type mt--0">검색기간</label>
+                                    <div class="input__box">
+                                        <div class="flex--box-c" style="gap: 1rem;">
+                                            <div class="calender__body">
+                                                <input type="text" class="datePicker width--100" id="searchDate" maxlength="10">
+                                                <label class="calender__icon ml--10"></label>
+                                            </div>
+                                            ~
+                                            <div class="calender__body">
+                                                <input type="text" class="datePicker width--100" maxlength="10" title="검색 기간 두번째 셀렉트">
+                                                <label class="calender__icon ml--10"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- ./ 상단 검색폼 -->
+                    <!-- 결과 값 -->
+                    <div class="table__title__wrap">
+                        <h2 class="table__title">조회결과</h2>
+                        <p class="data__number">건수 <span>3</span>건</p>
+                    </div>
+                    <!-- ./ 결과 값 -->
+                    <div class="accn__result check__result" id="main__content">
+                        <div class="tab__detail table__vertical w__cont notBorderRight" style="margin-bottom: 6.4rem;">
+                            <table class="border-top-large click table--fixed">
+                                <caption>쪽지 조회 결과</caption>
+                                <colgroup>
+                                    <col style="width: 15rem;">
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col"><div class="min__h__box text--c">번호</div></th>
+                                        <th><div class="min__h__box text--c">노동조합명</div></th>
+                                        <th><div class="min__h__box text--c">쪽지 제목</div></th>
+                                        <th><div class="min__h__box text--c">등록일</div></th>
+                                        <th><div class="min__h__box text--c">확인일시</div></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><div class="min__h__box text--c">1</div></td>
+                                        <td><div class="min__h__box text--c">테스트asdf</div></td>
+                                        <td><div class="min__h__box text--c">test11</div></td>
+                                        <td><div class="min__h__box text--c">2024-10-04</div></td>
+                                        <td><div class="min__h__box text--c"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="min__h__box text--c">2</div></td>
+                                        <td><div class="min__h__box text--c">test88</div></td>
+                                        <td><div class="min__h__box text--c">test2</div></td>
+                                        <td><div class="min__h__box text--c">2024-07-26</div></td>
+                                        <td><div class="min__h__box text--c"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="min__h__box text--c">3</div></td>
+                                        <td><div class="min__h__box text--c">test88</div></td>
+                                        <td><div class="min__h__box text--c">test2</div></td>
+                                        <td><div class="min__h__box text--c">2024-07-26</div></td>
+                                        <td><div class="min__h__box text--c">2024-07-26 14:06:34</div></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- 모바일용 조회 결과 테이블 -->
+                        <div class="m__cont">
+                            <div class="table__horizontal__mo halfTable widthAutoTable">
+                                <table class="border-top-large">
+                                    <caption>쪽지결과 모바일</caption>
+                                    <tbody>
+                                        <tr>
+                                            <td class="pb--10"><span class="sub__title">번호</span><span>1</span></td>
+                                            <td><span class="sub__title">노동조합명</span><span>테스트asdf</span></td>
+                                            <td><span class="sub__title">쪽지 제목</span><span>abcd11</span></td>
+                                            <td><span class="sub__title">등록일</span><span>2024-07-26</span></td>
+                                            <td><span class="sub__title">확인일시</span><span>2024-07-26 14:06:34</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="pb--10"><span class="sub__title">번호</span><span>1</span></td>
+                                            <td><span class="sub__title">노동조합명</span><span>테스트asdf</span></td>
+                                            <td><span class="sub__title">쪽지 제목</span><span>abcd11</span></td>
+                                            <td><span class="sub__title">등록일</span><span>2024-07-26</span></td>
+                                            <td><span class="sub__title">확인일시</span><span>2024-07-26 14:06:34</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="pb--10"><span class="sub__title">번호</span><span>1</span></td>
+                                            <td><span class="sub__title">노동조합명</span><span>테스트asdf</span></td>
+                                            <td><span class="sub__title">쪽지 제목</span><span>abcd11</span></td>
+                                            <td><span class="sub__title">등록일</span><span>2024-07-26</span></td>
+                                            <td><span class="sub__title">확인일시</span><span>2024-07-26 14:06:34</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- ./ 모바일용 조회 결과 테이블 -->
+
+                        <!-- pagination w -->
+                        <div class="pagination w__cont mb--64">
+                            <a onclick="fnSelectInfs(1);return false;" class="page-navi step prev" href="#" title="이전페이지로 이동">이전</a>
+                            <div class="page-links">
+                                <a onclick="fnSelectInfs(1);return false;" class="page-link active" href="#">1</a>
+                                <span class="page-link link-dot">
+                                    ···
+                                </span>
+                                <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">6</a>
+                                <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">7</a>
+                                <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">8</a>
+                                <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">9</a>
+                                <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">10</a>
+                                <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">11</a>
+                                <span class="page-link link-dot">
+                                    ···
+                                </span>
+                                <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">120</a>
+                            </div>
+                            <a onclick="fnSelectInfs(1);return false;" class="page-navi step next" href="#" title="다음페이지로 이동">다음</a>
+                        </div>
+                        <!-- ./ pagination w -->
+                        <!-- 페이지 네이션 모바일 버전 -->
+                        <div class="pagination m__cont pagination__margin__mo">
+                            <div class="page-navis">
+                                <a onclick="fnSelectInfs(1); return false;" class="page-navi step prev" href="#" title="이전페이지로 이동">이전</a>
+                                <a onclick="fnSelectInfs(1); return false;" class="page-navi step next" href="#" title="다음페이지로 이동">다음</a>
+                            </div>
+                            <div class="page-links">
+                                <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">1</a>
+                                <span class="page-link link-dot">...</span>
+                                <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">7</a>
+                                <a onclick="fnSelectInfs(1);return false;" class="page-link active" href="#">8</a>
+                                <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">9</a>
+                                <span class="page-link link-dot">...</span>
+                                <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">120</a>
+                            </div>
+                        </div>
+                        <!-- 페이지 네이션 모바일 버전 -->
+                        <div class="sm--mt-36 mb--36">
+                            <h2 class="table__title">쪽지 정보</h2>
+                        </div>
+                        <div class="table__horizontal__ex mb--36">
+                            <table class="border-top-large">
+                                <caption>쪽지 정보 테이블</caption>
+                                <tr class="w__cont-i">
+                                    <th scope="row"><label for="name" class="must__type">노동조합명</label></th>
+                                    <td>
+                                        <div class="td__container">
+                                            <input id="name" type="text" class="txt--r" value="테스트asdf" readonly> 
+                                            <button type="button" class="bg--gray-02 borderR-7 color-fff px--10">검색</button>
+                                        </div>
+                                    </td>
+                                    <th scope="row">
+                                        <label for="day">등록일</label>
+                                    </th>
+                                    <td>
+                                        <div class="td__container">
+                                            <input id="day" type="text" class="txt--l" value="2024-10-04" readonly>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="m__cont">
+                                    <th scope="row">
+                                        <label for="nameMo">노동조합명</label>
+                                    </th>
+                                    <td>
+                                        <div class="td__container">
+                                            <input id="nameMo" type="text" class="txt--r" value="테스트asdf" readonly>
+                                            <button type="button" class="bg--gray-02 borderR-7 color-fff px--10">검색</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="m__cont">
+                                    <th scope="row">
+                                        <label for="dayMo">등록일</label>
+                                    </th>
+                                    <td>
+                                        <div class="td__container">
+                                            <input id="dayMo" type="text" class="txt--r" value="2024-10-04" readonly>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <label for="title" class="must__type">쪽지 제목</label>
+                                    </th>
+                                    <td>
+                                        <div class="td__container">
+                                            <input id="title" type="text" value="test11" class="txt--l" readonly>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <label class="must__type">쪽지 내용</label>
+                                    </th>
+                                    <td>
+                                        <div class="td__container">
+                                            <div class="pd--10 borderBox textarea">
+                                                /* 200px 이상 시 스크롤 생깁니다. */
+                                                쪽지내용test쪽지내용test쪽지내용test쪽지내용test쪽지내용test쪽지내용test
+                                                쪽지내용test쪽지내용test쪽지내용test쪽지내용test쪽지내용test쪽지내용test
+                                                쪽지내용test쪽지내용test쪽지내용test쪽지내용test쪽지내용test쪽지내용test
+                                                쪽지내용test쪽지내용test쪽지내용test쪽지내용test쪽지내용test쪽지내용test
+                                                쪽지내용test쪽지내용test쪽지내용test쪽지내용test쪽지내용test쪽지내용test
+                                                쪽지내용test쪽지내용test쪽지내용test쪽지내용test쪽지내용test쪽지내용test
+                                                쪽지내용test쪽지내용test쪽지내용test쪽지내용test쪽지내용test쪽지내용test
+                                                쪽지내용test쪽지내용test쪽지내용test쪽지내용test쪽지내용test쪽지내용test
+                                                쪽지내용test쪽지내용test쪽지내용test쪽지내용test쪽지내용test쪽지내용test
+                                                쪽지내용test쪽지내용test쪽지내용test쪽지내용test쪽지내용test쪽지내용test
+                                                쪽지내용test쪽지내용test쪽지내용test쪽지내용test쪽지내용test쪽지내용test
+                                                쪽지내용test쪽지내용test쪽지내용test쪽지내용test쪽지내용test쪽지내용test
+                                                쪽지내용test쪽지내용test쪽지내용test쪽지내용test쪽지내용test쪽지내용test
+                                                쪽지내용test쪽지내용test쪽지내용test쪽지내용test쪽지내용test쪽지내용test
+                                                쪽지내용test쪽지내용test쪽지내용test쪽지내용test쪽지내용test쪽지내용test
+                                                쪽지내용test쪽지내용test쪽지내용test쪽지내용test쪽지내용test쪽지내용test
+                                                쪽지내용test쪽지내용test쪽지내용test쪽지내용test쪽지내용test쪽지내용test
+                                                쪽지내용test쪽지내용test쪽지내용test쪽지내용test쪽지내용test쪽지내용test
+                                                쪽지내용test쪽지내용test쪽지내용test쪽지내용test쪽지내용test쪽지내용test
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                </div>
+                </div>
+            </main>
+            <!-- 푸터 -->
+            <footer>
+                <div class="footer__bottom" style="background-color: #F0F0F0;">
+                    <div class="inner">
+                        <div class="footer__logo">
+                            <img src="img/slogan_H48.svg" alt="하단 로고">
+                        </div>
+                        <div class="footer__flex">
+                            <div class="footer__info">
+                                <p class="location">
+                                    30117 세종특별자치시 한누리대로 422 정부세종청사 11동 고용노동부(044-202-7828)
+                                </p>
+                                <p class="copyright">
+                                    Copyright(c)Ministry of Employment and Labor. All rights reserved.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- ./ 푸터 -->
+            <div class="gnb__bg"></div>
+        </div>
+        <script src="js/default.js"></script>
+        <script>
+        /** 
+        함수명	: 없음
+        용도    : 달력 표시 및 옵션 설정
+        */
+        $(document).ready(function () {
+            var dateFormat = "yymmdd",
+            from = $(".datePicker").datepicker({
+                dateFormat: "yymmdd",
+                // defaultDate: "+1w",
+                changeMonth: true,
+                changeYear: true,
+                yearRange: "c-80y:c",
+                numberOfMonths: 1,
+            });
+
+            function getDate(element) {
+            var date;
+            try {
+                date = $.datepicker.parseDate(dateFormat, element.value);
+            } catch (error) {
+                date = null;
+            }
+            return date;
+            }
+
+            $.datepicker.setDefaults({
+            closeText: "닫기",
+            currentText: "오늘",
+            prevText: "이전 달",
+            nextText: "다음 달",
+            monthNames: ["1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월","12월",],
+            monthNamesShort: ["1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월","12월",],
+            dayNames: ["일", "월", "화", "수", "목", "금", "토"],
+            dayNamesShort: ["일", "월", "화", "수", "목", "금", "토"],
+            dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
+            weekHeader: "주",
+            yearSuffix: "년",
+            });
+        });
+        </script>
+    </body>
+</html>

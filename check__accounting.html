@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=, initial-scale=1.0">
+        <title>회계공시여부조회</title>
+        <link rel="stylesheet" href="style/reset.css">
+        <link rel="stylesheet" href="style/default.css">
+        <link rel="shortcut icon" href="img/korea__favicon.ico">
+        <link rel="stylesheet" href="style/swiper-bundle.min.css">
+        <script src="js/jquery-3.7.1.js"></script>
+    </head>
+    <body>
+        <!-- 스킵 네비개이션 -->
+        <div class="skip__nav">
+            <a href="#main__content">본문 바로가기</a>
+        </div>
+        <div class="wrap relative" id="sub__wrap">
+            <!-- 헤더 -->
+            <header class="header">
+                <div class="inner">
+                    <div class="header__btm">
+                        <h1 class="logo">
+                            <a href="index(변경).html" title="노동조합 회계공시 시스템 메인페이지로 바로가기">
+                                <span class="blind">노동조합 회계공시시스템</span>
+                                <img src="img/slogan_H48.svg" alt="메인 홈페이지로고">
+                            </a>
+                        </h1>
+                        <div class="right__icon__set">
+                            <!-- <a href="login.html" class="login">
+                                <img src="img/login__icon.svg" alt="로그인 아이콘">
+                                <span>로그인</span>
+                            </a> -->
+                            <a href="#" class="hamburger">
+                                <img src="img/hamburger__icon.svg" alt="전체 메뉴 아이콘">
+                                <span>전체메뉴</span>
+                            </a>
+                            <!-- <a href="sign__up.html" class="sign__up">
+                                <img src="img/sign__up.svg" alt="회원가입 아이콘">
+                                <span>회원가입</span>
+                            </a>   -->
+                            <div class="user__info">
+                                <!-- 기존 카운트  -->
+                                <!-- <ul id="cnt" class="clear">
+                                    <li><span>일일 <i></i></span><b>14</b></li><li><span>주간 <i></i></span><b>130</b></li><li><span>월간 <i></i></span><b>731</b></li><li><span>연간 <i></i></span><b>12182</b></li></ul> -->
+                                <!-- <a class="reset" href="javascript:void(0)" onclick="fn_reset()">관리자 패스워드 변경</a> -->
+                                    <a href="#" class="user__name">
+                                        <img src="img/icon__user.svg" alt="유저 아이콘">
+                                        <span>사용자님</span>
+                                    </a>
+                                        <a href="#" class="logout">
+                                        <img src="img/login__icon.svg" alt="로그아웃 아이콘">
+                                        <span>로그아웃</span>
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+                <div class="header__gnb">
+                    <div>
+                        <nav id="gnb1">
+                            <ul id="head_menu" class="top__menu">
+                                <li class="plus"> <a href="javascript:void(0);">시스템안내
+                                </a>
+                                    <div class="sub__menu">
+                                        <ul>
+                                            <li class="plus"> <a href="javascript:void(0);">회계공시시스템이란</a>
+                                                <div class="dep3"> <strong class="dep3__title"> <a href="accn__desc.html">회계공시시스템이란</a> </strong>                  
+                                                </div>
+                                            </li>
+                                            <li class="plus"> <a href="javascript:void(0);">주요회계공시항목설명</a>
+                                                <div class="dep3"> <strong class="dep3__title"> <a href="main__accn__desc.html">주요회계공시항목설명</a> </strong>
+                                                </div>
+                                            </li>
+                                            <li class="plus"> <a href="javascript:void(0);">공지사항</a>
+                                                <div class="dep3"> <strong class="dep3__title"> <a href="notice.html">공지사항</a> </strong>
+                                                </div>
+                                            </li>
+                                            <li class="plus"> <a href="javascript:void(0);">자주묻는질문</a>
+                                                <div class="dep3"> <strong class="dep3__title"> <a href="faq.html">자주묻는질문</a></strong>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="plus"> <a class="open--depth-2" href="javascript:void(0);">회계공시열람
+                                </a>
+                                    <div class="sub__menu">
+                                        <ul>
+                                            <li class="plus"> <a href="javascript:void(0);">회계공시열람</a>
+                                                <div class="dep3"> <strong class="dep3__title"> <a href="accn__open.html">회계공시열람</a> </strong>
+                                                    <ul>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="plus"> <a href="javascript:void(0);">회계공시여부조회</a>
+                                                <div class="dep3"> <strong class="dep3__title"> <a href="check__accounting.html">회계공시여부조회</a> </strong>
+                                                    <ul>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="plus"> <a class="open--depth-2" href="javascript:void(0);">회계공시등록
+                                </a>
+                                    <div class="sub__menu">
+                                        <ul>
+                                            <li class="plus"> <a href="javascript:void(0);">회계공시등록</a>
+                                                <div class="dep3"> <strong class="dep3__title"> <a href="public__register.html">회계공시등록</a> </strong>
+                                                    <ul>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="plus"> <a href="javascript:void(0);">가맹노조산하조직관리</a>
+                                                <div class="dep3"> <strong class="dep3__title"> <a href="union__management.html">가맹노조산하조직관리</a> </strong>
+                                                    <ul>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- 모바일용 GNB -->
+                <nav id="gnb2">
+                    <div class="gnb__in" tabindex="0">
+                    <div class="gnb__head">
+                        <div class="gnb__top2">
+                            <div class="txt--r">
+                                <button type="button" class="gnb__close"></button>
+                            </div>
+                            <div class="login__info">
+                                <a href="login.html" class="id__info">
+                                    <img src="img/icon20-1.png" alt="로그인 아이콘">
+                                    <span>로그인을 해주세요</span>
+                                </a>
+                                <!-- <a href="" class="id__info">
+                                    <img src="img/user__info.svg" alt="유저 아이콘">
+                                    <span>테스트님</span>
+                                </a> -->
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="gnb__body">
+                        <div class="m-gnb__menu">
+                            <div class="menu__wrap">
+                                <ul>
+                                    <li><a href="#gnbAnchor1" data-target="gnbAnchor1">시스템안내</a></li>
+                                    <li><a href="#gnbAnchor2" data-target="gnbAnchor2">회계공시열람</a></li>
+                                    <li><a href="#gnbAnchor3" data-target="gnbAnchor3">회계공시등록</a></li>
+                                </ul>
+                                <a href="#" class="logout">
+                                    <img src="img/icon20-1.png" alt="로그아웃 아이콘">
+                                    <span>로그아웃</span>
+                                </a>
+                            </div>
+                            <div class="submenu__wrap">
+                                <ul class="submenu" id="gnbAnchor1">
+                                    <li class="title"><a href="#">시스템안내</a></li>
+                                    <li><a href="accn__desc.html">회계공시시스템이란</a></li>
+                                    <li><a href="main__accn__desc.html">주요회계공시항목설명</a></li>
+                                    <li><a href="notice.html">공지사항</a></li>
+                                    <li><a href="faq.html">자주묻는질문</a></li>
+                                </ul>
+                                <ul class="submenu" id="gnbAnchor2">
+                                    <li class="title"><a href="accn__open.html">회계공시열람</a></li>
+                                    <li><a href="accn__open.html">회계공시열람</a></li>
+                                    <li><a href="check__accounting.html">회계공시여부조회</a></li>
+                                </ul>
+                                <ul class="submenu" id="gnbAnchor3">
+                                    <li class="title"><a href="public__register.html">회계공시등록</a></li>
+                                    <li><a href="public__register.html">회계공시등록</a></li>
+                                    <li><a href="union__management.html">가맹노조(산하조직) 관리</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </nav>
+                </div>
+            </header>
+            <!-- ./헤더 -->
+            <main class="content check__accounting">
+                <!-- visual bg -->
+                <div class="visual__bg">
+                    <div class="inner">
+                        <div class="visual__text">
+                            <h2>회계공시여부조회</h2>
+                            <p>회계공시여부조회 화면입니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner">
+                    <!-- breadcrumb -->
+                    <nav class="breadcrumb">
+                        <ol class="path">
+                            <li class="home"><a href="index(변경).html" class="txt">홈</a></li>
+                            <li><a href="sub1__1.html" class="txt">회계공시열람</a></li>
+                            <li><a href="check__accounting.html" class="txt">회계공시여부조회</a></li>
+                        </ol>
+                    </nav>
+                    <div class="relative">
+                        <!-- 페이지 제목 -->
+                        <div class="title__lv1__wrap">
+                            <h2 class="title__lv1">회계공시여부조회</h2>
+                        </div>
+                        <!-- /. 페이지 제목 -->
+                        <!-- 조회 방법 설명 -->
+                        <div class="desc__box">
+                                <p><strong class="desc__boxTit">참고</strong></p>
+                                <div class="desc__box__txt">
+                                    <p>조합비 세액공제 적용을 위해 공시해야 하는 대상인 <strong>총연합단체, 연합단체, ’22.12.31. 기준 조합원 수 1,000인 이상 단위노동조합(산하조직)</strong>의 공시여부를 조회할 수 있습니다.</p>
+                                    <p>조회 결과 <strong>모두 '공시완료'</strong>인 경우 ’23.10월 이후에 납부한 조합비에 세액공제 혜택을 부여합니다.</p>
+                                    <p>* 노동조합(산하조직)에 '23.1월 ~ 9월에 납부한 조합비는 종전과 같이 회계공시와 관계없이 세액공제 혜택을 부여합니다.</p>
+                                </div>
+                                <div class="desc__box__txt desc__list">
+                                    <p>&lt;검색 방법&gt;</p>
+                                    <p>❶ <strong>'22.12.31. 기준 조합원 수 1,000인 이상</strong> 단위노동조합(산하조직)에 소속된 조합원은 <strong>해당 단위노동조합(산하조직)</strong>을 검색</p>
+                                    <p style="margin-top: 1rem;">* (예시1) A총연맹 - B연맹 - C노동조합(1,500명) : C노동조합의 조합원은 C노동조합을 검색</p>
+                                    <p style="margin-left: 4.8rem;">→ 조회결과 A, B, C가 모두 '공시완료'인 경우 조합비 세액공제 O</p>
+                                    <p>* (예시2) A총연맹 - B연맹 - D노동조합(2,000명) - E지부(1,200명) : E지부의 조합원은 E지부를 검색</p>
+                                    <p style="margin-left: 4.8rem;">→ 조회결과 A, B, D, E가 모두 '공시완료'인 경우 조합비 세액공제 O</p>
+
+                                    <p style="margin-top: 1.6rem;">❷ <strong>'22.12.31. 기준 조합원 수 1,000인 미만</strong> 단위노동조합(산하조직)에 소속된 조합원은 해당 단위노동조합(산하조직)이 소속된 <strong>상급단체*</strong>를 검색</p>
+                                    <p style="margin-top: 1rem;">* 단위노동조합의 상급단체: 해당 단위노동조합이 소속된 총연합단체, 연합단체</p>
+                                    <p style="margin-left: 1.2rem;">산하조직의 상급단체: 해당 산하조직이 소속된 총연합단체, 연합단체, '22.12.31. 기준 조합원수 1,000인 이상 단위노동조합 및 산하조직</p>
+                                    <p style="margin-top: 1rem;">* (예시3) A총연맹 - B연맹 - F노동조합(500명) : F노동조합의 조합원은 B연맹을 검색</p>
+                                    <p style="margin-left: 4.8rem;">→ 조회결과 A, B가 모두 '공시완료'인 경우 조합비 세액공제 O</p>
+                                    <p>* (예시4) A총연맹 - B연맹 - D노동조합(2,000명) - E지부(1,200명) - G지회(500명) : G지회의 조합원은 E지부를 검색</p>
+                                    <p style="margin-left: 4.8rem;">→ 조회결과 A, B, D, E가 모두 '공시완료'인 경우 조합비 세액공제 O</p>
+                                </div>
+                        </div>
+                        <!-- ./ 조회 방법 설명 -->
+                    </div>
+                    <!-- 상단 검색 영역 -->
+                    <div class="user__form__wrapper">
+                        <form class="search__form__user type1 hp--mdSpace" action="POST">
+                            <div class="search">
+                                <input type="hidden" id="pageNo" name="pageNo" value="">
+                                <input type="hidden" id="lbrUniId" name="lbrUniId" value="">
+                                <input type="hidden" id="yearSel" name="yearSel" value="">
+                                <div class="flex--box-c search__list">
+                                    <label for="label" class="mo_only">검색항목</label>
+                                    <div class="select__box">
+                                        <select class="select--no--style select__renew" id="year" name="year">
+                                            <option value="">전체</option>
+                                            <option value="">2022</option>
+                                        </select>
+                                    </div>
+                                    <label for="label" class="mo_only">검색어</label>
+                                    <div class="input__box lg--interval__both">
+                                        <label for="searchText" class="blind">질문조회</label>
+                                        <input type="text" id="searchText" name="searchText" class="ml4" placeholder="노동조합,산하조직,대표자명,총연맹명,연맹명을 입력하세요." value="">
+                                        <div class="flex--box-c btn__con">
+                                            <button type="button" id="" class="btn__control__u bg--mint-00 mr--24" onclick="fn_search();">초기화</button>
+                                            <button type="button" id="" class="btn__control__u bg--blue-02 tablet-mr-24" onclick="fn_search();">조회</button>
+                                            <button type="button" id="" class="openPrint btn__control__u bg--black-00 w__cont" onclick="printOpen();">출력</button>
+                                        </div>   
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- ./ 상단 검색 영역 -->
+                    <!-- 조회 결과 텍스트 -->
+                    <div class="table__title__wrap">
+                        <h2 class="table__title">조회결과</h2>
+                        <p class="data__number">전체 <span>652</span>건</p>
+                    </div>
+                    <!-- ./ 조회 결과 -->
+                    <!-- 웹 조회 결과 표 -->
+                    <div class="table__vertical w__cont">
+                        <table class="border-top-large click">
+                            <caption>회계공시여부조회결과</caption>
+                            <colgroup>
+                                <col style="width: 6%;">
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col"><div class="min__h__box text--c">번호</div></th>
+                                    <th><div class="min__h__box text--c">회계연도</div></th>
+                                    <th><div class="min__h__box text--c">노동조합(산하조직)명</div></th>
+                                    <th><div class="min__h__box text--c">대표자</div></th>
+                                    <th><div class="min__h__box text--c">총연합단체</div></th>
+                                    <th><div class="min__h__box text--c">연합단체</div></th>
+                                    <th><div class="min__h__box text--c">단위노동조합</div></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><div class="min__h__box text--c">1</div></td>
+                                    <td><div class="min__h__box text--c">2022</div></td>
+                                    <td><div class="min__h__box text--l">강원도지역버스노동조합</div></td>
+                                    <td><div class="min__h__box text--c">김*만</div></td>
+                                    <td><div class="min__h__box text--l">한국노동조합총연맹</div></td>
+                                    <td><div class="min__h__box text--l">전국자동차노동조합연맹</div></td>
+                                    <td><div class="min__h__box text--l">강원도지역버스노동조합</div></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="min__h__box text--c">2</div></td>
+                                    <td><div class="min__h__box text--c">2022</div></td>
+                                    <td><div class="min__h__box text--l">강원특별자치도교육청노동조합</div></td>
+                                    <td><div class="min__h__box text--c">최*덕</div></td>
+                                    <td><div class="min__h__box text--l">한국노동조합총연맹</div></td>
+                                    <td><div class="min__h__box text--l">교육청노동조합연맹</div></td>
+                                    <td><div class="min__h__box text--l">강원특별자치도교육청노동조합</div></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="min__h__box text--c">3</div></td>
+                                    <td><div class="min__h__box text--c">2022</div></td>
+                                    <td><div class="min__h__box text--l">강원특별자치도청공무원노동조합</div></td>
+                                    <td><div class="min__h__box text--c">이*범</div></td>
+                                    <td><div class="min__h__box text--l">한국노동조합총연맹</div></td>
+                                    <td><div class="min__h__box text--l">공무원노동조합연맹</div></td>
+                                    <td><div class="min__h__box text--l">강원특별자치도청공무원노동조합</div></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="min__h__box text--c">4</div></td>
+                                    <td><div class="min__h__box text--c">2022</div></td>
+                                    <td><div class="min__h__box text--l">건강보험심사평가원노동조합</div></td>
+                                    <td><div class="min__h__box text--c">김*형</div></td>
+                                    <td><div class="min__h__box text--l">전국민주노동조합총연맹</div></td>
+                                    <td><div class="min__h__box text--l">전국정보경제서비스노동조합연맹</div></td>
+                                    <td><div class="min__h__box text--l">건강보험심사평가원노동조합</div></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="min__h__box text--c">5</div></td>
+                                    <td><div class="min__h__box text--c">2022</div></td>
+                                    <td><div class="min__h__box text--l">건설산업노동조합</div></td>
+                                    <td><div class="min__h__box text--c">육*수</div></td>
+                                    <td><div class="min__h__box text--l">-</div></td>
+                                    <td><div class="min__h__box text--l">전국건설노동조합연맹</div></td>
+                                    <td><div class="min__h__box text--l">건설산업노동조합</div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- ./ 웹 조회결과 표 -->
+                    <!-- 모바일 조회결과 표 -->
+                    <div class="m__cont accn__result">
+                        <div class="table__horizontal__mo miw120">
+                            <table class="border-top-large table--fixed">
+                                <caption>모바일용 조회결과 열람 테이블</caption>
+                                <tbody>
+                                    <tr>
+                                        <td class="txt--l title mo__strongTitle"><a href="#">강원도지역버스노동조합</a></td>
+                                        <td><span class="sub__title">회계연도</span><span>2022</span></td>
+                                        <td><span class="sub__title">대표자</span><span>김*만</span></td>
+                                        <td><span class="sub__title">총연합단체</span><span>한국노동조합총연맹</span></td>
+                                        <td><span class="sub__title">연합단체</span><span>전국자동차노동조합연맹</span></td>
+                                        <td><span class="sub__title">단위노동조합</span><span>강원도지역버스노동조합</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="txt--l title mo__strongTitle"><a href="#">강원특별자치도교육청노동조합</a></td>
+                                        <td><span class="sub__title">회계연도</span><span>2022</span></td>
+                                        <td><span class="sub__title">대표자</span><span>최*덕</span></td>
+                                        <td><span class="sub__title">총연합단체</span><span>한국노동조합총연맹</span></td>
+                                        <td><span class="sub__title">연합단체</span><span>교육청노동조합연맹</span></td>
+                                        <td><span class="sub__title">단위노동조합</span><span>강원특별자치도교육청노동조합</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="txt--l title mo__strongTitle"><a href="#">강원특별자치도청공무원노동조합</a></td>
+                                        <td><span class="sub__title">회계연도</span><span>2022</span></td>
+                                        <td><span class="sub__title">대표자</span><span>이*범</span></td>
+                                        <td><span class="sub__title">총연합단체</span><span>한국노동조합총연맹</span></td>
+                                        <td><span class="sub__title">연합단체</span><span>공무원노동조합연맹</span></td>
+                                        <td><span class="sub__title">단위노동조합</span><span>강원특별자치도청공무원노동조합</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="txt--l title mo__strongTitle"><a href="#">건강보험심사평가원노동조합</a></td>
+                                        <td><span class="sub__title">회계연도</span><span>2022</span></td>
+                                        <td><span class="sub__title">대표자</span><span>김*형</span></td>
+                                        <td><span class="sub__title">총연합단체</span><span>전국민주노동조합총연맹</span></td>
+                                        <td><span class="sub__title">연합단체</span><span>전국정보경제서비스노동조합연맹</span></td>
+                                        <td><span class="sub__title">단위노동조합</span><span>건강보험심사평가원노동조합</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="txt--l title mo__strongTitle"><a href="#">건설산업노동조합</a></td>
+                                        <td><span class="sub__title">회계연도</span><span>2022</span></td>
+                                        <td><span class="sub__title">대표자</span><span>육*수</span></td>
+                                        <td><span class="sub__title">총연합단체</span><span>-</span></td>
+                                        <td><span class="sub__title">연합단체</span><span>전국건설노동조합연맹</span></td>
+                                        <td><span class="sub__title">단위노동조합</span><span>건설산업노동조합</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- 웹 페이지 네이션 -->
+                    <div class="pagination w__cont my--64">
+                        <a onclick="fnSelectInfs(1);return false;" class="page-navi step prev" href="#" title="이전페이지로 이동">이전</a>
+                        <div class="page-links">
+                            <a onclick="fnSelectInfs(1);return false;" class="page-link active" href="#">1</a>
+                            <span class="page-link link-dot">
+                                ···
+                            </span>
+                            <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">6</a>
+                            <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">7</a>
+                            <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">8</a>
+                            <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">9</a>
+                            <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">10</a>
+                            <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">11</a>
+                            <span class="page-link link-dot">
+                                ···
+                            </span>
+                            <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">120</a>
+                        </div>
+                        <a onclick="fnSelectInfs(1);return false;" class="page-navi step next" href="#" title="다음페이지로 이동">다음</a>
+                    </div>
+                    <!-- 모바일 페이지 네이션 -->
+                    <div class="pagination m__cont pagination__margin__mo">
+                        <div class="page-navis">
+                            <a onclick="fnSelectInfs(1); return false;" class="page-navi step prev" href="#" title="이전페이지로 이동">이전</a>
+                            <a onclick="fnSelectInfs(1); return false;" class="page-navi step next" href="#" title="다음페이지로 이동">다음</a>
+                        </div>
+                        <div class="page-links">
+                            <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">1</a>
+                            <span class="page-link link-dot">...</span>
+                            <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">7</a>
+                            <a onclick="fnSelectInfs(1);return false;" class="page-link active" href="#">8</a>
+                            <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">9</a>
+                            <span class="page-link link-dot">...</span>
+                            <a onclick="fnSelectInfs(1);return false;" class="page-link" href="#">120</a>
+                        </div>
+                    </div>
+                    <!-- 도움말 상단 제목 -->
+                    <div class="info__tip__box flex--box-c mb--16">
+                        <h2 class="title__lv2">회계공시여부 정보</h2>
+                        <button type="button" class="info__tip ml--10"></button>
+                        <!-- 툴팁 내부 내용 -->
+                        <div class="tooltip__layer">
+                            <div class="tooltip__top flex--box-s">
+                                <p class="tooltip__title">회계공시여부 정보란?</p>
+                                <button type="button" class="info__close__btn"></button>
+                            </div>
+                            <div class="tooltip__content">
+                                <p>
+                                    <strong>가</strong>공시완료 : (총)연합단체, '22.12.31. 기준 조합원 수 1,000인 이상 단위노동조합(산하조직)에 해당하여 공시를 완료한 경우
+                                </p>
+                                <p>
+                                    <strong>나</strong>미공시 : (총)연합단체 또는 전년도 말일 기준 조합원수 1,000인 이상 단위노동조합(산하조직)에 해당하지만 공시하지 않은 경우 
+                                </p>
+                                <p>
+                                    <strong>다</strong>총연합단체 : 산업별 연합단체 또는 전국 규모의 산업별 노동조합을 구성원으로 하여 조직한 노동조합 
+                                </p>
+                                <p>
+                                    <strong>라</strong>연합단체 : 구성단위가 자연인(사람)이 아닌 노동조합(단체)인 경우로 동종 산업별로 조직된 단위 노동조합을 구성원으로 하여 조직한 노동조합 
+                                </p>
+                                <div>
+                                    <p>
+                                        <strong>마</strong>단위노동조합
+                                    </p>
+                                    <div class="list pl--20">
+                                        <p>1) 산업별/업종별 노동조합 : 동종 산업(업종)에 종사하는 근로자들이 직종과 기업을 초월하여 조직한 노동조합</p>
+                                        <p>2) 지역별 노동조합 : 일정지역 내의 근로자들이 동일산업 또는 직종 단위로 조직한 노동조합</p>
+                                        <p>3) 기업단위 노동조합 : 일반적인 단위노동조합 형태로 특정 기업(사업 또는 사업장)에 소속된 근로자가 직업(종)의 구별없이 개별 기업단위로 조직한 노동조합</p>
+                                        <p style="padding-bottom: 1.6rem;">※ 수익사업회계는 임대사업, 영리시설 운영사업 등 법인세 납세의무가 있는 사업의 회계를 말합니다.</p>
+                                    </div>
+                                    </div>
+                                <p>
+                                    <strong>바</strong>지부, 지회, 분회(산하조직) : 단위노동조합의 내부조직 
+                                </p>
+                            </div>
+                        </div>
+                        <!-- ./ 툴팁 내부 내용 -->
+                    </div>
+                    <!-- ./ 도움말 상단 제목 -->
+                    <!-- 가로 테이블 예시 -->
+                    <div class="table__horizontal__ex shortTit2 mo__columnTable hp--lgSpace" id="main__content">
+                        <table class="border-top-large wordBreakKeepAll">
+                            <caption>회계공시여부 정보</caption>
+                            <tbody>
+                                <tr>
+                                    <th><label for="">노동조합<br class="pcOnly">(산하조직)명</label></th>
+                                    <td><div class="td__container"><input type="text" id="a" name="a" value="건설산업노동조합" readonly></div></td>
+                                    <th><label for="">회계연도</label></th>
+                                    <td><div class="td__container"><input type="text" id="b" name="b" value="2022" readonly></div></td>
+                                    <th><label for="">대표자</label></th>
+                                    <td><div class="td__container"><input type="text" id="c" name="c" value="육*영" readonly></div></td>
+                                </tr>
+                                <tr>
+                                    <th><label for="">총연합단체</label></th>
+                                    <td><div class="td__container"><input type="text" id="d" name="d" value="" readonly></div></td>
+                                    <th><label for="">총연합단체 공시여부</label></th>
+                                    <td><div class="td__container"><input type="text" value=""></div></td>
+                                </tr>
+                                <tr>
+                                    <th><label for="">연합단체</label></th>
+                                    <td><div class="td__container"><input type="text" id="e" name="e" value="전국건설노동조합연맹" readonly></div></td>
+                                    <th><label for="">연합단체 공시여부</label></th>
+                                    <td><div class="td__container"><input type="text" id="f" name="f" value="공시완료" readonly></div></td>
+                                </tr>
+                                <tr>
+                                    <th><label for="">단위노동조합</label></th>
+                                    <td><div class="td__container"><input type="text" id="g" name="g" value="건설산업노동조합" readonly></div></td>
+                                    <th><label for="">단위노동조합 공시여부</label></th>
+                                    <td><div class="td__container"><input type="text" id="h" name="h" value="미공시" readonly></div></td>
+                                </tr>
+                                <tr>
+                                    <th><label for="">지부</label></th>
+                                    <td><div class="td__container"><input type="text" id="i" name="i" value="" readonly></div></td>
+                                    <th><label for="">지부 공시여부</label></th>
+                                    <td><div class="td__container"><input type="text" id="j" name="j" value="" readonly></div></td>
+                                </tr>
+                                <tr>
+                                    <th><label for="">지회</label></th>
+                                    <td><div class="td__container"><input type="text" id="k" name="k" value="" readonly></div></td>
+                                    <th><label for="">지회 공시여부</label></th>
+                                    <td><div class="td__container"><input type="text" id="l" name="l" value="" readonly></div></td>
+                                </tr>
+                                <tr>
+                                    <th><label for="">분회</label></th>
+                                    <td><div class="td__container"><input type="text" id="m" name="m" value="" readonly></div></td>
+                                    <th><label for="">분회 공시여부</label></th>
+                                    <td><div class="td__container"><input type="text" id="n" name="n" value="" readonly></div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- ./ 가로 테이블 예시 -->
+                    <!-- 하단 버튼 그룹 -->
+                    <div class="function__group m__cont mb--60">
+                        <button type="button" id="" class="openPrint btn__control bg--black-00" onclick="printOpen();">출력</button>
+                    </div>
+                    <!-- ./ 하단 버튼 그룹 -->
+                    <!-- 보고서 출력 정보  -->
+                </div>
+            </main>
+            <!-- 푸터 -->
+            <footer>
+                <div class="footer__bottom" style="background-color: #F0F0F0;">
+                    <div class="inner">
+                        <div class="footer__logo">
+                            <img src="img/slogan_H48.svg" alt="하단 로고">
+                        </div>
+                        <div class="footer__flex">
+                            <div class="footer__info">
+                                <p class="location">30117 세종특별자치시 한누리대로 422 정부세종청사 11동 고용노동부(044-202-7828)</p>
+                                <p class="copyright">Copyright(c)Ministry of Employment and Labor. All rights reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- /. 푸터 -->
+            <div class="gnb__bg"></div>
+        </div>
+        <script src="js/default.js"></script>
+    </body>
+</html>

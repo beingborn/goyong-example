@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=, initial-scale=1.0">
+        <title>메인 페이지 팝업</title>
+
+        <link rel="stylesheet" href="style/default.css">
+        <link rel="stylesheet" href="style/reset.css">
+        <link rel="shortcut icon" href="img/korea__favicon.ico">
+        <link rel="stylesheet" href="style/swiper-bundle.min.css">
+        <script src="js/jquery-3.7.1.js"></script>
+        <script src="js/echarts.min.js"></script>
+        <style>
+            html, body {overflow: hidden; min-height: auto!important;}
+        </style>
+    </head>
+    <body>
+        <!-- 
+        P :
+        img만 있는 경우 상하 좌우 여백을 없애기 위해 popup__body에 imgOnly 클래스를 삽입해주어야 합니다.
+        -->
+
+        <!-- 메인용 팝업 텍스트 -->
+        <div class="popupBox main">
+            <div class="popup__title title__lv2">
+                <h2>[노동조합 회계공시시스템 이용 안내]</h2>
+            </div>
+            <div class="popup__body">
+                <div class="flex--vertical gap-40">
+                    <p>보다 원활하고 안정적인 서비스를 제공해 드리고자 <br>
+                        시스템 업그레이드 및 점검 작업이 진행 될 예정입니다.<br> 
+                        그로 인해 사이트가 아래와 같이 잠시 중단됨을 알려드립니다.
+                    </p>
+                    <p>시간 : 2024.10.25(금) 18시~21시
+                        <br>
+                        내용 : 사이트 이용 제한
+                    </p>
+                    <p>감사합니다.</p>
+                </div>
+            </div>
+            <div class="popup__foot flex--box-cs">
+                <div class="flex--box-c">
+                    <input type="checkbox" id="todayCheck">
+                    <label for="todayCheck" class="ml--15 color-666">오늘하루 보지않기</label>
+                </div>
+                <button type="button" class="pop__close">닫기</button>
+            </div>
+        </div>
+        <!-- ./ 메인용 팝업 -->
+        <!-- 메인용 팝업 텍스트 이미지만 있을 경우 -->
+        <!-- <div class="popupBox main">
+            <div class="popup__title title__lv2">
+                <h2>[노동조합 회계공시시스템 이용 안내]</h2>
+            </div>
+            <div class="popup__body imgOnly">
+                <div class="popup__img" style="height: 400px;">
+                    <img src="./img/top_visual_faq.jpg" alt="abc">
+                </div>
+            </div?>
+            <div class="popup__foot flex--box-cs">
+                <div class="flex--box-c">
+                    <input type="checkbox" id="todayCheck">
+                    <label for="todayCheck" class="ml--15 color-666">오늘하루 보지않기</label>
+                </div>
+                <button type="button" class="pop__close">닫기</button>
+            </div>
+        </div> -->
+        <!-- ./ 메인용 팝업 -->
+        <!-- 이미지와 텍스트가 같이 있는 경우 -->
+        <!-- <div class="popupBox main">
+            <div class="popup__title title__lv2">
+                <h2>[노동조합 회계공시시스템 이용 안내]</h2>
+            </div>
+            <div class="popup__body">
+                <div class="popup__img" style="height: 400px;">
+                    <img src="./img/예시이미지.jpg" alt="예시이미지">
+                </div>
+                <div class="flex--vertical gap-40 my--20">
+                    <p>보다 원활하고 안정적인 서비스를 제공해 드리고자 <br>
+                        시스템 업그레이드 및 점검 작업이 진행 될 예정입니다.<br> 
+                        그로 인해 사이트가 아래와 같이 잠시 중단됨을 알려드립니다.
+                    </p>
+                    <p>시간 : 2024.10.25(금) 18시~21시
+                        <br>
+                        내용 : 사이트 이용 제한
+                    </p>
+                    <p>감사합니다.</p>
+                </div>
+            </div>
+            <div class="popup__foot flex--box-cs">
+                <div class="flex--box-c">
+                    <input type="checkbox" id="todayCheck">
+                    <label for="todayCheck" class="ml--15 color-666">오늘하루 보지않기</label>
+                </div>
+                <button type="button" class="pop__close">닫기</button>
+            </div>
+        </div> -->
+        <!-- ./ 이미지와 텍스트가 같이 있는 경우 -->
+
+        <script>
+            $('.pop__close').on('click', function(){
+                window.close();
+            })
+        </script>
+    </body>
+</html>

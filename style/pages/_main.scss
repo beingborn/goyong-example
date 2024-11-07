@@ -1,0 +1,117 @@
+/****************************************************
+	파일명	: main.css
+	최초작성자	: 이민혁
+	최초작성일	: 2024-09-28
+	-------------------------------------------------
+	Dec. 메인페이지 관련 스타일 
+	-------------------------------------------------
+	최종수정자	: 이민혁
+	최종수정일	: 2024-10-02
+	수정내용	: 최초작성
+	속성순서: 
+*****************************************************/
+
+.top__visual { width: 100%; color: #fff; font-size: 1rem;}
+.top__visual .main__hero {width: 100%; height: 45rem; background: url(../img/main__hero.jpg) no-repeat center; background-size: cover; position: relative;}
+.top__visual .main__hero .black__bg {position: absolute;left: 0;top: 0;width: 100%;height: 100%;background: rgba(0, 0, 0, 0.2);}
+.top__visual .main__hero .inner {height: 100%;position: relative;z-index: 1;}
+.top__visual .main__hero .main__text {position: absolute;top: 9.7rem;}
+.top__visual .main__hero .main__text .main__bold {font-size: 4rem;line-height: 130%;margin-bottom: 4rem;}
+.top__visual .main__hero .main__text .main__medium {font-size: 2rem; font-weight: 400; line-height: 110%;}
+.top__visual .main__hero .quick__menu {position: absolute;right: 0;top: 12.8rem;display: flex;}
+.top__visual .main__hero .quick__menu .quick__wrap {width: 14rem; height: 14rem; border-radius: 50%; border: 0.2rem solid #DBDBDB; background-color: #373737; display: flex; flex-direction: column; align-items: center; justify-content: center; margin-right: 4.8rem; cursor: pointer;}
+.top__visual .main__hero .quick__menu .quick__wrap:nth-last-child(1) {margin-right: 0;}
+.top__visual .main__hero .quick__menu .quick__wrap span {font-size: 1.5rem; padding-top: 1.6rem; color: #fff; line-height: 120%;}
+
+.manual {position: relative;}
+.manual .tip {position: absolute; top: -6rem;}
+
+// 상단 카운트 그룹 
+.count__group .count:hover { &:hover {background-color: #14BDB3; .subc {color: #fff;}}}
+.count__group { position: relative; z-index: 2; top: -10rem;}
+.count__group .inner { display: flex; justify-content: space-between;}
+.count__group .count {width: 40.5rem; padding: 3.3rem 0; max-height: 18rem; background-color: #fff; box-shadow: 0rem 0.4rem 1.5rem rgba(0, 0, 0, 0.1); border-radius: 3.2rem;}
+.count__group .count > a {display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; height: 100%; text-align: center;}
+.count__group .count .subc {font-size: 3rem; font-weight: 700; text-align: center; line-height: 120%; word-break: keep-all;} 
+.count__group .count .subc::before {content: ''; width: 9rem; height: 9rem; display: block; margin: 0px auto; margin-bottom: 1.8rem; background-color: #fff; border-radius: 50%;} 
+.count__group .count    .subc.open::before {background-image: url(../img/icons__open.png);background-repeat: no-repeat;background-position: center;}
+.count__group .count     .subc.write::before {background-image: url(../img/icons__write.png);background-repeat: no-repeat;background-position: center;}
+.count__group .count .subc.manual::before {background-image: url(../img/icons__manual.png);background-repeat: no-repeat;background-position: center;}
+
+// 고객센터 및 자주 묻는 질문
+.cs__center {position: relative; z-index: 0; min-height: 37.4rem; color: #fff; background: url(../img/cs__center.jpg) no-repeat center; -webkit-backdrop-filter: blur(1.5rem);backdrop-filter: blur(1.5rem);background-size: cover;display: flex;}
+.cs__center .content__top {display: flex;justify-content: space-between; align-items: center;}
+.cs__center .content__top .more {color: #fff;font-size: 1.9rem;padding-right: 0.4rem;display: inline-flex;align-items: center;}
+.cs__center .content__top .more::after {content: "";width: 2.4rem;height: 2.4rem;background: url(../img/more__arrow__right.png) no-repeat center;}
+.cs__center .content__title {font-size: 3.2rem;font-weight: bold;}
+.cs__center .content {display: flex;justify-content: space-between;position: relative;z-index: 3;padding-top: 3.7rem;}
+.cs__center .content .item {width: calc(50% - 3rem);}
+.cs__center .content .visitor__graph .graph__img {display: flex;justify-content: center;align-items: center;}
+.cs__center .content .visitor__graph img {width: 100%;}.cs__center .content .qa .content__qa {margin-top: 0.7rem;}
+.cs__center .content .qa .content__qa a {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 3.3rem 0 3.3rem 2.4rem;
+    color: #fff;
+    max-height: 8rem;
+}
+.cs__center .content .qa .content__qa a .text {white-space: nowrap;text-overflow: ellipsis;overflow: hidden;font-size: 2rem;font-weight: 700;}
+.cs__center .content .qa .content__qa a .text span {margin-right: 3.2rem;}
+.cs__center .content .qa .content__qa a:not(:last-child) {border-bottom: 0.1rem solid #fff;}
+
+
+// 메인 차트 영역
+.main__graph {position: relative; top: -4rem; margin-bottom: 1rem}
+.main__echart .chartBox {background: #FFF; height: 40rem; border-top: 1px solid #E5E5E5; border-radius: 2.4rem; padding: 3rem 3.5rem 0 3.5rem; box-shadow: 0rem 0rem 2rem 0 rgba(0, 0, 0, 0.1);}
+.main__echart > div {display: flex; justify-content: space-between; align-items: center; gap: 4rem;}
+.main__echart .chartBox .title {margin-bottom: 3.2rem;}
+.main__echart .chartBox .echart {width: 100%; height: 18.8rem;}
+.main__echart .table__vertical {width: 44%; font-size: 1.6rem;}
+.main__echart .table__vertical table {table-layout: fixed;}
+.main__echart .table__vertical table tbody td {padding: 0 1rem;}
+.main__echart .table th {height: 6.5rem;}
+.main__echart .data .unit {color: #767676; font-size: 1.3rem; margin-left: 0.4rem;}
+.main__echart .data > h2 {font-size: 1.7rem; color: #767676;}
+.main__echart .chart1, .chart2 { width: 320px;}
+.main__echart .table tbody td { height: 6.5rem; text-overflow: ellipsis; overflow: hidden; }// white-space: nowrap; min-width: 5rem;
+.main__echart .table tbody td :nth-child(1) {min-width: 10rem;}
+.main__echart .table tbody td :nth-child(2) {min-width: 8rem;}
+.main__echart .table colgroup col:nth-child(1){width: 30%;}
+.main__echart .table colgroup col:nth-child(2){width: 25%;}
+.main__echart__wrap {display: flex; justify-content: space-between; gap: 3.2rem;}
+.main__echart .table__unit {padding-bottom: 1.2rem; font-size: 1.7rem;}
+#tableList tbody tr.on {background-color: #DDEAF6!important;} // 메인 차트 클릭 시 클래스 바인딩
+.chartBox .container { display: flex; justify-content: center; align-items: center;}
+.chartBox .title {font-size: 2.5rem;}
+.data--bold {color: #000; font-size: 1.7rem; font-weight: bold;}
+
+.chartData__wrap {display: flex; padding-top: 3rem;}
+.chartData__wrap .data {text-align: center; width: 50%;}
+
+.table>#tableList {min-height: 40rem;max-height: 40rem;}
+
+ // 메인페이지 하단 배너 스와이퍼
+.swiper__container {width: 100%;max-width: 109.6rem;padding-left: 9.2rem;padding-right: 9.2rem;}
+.banner__swiper .swiper__wrapper {display: flex; justify-content: center; margin: 0 auto;}
+.banner__swiper {position: relative;margin: 6rem 0;}
+.banner__swiper .swiper-slide {display: flex; justify-content: center; align-items: center; height: 16rem; position: relative;}
+.banner__swiper .swiper-slide .item__desc {font-size: 2.4rem; margin-left: 2.4rem; font-weight: 700; color: #fff; text-align: left; position: absolute; top: 50%; transform: translateY(-50%); left: 2.4rem;}   
+.worker {background-color: #218BEE;}
+.work__condition {background-color: #16C273;}
+.work__portal {background-color: #14BDB3;}
+.banner__box {width: 100%; height: 100%; position: relative; border-radius: 2.4rem; overflow: hidden;}
+.banner__box .banner__text {position: absolute;left: 2.4rem;top: 50%;transform: translateY(-50%);z-index: 99;} 
+.banner__box .banner__text {color: #fff; font-size: 2.4rem; line-height: 150%; font-weight: 700;} 
+.banner__box img {position: absolute; right: 0; bottom: 0; z-index: 98;}
+.banner__btn {position: absolute;  width: 128rem;top: 50%;transform: translateY(-50%);z-index: 999;}    .banner__btn .swiper-button-next {background: url(../img/swiper__next__btn.png) no-repeat center; background-size: cover; right: 1.2rem;}
+.banner__btn .swiper-button-prev {background: url(../img/swiper__prev__btn.png) no-repeat center; background-size: cover; right: 1.2rem;}
+.banner__btn .swiper-button-next,.banner__btn .swiper-button-prev {width: 6.4rem; height: 6.4rem;}
+.banner__btn .swiper-button-prev::after, .banner__btn .swiper-button-next::after {display: none;}
+
+.section__top {display: flex;justify-content: space-between;align-items: center;margin-bottom: 4rem;}
+.section__top .section__title {font-weight: 700;font-size: 4rem;line-height: 150%;}
+.section__top .section__title .strong {color: #21A366;}
+.section__top .form__select {font-family: inherit;width: 15rem;border: 0;border-bottom: 0.1rem solid #dbdbdb;font-size: 1.9rem;-webkit-appearance: none;  -moz-appearance: none; appearance: none; background: url(../img/icon__arrow__20.png) no-repeat;background-position: right 1.6rem center;}
