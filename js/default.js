@@ -253,11 +253,48 @@ $(document).ready(function () {
   $(".mo__slide").slideUp();
 });
 
-/* t-title modal */
+/* t-title */
 $('.mo__slide > table .t__title').on('click', function(){
   /* 클릭 시 자신을 포함한 tr을 찾아 해당 요소 내부에 td 모두 display block */
   let parentTr = $(this).closest('tr');
   $('.mo__slide > table tr').not(parentTr).removeClass('is-open')
   parentTr.toggleClass('is-open')
 })
+
+
+
+var titleLength;
+/* 기본 설정으로 td들 숨겨놓기 */
+$('.mo__slide .sub__t__title').nextAll('td:not(.sub__t__title)').hide()
+$('.mo__slide .sub__t__title').on('click',function(){
+  let parentTr = $(this).closest('tr'); /* 부모  tr 찾기 */
+  let hasNext = $(this).nextAll('.sub__t__title').length === 0; /* 다음 요소가 있는 지 찾기 */
+  /* 해당 클래스 토글하기 */
+  $(this).toggleClass('is-subopen')
+  /* sub__t__title 개수 확인 */
+  parentTr.each(function(){ 
+    titleLength = $(this).find('.sub__t__title').length;
+  })  
+  /* 요소가 한 개이거나 다음 서브 타이틀이 없을 시*/
+  if (titleLength == 1 || hasNext == true){
+    $('.mo__slide .sub__t__title').not($(this)).nextUntil('.sub__t__title').hide()
+    $(this).nextAll().toggle();
+    $('.mo__slide .sub__t__title').not($(this)).removeClass('is-subopen')   
+  } else {
+    /* 해당 요소가 아닌 것들의 다음 sub__title까지의 요소 hide로 바꾸기 */
+    $('.mo__slide .sub__t__title').not($(this)).nextUntil('.sub__t__title').hide()
+    $(this).nextUntil('.sub__t__title').toggle();
+    $('.mo__slide .sub__t__title').not($(this)).removeClass('is-subopen')   
+  }
+})
+
+
+
+
+
+
+
+
+
+
 
