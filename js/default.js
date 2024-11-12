@@ -226,7 +226,7 @@ $(".openPopup").on("click", function(event) {
   $('body').addClass('overflow-rock')
 });
 
-// popup bg 클릭 시 팝업 및 배경 비활성화
+/* popup bg 클릭 시 팝업 및 배경 비활성화 */
 $('body').on('click', '.bgPopup', function() {
   $('#popup').fadeOut()
   $(this).fadeOut(); 
@@ -238,7 +238,6 @@ $("#popup .close").on("click", function(event) {
   $(".bgPopup").fadeOut(400);
   $('body').removeClass('overflow-rock')
 });
-
 
 /** 모바일 슬라이드 토글 */
 let dataOpen = $(".data--open");
@@ -253,7 +252,7 @@ $(document).ready(function () {
   $(".mo__slide").slideUp();
 });
 
-/* t-title */
+/* 공시 열람 모바일 애니메이션 */
 $('.mo__slide > table .t__title').on('click', function(){
   /* 클릭 시 자신을 포함한 tr을 찾아 해당 요소 내부에 td 모두 display block */
   let parentTr = $(this).closest('tr');
@@ -261,10 +260,8 @@ $('.mo__slide > table .t__title').on('click', function(){
   parentTr.toggleClass('is-open')
 })
 
-
-
+/* 공시 열람 depth 토글 애니메이션 */
 var titleLength;
-/* 기본 설정으로 td들 숨겨놓기 */
 $('.mo__slide .sub__t__title').nextAll('td:not(.sub__t__title)').hide()
 $('.mo__slide .sub__t__title').on('click',function(){
   let parentTr = $(this).closest('tr'); /* 부모  tr 찾기 */
