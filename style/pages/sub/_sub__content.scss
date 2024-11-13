@@ -342,19 +342,22 @@ button.mo_only {display: none;}
 // 모바일 슬라이드 서브 스타일
 .sub__t__title {cursor: pointer; font-size: 1.8rem;}
 .sub__t__title > span {display: flex; align-items: center;}
+.sub__t__total {margin-right: .8rem; margin-left: auto;}
 .sub__t__title::after {content: ''; width: 1.6rem; height: 1.6rem; background: url(../img/acordian__arrow__down.png) no-repeat center; align-self: center;}
 .sub__t__title.is-subopen::after{transform: rotate(180deg);}
+.notFold {font-size: 1.8rem;}
+.notFold > span {display: flex; align-items: center;}
+
 .mo__slide > table .sub__element td {display: flex; align-items: center;}
 .mo__slide > table .sub__element span {display: flex; align-items: center;}
 .mo__slide > table .sub__element::after {content: ''; height: 1px; background-color: #ddd; flex: 1; margin-left: 1rem;}
 .mo__slide > table .t__title {padding-top: 2rem; padding-bottom: 1rem; border-bottom: 0.1rem solid #ddd; display: flex; justify-content: space-between; cursor: pointer;}
-
 .mo__slide > table tr.is-open .t__title.arrow::after {transform: rotate(180deg);}
 .t__title.arrow::after { content: ''; width: 1.6rem; height: 1.6rem; background: url(../img/acordian__arrow__down.png) no-repeat center; align-self: center;}
 .t__title.arrow > span {margin-left: auto; margin-right: .8rem;}
 
-
-.mo__slide > table tr td {margin-top: 2rem; display: flex; align-items: center; justify-content: space-between; display: none;}
+.mo__slide .acordian__table tr td {display: none;}
+.mo__slide > table tr td {margin-top: 2rem; display: flex; align-items: center; justify-content: space-between;}
 .mo__slide input {text-align: right;}
 .mo__slide.min__h__58 td {min-height: 5.8rem;}
 .td--separated {padding-top: 2rem; padding-bottom: 3rem; border-top: 0.1rem solid #ddd; border-bottom: 0.1rem solid #ddd; margin-bottom: 0!important;}

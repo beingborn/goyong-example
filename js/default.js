@@ -253,7 +253,7 @@ $(document).ready(function () {
 });
 
 /* 공시 열람 모바일 애니메이션 */
-$('.mo__slide > table .t__title').on('click', function(){
+$('.mo__slide .acordian__table .t__title').on('click', function(){
   /* 클릭 시 자신을 포함한 tr을 찾아 해당 요소 내부에 td 모두 display block */
   let parentTr = $(this).closest('tr');
   $('.mo__slide > table tr').not(parentTr).removeClass('is-open')
@@ -262,27 +262,13 @@ $('.mo__slide > table .t__title').on('click', function(){
 
 /* 공시 열람 depth 토글 애니메이션 */
 var titleLength;
-$('.mo__slide .sub__t__title').nextAll('td:not(.sub__t__title)').hide()
-$('.mo__slide .sub__t__title').on('click',function(){
-  let parentTr = $(this).closest('tr'); /* 부모  tr 찾기 */
-  let hasNext = $(this).nextAll('.sub__t__title').length === 0; /* 다음 요소가 있는 지 찾기 */
-  /* 해당 클래스 토글하기 */
+$('.mo__slide .sub__t__title').nextAll('td:not(.sub__t__title):not(.notFold)').hide()
+$('.mo__slide .sub__t__title').on('click', function(){
+  // true 일시 없는 것, false일시 있는 것.
   $(this).toggleClass('is-subopen')
-  /* sub__t__title 개수 확인 */
-  parentTr.each(function(){ 
-    titleLength = $(this).find('.sub__t__title').length;
-  })  
-  /* 요소가 한 개이거나 다음 서브 타이틀이 없을 시*/
-  if (titleLength == 1 || hasNext == true){
-    $('.mo__slide .sub__t__title').not($(this)).nextUntil('.sub__t__title').hide()
-    $(this).nextAll().toggle();
-    $('.mo__slide .sub__t__title').not($(this)).removeClass('is-subopen')   
-  } else {
-    /* 해당 요소가 아닌 것들의 다음 sub__title까지의 요소 hide로 바꾸기 */
-    $('.mo__slide .sub__t__title').not($(this)).nextUntil('.sub__t__title').hide()
-    $(this).nextUntil('.sub__t__title').toggle();
-    $('.mo__slide .sub__t__title').not($(this)).removeClass('is-subopen')   
-  }
+  $(this).nextUntil('.sub__t__title').filter('td:not(.notFold)').toggle();
+  $('.mo__slide .sub__t__title').not($(this)).removeClass('is-subopen');
+  $('.mo__slide .sub__t__title').not($(this)).nextUntil('.sub__t__title').filter('td:not(.notFold)').hide()
 })
 
 

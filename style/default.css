@@ -285,12 +285,16 @@ textarea {
   margin-right: 1rem;
 }
 
-.mr--24 {
+.mr--20 {
   margin-right: 2rem;
 }
 
-.mr--20 {
-  margin-right: 2rem;
+.mr--24 {
+  margin-right: 2.4rem;
+}
+
+.mr--32 {
+  margin-right: 3.2rem;
 }
 
 /* margin top */
@@ -4174,6 +4178,11 @@ button.mo_only {
   align-items: center;
 }
 
+.sub__t__total {
+  margin-right: 0.8rem;
+  margin-left: auto;
+}
+
 .sub__t__title::after {
   content: "";
   width: 1.6rem;
@@ -4184,6 +4193,15 @@ button.mo_only {
 
 .sub__t__title.is-subopen::after {
   transform: rotate(180deg);
+}
+
+.notFold {
+  font-size: 1.8rem;
+}
+
+.notFold > span {
+  display: flex;
+  align-items: center;
 }
 
 .mo__slide > table .sub__element td {
@@ -4230,12 +4248,15 @@ button.mo_only {
   margin-right: 0.8rem;
 }
 
+.mo__slide .acordian__table tr td {
+  display: none;
+}
+
 .mo__slide > table tr td {
   margin-top: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  display: none;
 }
 
 .mo__slide input {
