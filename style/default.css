@@ -4252,9 +4252,8 @@ button.mo_only {
   display: none;
 }
 
-.acordian__table.depth-margin .depth-2,
-.acordian__table.depth-margin .depth-3
-{margin-left: 1.6rem;}
+.acordian__table.depth-margin .depth-2 {margin-left: 1.6rem;}
+.acordian__table.depth-margin .depth-3 {margin-left: 2rem;}
 
 .mo__slide > table tr td {
   margin-top: 2rem;

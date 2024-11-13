@@ -258,17 +258,21 @@ $('.mo__slide .acordian__table .t__title').on('click', function(){
   let parentTr = $(this).closest('tr');
   $('.mo__slide > table tr').not(parentTr).removeClass('is-open')
   parentTr.toggleClass('is-open')
+  /* 뎁스 전체 초기화 */
+  $('.mo__slide .acordian__table td:not(.depth-1)').hide()
 })
 
 /* 공시 열람 depth 토글 애니메이션 */
-$('.mo__slide td:not(.depth-1)').hide()
-$('.mo__slide .sub__t__title').on('click', function(){
+$('.mo__slide .acordian__table td:not(.depth-1)').hide()
+$('.mo__slide .acordian__table .sub__t__title').on('click', function(){
   $(this).toggleClass('is-subopen');
 })
-$('.mo__slide .sub__t__title.depth-1').on('click',function(){
+$('.mo__slide .acordian__table .sub__t__title.depth-1').on('click',function(){
   $(this).siblings('.depth-2').toggle();
+  /* depth 3 초기화 */
+  $('.mo__slide .depth-3').hide()
 })
-$('.mo__slide .sub__t__title.depth-2').on('click',function(){
+$('.mo__slide .acordian__table .sub__t__title.depth-2').on('click',function(){
   $('.mo__slide .depth-2').not($(this)).removeClass('is-subopen');
   $('.mo__slide .depth-2').not($(this)).nextUntil('.depth-2').filter('.depth-3').hide();
   // 클릭되지 않은 depth-2의 옆 depth-3 hide하기
