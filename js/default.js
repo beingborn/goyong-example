@@ -261,15 +261,20 @@ $('.mo__slide .acordian__table .t__title').on('click', function(){
 })
 
 /* 공시 열람 depth 토글 애니메이션 */
-var titleLength;
-$('.mo__slide .sub__t__title').nextAll('td:not(.sub__t__title):not(.notFold)').hide()
+$('.mo__slide td:not(.depth-1)').hide()
 $('.mo__slide .sub__t__title').on('click', function(){
-  // true 일시 없는 것, false일시 있는 것.
-  $(this).toggleClass('is-subopen')
-  $(this).nextUntil('.sub__t__title').filter('td:not(.notFold)').toggle();
-  $('.mo__slide .sub__t__title').not($(this)).removeClass('is-subopen');
-  $('.mo__slide .sub__t__title').not($(this)).nextUntil('.sub__t__title').filter('td:not(.notFold)').hide()
+  $(this).toggleClass('is-subopen');
 })
+$('.mo__slide .sub__t__title.depth-1').on('click',function(){
+  $(this).siblings('.depth-2').toggle();
+})
+$('.mo__slide .sub__t__title.depth-2').on('click',function(){
+  $('.mo__slide .depth-2').not($(this)).removeClass('is-subopen');
+  $('.mo__slide .depth-2').not($(this)).nextUntil('.depth-2').filter('.depth-3').hide();
+  // 클릭되지 않은 depth-2의 옆 depth-3 hide하기
+  $(this).nextUntil('.depth-2').filter('.depth-3').toggle();
+})
+
 
 
 

@@ -47,8 +47,7 @@ input[type=text], select, input[type=password] {
 }
 
 select {
-  -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
   -moz-appearance: none;
   padding: 0.8rem 1rem;
   min-height: 4rem;
@@ -72,9 +71,7 @@ input[type=radio] {
 }
 
 input[type=radio].clicked:not(:checked) {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   background-color: #D8D8D8;
   border: 0.1rem solid #C6C6C6;
 }
@@ -658,8 +655,7 @@ textarea {
 .m__image img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .m__cont {
@@ -951,7 +947,13 @@ body {
   top: 50%;
   left: 50%;
   background: #fff;
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: 1002;
 }
@@ -1814,7 +1816,13 @@ table.click tr {
   top: 50%;
   left: 50%;
   background: #fff;
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: 1002;
 }
@@ -1851,8 +1859,7 @@ table.click tr {
 .popup__img > img {
   height: 100%;
   max-width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .popupBox.main .popup__title {
@@ -2951,19 +2958,7 @@ footer {
   background-position: right 1.6rem center;
 }
 
-/****************************************************
-	파일명	: sub__content.css
-	최초작성자	: 이민혁
-	최초작성일	: 2024-09-28
-	-------------------------------------------------
-	Dec. 서브 페이지 스타일링 정의
-	-------------------------------------------------
-	최종수정자	: 이민혁
-	최종수정일	: 2024-10-02
-	수정내용	: 최초작성
-	속성순서: 
-*****************************************************/
-label.mo_only {
+ml- label.mo_only {
   display: none;
 }
 
@@ -3934,8 +3929,7 @@ button.mo_only {
 }
 @media print {
   .printPage {
-    -webkit-print-color-adjust: exact;
-            print-color-adjust: exact;
+    print-color-adjust: exact;
     margin: 0;
     border: initial;
     border-radius: initial;
@@ -4252,10 +4246,6 @@ button.mo_only {
   display: none;
 }
 
-.acordian__table.depth-margin .depth-2,
-.acordian__table.depth-margin .depth-3
-{margin-left: 1.6rem;}
-
 .mo__slide > table tr td {
   margin-top: 2rem;
   display: flex;
@@ -4304,9 +4294,6 @@ button.mo_only {
 .login__page #login__body input[type=text], .login__page #login__body input[type=password] {
   height: 5.8rem;
   border: 0.1rem solid #717171;
-}
-.login__page #login__body input::-moz-placeholder {
-  font-size: 1.9rem;
 }
 .login__page #login__body input::placeholder {
   font-size: 1.9rem;
@@ -5085,8 +5072,7 @@ button.mo_only {
   }
   .accn__desc__wrap .m__image {
     display: block;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   .accn__desc__wrap .section:not(:nth-of-type(1)) {
     margin-top: 6.4rem;
@@ -5487,8 +5473,7 @@ button.mo_only {
     height: 9rem;
   }
   .manual .tip {
-    -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
     width: 12rem;
     height: auto;
   }
@@ -5530,4 +5515,4 @@ button.mo_only {
     transform: translate(-50%, -50%);
     bottom: auto;
   }
-}/*# sourceMappingURL=default.css.map */
+}

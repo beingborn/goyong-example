@@ -1,4 +1,4 @@
-/****************************************************
+ml-/****************************************************
 	파일명	: sub__content.css
 	최초작성자	: 이민혁
 	최초작성일	: 2024-09-28
@@ -333,6 +333,8 @@ button.mo_only {display: none;}
 .mo__slide > table th {background: transparent;}
 .mo__slide > table .sub__element {font-weight: 700;font-size: 1.8rem;}
 .mo__slide > table tbody tr td:last-child {margin-bottom: 3rem;}
+// 뎁스별 마진 변경
+
 // 모바일 슬라이드 1depth 액티브 스타일
 .mo__slide > .mo__slide-active tbody tr td:first-of-type {background: #DEEBF7;}
 .mo__slide > table tbody tr td:first-of-type {margin-top: 2rem;} // 총계 액티브 스타일
