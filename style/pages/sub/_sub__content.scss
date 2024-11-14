@@ -1,4 +1,4 @@
-ml-/****************************************************
+/****************************************************
 	파일명	: sub__content.css
 	최초작성자	: 이민혁
 	최초작성일	: 2024-09-28
@@ -341,8 +341,12 @@ button.mo_only {display: none;}
 .mo__slide > table tr.style1 > td {background: #DEEBF7;}
 .mo__slide > table tr.style1 .sub__element {background: transparent;} 
 .mo__slide > table td td:first-of-type {background: #DEEBF7;}
+// 뎁스별 구조
+.mo__slide .acordian__table td.depth-1 {font-size: 1.7rem;}
+.mo__slide .acordian__table td.depth-2 {font-size: 1.5rem;}
+.mo__slide .acordian__table td.depth-3 {font-size: 1.3rem;}
 // 모바일 슬라이드 서브 스타일
-.sub__t__title {cursor: pointer; font-size: 1.8rem;}
+.sub__t__title {cursor: pointer;}
 .sub__t__title > span {display: flex; align-items: center;}
 .sub__t__total {margin-right: .8rem; margin-left: auto;}
 .sub__t__title::after {content: ''; width: 1.6rem; height: 1.6rem; background: url(../img/acordian__arrow__down.png) no-repeat center; align-self: center;}
@@ -366,3 +370,6 @@ button.mo_only {display: none;}
 // 하위 항목 표시
 .child__arrow {display: inline-block; width: 1.6rem; height: 2.2rem; background: url(../img/arrow__right-bk.svg) no-repeat center; background-size: cover;}
 
+/* th depth */
+tr.th-depth .min__h__box {position: relative;}
+tr.th-depth p {height: 4rem; position: absolute; bottom: 0; width: 100%; background:#d5e4de; display: flex; align-items: center; justify-content: center; color: #505050;}

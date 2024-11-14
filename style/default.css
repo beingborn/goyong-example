@@ -4168,9 +4168,20 @@ button.mo_only {
   background: #DEEBF7;
 }
 
+.mo__slide .acordian__table td.depth-1 {
+  font-size: 1.7rem;
+}
+
+.mo__slide .acordian__table td.depth-2 {
+  font-size: 1.5rem;
+}
+
+.mo__slide .acordian__table td.depth-3 {
+  font-size: 1.3rem;
+}
+
 .sub__t__title {
   cursor: pointer;
-  font-size: 1.8rem;
 }
 
 .sub__t__title > span {
@@ -4252,9 +4263,6 @@ button.mo_only {
   display: none;
 }
 
-.acordian__table.depth-margin .depth-2 {margin-left: 1.6rem;}
-.acordian__table.depth-margin .depth-3 {margin-left: 2rem;}
-
 .mo__slide > table tr td {
   margin-top: 2rem;
   display: flex;
@@ -4284,6 +4292,23 @@ button.mo_only {
   height: 2.2rem;
   background: url(../img/arrow__right-bk.svg) no-repeat center;
   background-size: cover;
+}
+
+/* th depth */
+tr.th-depth .min__h__box {
+  position: relative;
+}
+
+tr.th-depth p {
+  height: 4rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #d5e4de;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #505050;
 }
 
 /* 사용자 폼 관련 페이지 스타일 */
