@@ -441,6 +441,10 @@ textarea {
   border-right: 0.1rem solid #ddd;
 }
 
+.noBorder--r {
+  border-right: 0 !important;
+}
+
 /* flex */
 .flex--box {
   display: flex;

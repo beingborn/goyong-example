@@ -151,6 +151,7 @@ textarea {border: 0.1rem solid #ddd; width: 100%;}
 .border-top-large {border-top: 0.2rem solid #000;}
 .border--btm {border-bottom: 0.1rem solid #ddd;}
 .border--r {border-right: 0.1rem solid #ddd;}
+.noBorder--r {border-right: 0!important;}
 
 /* flex */
 .flex--box {display: flex;}

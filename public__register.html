@@ -722,13 +722,17 @@
                           <col/>
                         </colgroup>
                         <thead>
-                          <tr>
+                          <!-- 
+                          임시로 열람 페이지와 동일한 스타일 적용 
+                          되돌리기 원할 시 noBorder--r, p태그 일괄 삭제, th-depth 클래스 삭제
+                          -->
+                          <tr class="th-depth">
                             <th scope="col"><div class="min__h__box text--c">구분</div></th>
-                            <th scope="col"><div class="min__h__box text--c">자산</div></th>
-                            <th scope="col"><div class="min__h__box text--c">현금및예금</div></th>
-                            <th scope="col"><div class="min__h__box text--c">토지</div></th>
-                            <th scope="col"><div class="min__h__box text--c">건물</div></th>
-                            <th scope="col"><div class="min__h__box text--c">기타자산</div></th>
+                            <th class="noBorder--r" scope="col"><div class="min__h__box text--c">자산</div></th>
+                            <th scope="col"><div class="min__h__box text--c"><p>현금및예금</p></div></th>
+                            <th scope="col"><div class="min__h__box text--c"><p>토지</p></div></th>
+                            <th scope="col"><div class="min__h__box text--c"><p>건물</p></div></th>
+                            <th scope="col"><div class="min__h__box text--c"><p>기타자산</p></div></th>
                             <th scope="col"><div class="min__h__box text--c">부채</div></th>
                           </tr>
                         </thead>
