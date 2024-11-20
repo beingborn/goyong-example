@@ -336,15 +336,19 @@ button.mo_only {display: none;}
 // 뎁스별 마진 변경
 
 // 모바일 슬라이드 1depth 액티브 스타일
-.mo__slide > .mo__slide-active tbody tr td:first-of-type {background: #DEEBF7;}
+// .mo__slide > .mo__slide-active tbody tr td:first-of-type {background: #DEEBF7;}
 .mo__slide > table tbody tr td:first-of-type {margin-top: 2rem;} // 총계 액티브 스타일
 .mo__slide > table tr.style1 > td {background: #DEEBF7;}
 .mo__slide > table tr.style1 .sub__element {background: transparent;} 
 .mo__slide > table td td:first-of-type {background: #DEEBF7;}
 // 뎁스별 구조
-.mo__slide .acordian__table td.depth-1 {font-size: 1.7rem;}
-.mo__slide .acordian__table td.depth-2 {font-size: 1.5rem;}
-.mo__slide .acordian__table td.depth-3 {font-size: 1.3rem;}
+.mo__slide td.depth-1 {font-size: 1.7rem;}
+.mo__slide td.depth-2 {font-size: 1.5rem;}
+.mo__slide td.depth-3 {font-size: 1.3rem;}
+
+
+
+
 // 모바일 슬라이드 서브 스타일
 .sub__t__title {cursor: pointer;}
 .sub__t__title > span {display: flex; align-items: center;}

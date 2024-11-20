@@ -1527,6 +1527,17 @@ table caption {
   border-right: 0;
 }
 
+/* 20241118 ljy 추가 */
+/* 20241118 ljy 주석처리
+table td {
+  font-weight: 700;
+} */
+table td {
+  font-weight: 400;
+}
+/* 20241118 ljy 추가 */
+
+
 .table__vertical tbody td, .table__vertical tbody th {
   min-height: 6rem;
   border-right: 0.1rem solid #ddd;
@@ -4152,10 +4163,6 @@ button.mo_only {
   margin-bottom: 3rem;
 }
 
-.mo__slide > .mo__slide-active tbody tr td:first-of-type {
-  background: #DEEBF7;
-}
-
 .mo__slide > table tbody tr td:first-of-type {
   margin-top: 2rem;
 }
@@ -4172,15 +4179,15 @@ button.mo_only {
   background: #DEEBF7;
 }
 
-.mo__slide .acordian__table td.depth-1 {
+.mo__slide td.depth-1 {
   font-size: 1.7rem;
 }
 
-.mo__slide .acordian__table td.depth-2 {
+.mo__slide td.depth-2 {
   font-size: 1.5rem;
 }
 
-.mo__slide .acordian__table td.depth-3 {
+.mo__slide td.depth-3 {
   font-size: 1.3rem;
 }
 
@@ -4314,6 +4321,15 @@ tr.th-depth p {
   justify-content: center;
   color: #505050;
 }
+
+/* 등록 페이지 마진 */
+.register__table.depth-margin .depth-2 {margin-left: 1.6rem;}
+.register__table.depth-margin .depth-3 {margin-left: 3.2rem;}
+
+.acordian__table.depth-margin .depth-2 {margin-left: 1.6rem;}
+/* .acordian__table.depth-margin .depth-3 {margin-left: 2rem;} */
+.acordian__table.depth-margin .depth-3 {margin-left: 3.2rem;}	/* 20241114 문정환 수정 */
+
 
 /* 사용자 폼 관련 페이지 스타일 */
 .login__page body {
