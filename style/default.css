@@ -3988,6 +3988,41 @@ button.mo_only {
   box-shadow: 0 0 0.4rem 0 rgba(0, 0, 0, 0.25);
 }
 
+.mobile__tab .swiper-slide button.active {
+  color: #21A366;
+  position: relative;
+}
+
+.mobile__tab .swiper-slide button.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.4rem;
+  background-color: #21a366;
+}
+
+.mobile__tab .swiper-slide button.active {
+  color: #21A366;
+  position: relative;
+}
+
+.mobile__tab .swiper-slide button.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.4rem;
+  background-color: #21a366;
+}
+
+/* 20241120 이민혁 버튼 비활성화 스타일 초기화 */
+.mobile__tab .swiper-button-next.swiper-button-disabled, .mobile__tab .swiper-button-prev.swiper-button-disabled {
+  opacity: 0;
+}
+
 .mobile__tab .swiper-button-next,
 .mobile__tab .swiper-button-prev {
   position: absolute;
@@ -4007,46 +4042,6 @@ button.mo_only {
   position: absolute;
   left: 0;
   top: 0;
-}
-
-.mobile__tab .swiper-button-next::after {
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255));
-  padding: 0.8rem 1.6rem 0.8rem 3.2rem;
-}
-
-.mobile__tab .swiper-button-prev::after {
-  background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(255, 255, 255));
-  padding: 0.8rem 3.2rem 0.8rem 1.6rem;
-}
-
-.mobile__tab .swiper-slide button.active {
-  color: #21A366;
-  position: relative;
-}
-
-.mobile__tab .swiper-slide button.active::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0.4rem;
-  background-color: #21a366;
-}
-
-.mobile__tab .swiper-slide button.active {
-  color: #21A366;
-  position: relative;
-}
-
-.mobile__tab .swiper-slide button.active::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0.4rem;
-  background-color: #21a366;
 }
 
 @media all and (min-width: 551px) and (max-width: 766px) {
@@ -4200,6 +4195,23 @@ button.mo_only {
   margin-left: 3.2rem;
 }
 
+/* input값 초기화 */
+.input-txtReset input[type=text] {
+  border: 0;
+  min-height: auto;
+  padding: 0;
+  font-size: inherit;
+  border-radius: 0;
+}
+
+.input-txtReset input[type=text]:focus {
+  outline: none;
+}
+
+.t__title input[type=text] {
+  font-weight: 700;
+}
+
 .sub__t__title {
   cursor: pointer;
 }
@@ -4259,7 +4271,6 @@ button.mo_only {
   border-bottom: 0.1rem solid #ddd;
   display: flex;
   justify-content: space-between;
-  cursor: pointer;
 }
 
 .mo__slide > table tr.is-open .t__title.arrow::after {
@@ -4277,6 +4288,10 @@ button.mo_only {
 .t__title.arrow > span {
   margin-left: auto;
   margin-right: 0.8rem;
+}
+
+.mo__slide .acordian__table .t__title {
+  cursor: pointer;
 }
 
 .mo__slide .acordian__table tr td {
