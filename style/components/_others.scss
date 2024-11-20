@@ -193,7 +193,9 @@ button { background: inherit;cursor: pointer;}
 /*  테이블 CSS */
 // 테이블 공통 스타일
 table th {font-weight: 700; background-color: #EAF5F0;}
-table td {font-weight: 700;}
+/* 20241120 이민혁 수정 */
+table td {font-weight: 400;}
+
 table caption {position: absolute; top: 0; left: 0; width: 0.1rem; height: 0.1rem; margin: -0.1rem; overflow: hidden; clip: rect(0, 0, 0, 0);}
 
 // 프린트 페이지 출력 페이지에서만 사용

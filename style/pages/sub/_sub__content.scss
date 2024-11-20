@@ -346,6 +346,13 @@ button.mo_only {display: none;}
 .mo__slide td.depth-2 {font-size: 1.5rem;}
 .mo__slide td.depth-3 {font-size: 1.3rem;}
 
+/* 20241114 문정환 수정 */
+.acordian__table.depth-margin .depth-2 {margin-left: 1.6rem;}
+/* .acordian__table.depth-margin .depth-3 {margin-left: 2rem;} */
+.acordian__table.depth-margin .depth-3 {margin-left: 3.2rem;}
+/* 20241120 이민혁 수정 */ 
+.register__table.depth-margin .depth-2 {margin-left: 1.6rem;}
+.register__table.depth-margin .depth-3 {margin-left: 3.2rem;}
 
 
 

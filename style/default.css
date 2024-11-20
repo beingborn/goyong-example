@@ -1480,8 +1480,9 @@ table th {
   background-color: #EAF5F0;
 }
 
+/* 20241120 이민혁 수정 */
 table td {
-  font-weight: 700;
+  font-weight: 400;
 }
 
 table caption {
@@ -1526,17 +1527,6 @@ table caption {
 .table__vertical thead tr th:nth-last-child(1) {
   border-right: 0;
 }
-
-/* 20241118 ljy 추가 */
-/* 20241118 ljy 주석처리
-table td {
-  font-weight: 700;
-} */
-table td {
-  font-weight: 400;
-}
-/* 20241118 ljy 추가 */
-
 
 .table__vertical tbody td, .table__vertical tbody th {
   min-height: 6rem;
@@ -4191,6 +4181,25 @@ button.mo_only {
   font-size: 1.3rem;
 }
 
+/* 20241114 문정환 수정 */
+.acordian__table.depth-margin .depth-2 {
+  margin-left: 1.6rem;
+}
+
+/* .acordian__table.depth-margin .depth-3 {margin-left: 2rem;} */
+.acordian__table.depth-margin .depth-3 {
+  margin-left: 3.2rem;
+}
+
+/* 20241120 이민혁 수정 */
+.register__table.depth-margin .depth-2 {
+  margin-left: 1.6rem;
+}
+
+.register__table.depth-margin .depth-3 {
+  margin-left: 3.2rem;
+}
+
 .sub__t__title {
   cursor: pointer;
 }
@@ -4321,15 +4330,6 @@ tr.th-depth p {
   justify-content: center;
   color: #505050;
 }
-
-/* 등록 페이지 마진 */
-.register__table.depth-margin .depth-2 {margin-left: 1.6rem;}
-.register__table.depth-margin .depth-3 {margin-left: 3.2rem;}
-
-.acordian__table.depth-margin .depth-2 {margin-left: 1.6rem;}
-/* .acordian__table.depth-margin .depth-3 {margin-left: 2rem;} */
-.acordian__table.depth-margin .depth-3 {margin-left: 3.2rem;}	/* 20241114 문정환 수정 */
-
 
 /* 사용자 폼 관련 페이지 스타일 */
 .login__page body {
@@ -5156,6 +5156,9 @@ tr.th-depth p {
 }
 /* 태블릿 최소 사이즈까지 */
 @media all and (max-width: 767px) {
+  .mo__slide input {
+    max-width: 17rem;
+  }
   .sm-flex--column {
     flex-direction: column;
   }

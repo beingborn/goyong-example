@@ -208,6 +208,8 @@
 
 /* 태블릿 최소 사이즈까지 */
 @media all and (max-width: 767px) {
+  // 20241120 이민혁추가
+  .mo__slide input {max-width: 17rem;}
 
   .sm-flex--column {flex-direction: column;}
   .sm-flex--column > * { width: 100%;}
