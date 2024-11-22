@@ -3610,6 +3610,9 @@ button.mo_only {
 .main__accn__desc__wrap .image__container {
   text-align: center;
   margin: 6.4rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main__accn__desc__wrap .image__container img {
@@ -3649,8 +3652,7 @@ button.mo_only {
 }
 
 .desc__banner {
-  background-color: #82C252;
-  color: #fff;
+  background-color: #EDF1F5;
   display: flex;
   align-items: center;
   padding: 2.6rem 2.4rem;
